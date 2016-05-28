@@ -1,0 +1,35 @@
+﻿@model BeautyTeamWeb.Models.VerifyPhoneNumberViewModel
+@{
+    ViewBag.Title = "Verify Phone Number";
+}
+@Html.Partial("../Home/_StaticSliderII")
+<div class="container">
+    <h3>@ViewBag.Title.</h3>
+    <form class="form-horizontal col-md-4" role="form" action="@Url.Action("VerifyPhoneNumber", "Manage")" method="post" novalidate="novalidate">
+        @Html.AntiForgeryToken()
+        <input name="phoneNumber" id="phoneNumber" type="hidden" value="@Model.PhoneNumber"
+               data-val="true"
+               data-val-required="The Phone Number field is required."
+               data-val-phone="The Phone Number field is not a valid phone number.">
+        <h4>Enter verification code</h4>
+        <h5>@ViewBag.Status</h5>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="left_contact form-level">
+            <input name="Code" class="input-block" id="Code" type="text" value=""
+                   data-val="true"
+                   data-val-required="The Code field is required.">
+            <span class="form-icon fa fa-code"></span>
+        </div>
+        <span class="field-validation-valid text-danger" data-valmsg-replace="true" data-valmsg-for="Code"></span>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Submit" class="btn btn-main featured" />
+            </div>
+        </div>
+    </form>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>@ViewBag.Title - Obisoft</title>
+    <link rel="stylesheet" href="~/wwwroot/css/font-awesome.min.css" />
+    @Styles.Render("~/css")
+    @RenderSection("css",false)
+</head>
+<body>
+    <header class="navbar-fixed-top navbar-inverse video-menu" id="header" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Togglenavigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="@Url.Action("Index","Home")">
+                    <img src="~/wwwroot/images/logo3.png" class="img-responsive" />
+                </a>
+            </div>
+            <nav class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" role="navigation">
+                <ul class="nav navbar-nav navbar-left ">
+                    <li class="active"><a href="@Url.Action("Index","Home")">@Resources.lang.Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">@Resources.lang.TanZone<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="navbar-form navbar-right">
+                                <form action="@Url.Action("Search","TanZone")" method="get">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" name="q" placeholder="Title">
+                                    </div>
+                                    <input class="btn btn-main featured search" type="submit" value="Search Now" />
+                                </form>
+                            </li>
+                            <li><a href="@Url.Action("Index","Home")">@Resources.lang.Home</a></li>
+                            <li><a href="@Url.Action("Index","Home")">Public Zone</a></li>
+                            <li><a href="@Url.Action("Index","Home")">Publish new</a></li>
+                            <li><a href="@Url.Action("Index","Home")">My TanZone</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </nav>
+        </div>
+    </header>
+    @RenderBody()
+    @Html.Partial("_Footer")
+    <div id="back-top">
+        <a href="#slider_part" class="scroll" data-scroll>
+            <div class="btn btn-primary" title="Back to Top"><i class="fa fa-angle-up"></i></div>
+        </a>
+    </div>
+    @Scripts.Render("~/js")
+    @RenderSection("scripts",false)
+</body>
+</html>

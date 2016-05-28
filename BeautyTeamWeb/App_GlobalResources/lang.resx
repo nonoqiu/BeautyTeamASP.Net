@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccManaCenter" xml:space="preserve">
+    <value>Account Management</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>NO. 3-11, Wenhua Road, Heping District, Shenyang, P. R. China</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="EmailAddressRequired" xml:space="preserve">
+    <value>The Email field is required.</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Hello</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="HomeSubTitle" xml:space="preserve">
+    <value>Make ideas real</value>
+  </data>
+  <data name="HomeTitle" xml:space="preserve">
+    <value>Create Greate Things</value>
+  </data>
+  <data name="InvalidEmailAddress" xml:space="preserve">
+    <value>Invalid Email address!</value>
+  </data>
+  <data name="Lab" xml:space="preserve">
+    <value>Lab</value>
+  </data>
+  <data name="Lang" xml:space="preserve">
+    <value>Lang</value>
+  </data>
+  <data name="Licensing" xml:space="preserve">
+    <value>Licensing</value>
+  </data>
+  <data name="Link" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="MyTanZone" xml:space="preserve">
+    <value>My TanZone</value>
+  </data>
+  <data name="Navigation" xml:space="preserve">
+    <value>Navigation</value>
+  </data>
+  <data name="Our" xml:space="preserve">
+    <value>Our</value>
+  </data>
+  <data name="Permission" xml:space="preserve">
+    <value>Privacy Statement</value>
+  </data>
+  <data name="Portfolio" xml:space="preserve">
+    <value>Portfolio</value>
+  </data>
+  <data name="PortSub" xml:space="preserve">
+    <value>No matter if you are a student or enterprise, if you are in U.S. or not, there must exists something you need.</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="Ser1Ti" xml:space="preserve">
+    <value>Develope for idea</value>
+  </data>
+  <data name="Ser2Ti" xml:space="preserve">
+    <value>Art Design</value>
+  </data>
+  <data name="Ser3Ti" xml:space="preserve">
+    <value>Technical Support</value>
+  </data>
+  <data name="Ser4Ti" xml:space="preserve">
+    <value>For enterprises</value>
+  </data>
+  <data name="SerSubTi" xml:space="preserve">
+    <value>No matter websites, or mobile applications, or other services like wechat, we only need your thoughts.</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="Sta1Ani1" xml:space="preserve">
+    <value>Breath with reliable service.</value>
+  </data>
+  <data name="Sta1Ani2" xml:space="preserve">
+    <value>Log in your Obisoft account to enjoy personal service.</value>
+  </data>
+  <data name="Tags" xml:space="preserve">
+    <value>Tags</value>
+  </data>
+  <data name="TanZone" xml:space="preserve">
+    <value>TanZone</value>
+  </data>
+  <data name="UserSerToLog" xml:space="preserve">
+    <value>Use Obsoft account to log in.</value>
+  </data>
+  <data name="Ser1SubTi" xml:space="preserve">
+    <value>Do not require technology. With only an idea, we will bring it to billions of devices to run as a real application. One click, one dream, win thousands of users.</value>
+  </data>
+  <data name="Ser2SubTi" xml:space="preserve">
+    <value>Create your own culture. Do not need lots of money. No matter 2D or 3D, no matter pic or video, everything and be more beautiful. Every application can be more cool</value>
+  </data>
+  <data name="Ser3SubTi" xml:space="preserve">
+    <value>Any time, any place, and you won't run into technical problems. WeBo, WeChat, voting, statistics, information, management ... ... Our technical support you forever. Remember: technology is not an issue with us.</value>
+  </data>
+  <data name="Ser4SubTi" xml:space="preserve">
+    <value>Whether start-up businesses need a Web site, or an established company for scientific research, we will be your technical team. In this mobile first cloud first age, we want to bring you technical strength.</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="CreateNewAccount" xml:space="preserve">
+    <value>Create New Obisoft Account</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Forgot your password?</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="ObisoftAccount" xml:space="preserve">
+    <value>Obisoft Account (Email)</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="RegisterasaNewUser" xml:space="preserve">
+    <value>Register as a new user.</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Remember Me?</value>
+  </data>
+  <data name="UnabletoLogin" xml:space="preserve">
+    <value>Unable to Log in?</value>
+  </data>
+  <data name="WhyAccountC1" xml:space="preserve">
+    <value>Enjoy TanZone and have your own tech blog, share tech ideas with your team and other experts.</value>
+  </data>
+  <data name="WhyAccountC2" xml:space="preserve">
+    <value>Enjoy BeautyTeam service, communicate better with your team members and your tasks.</value>
+  </data>
+  <data name="WhyAccountC3" xml:space="preserve">
+    <value>Sync your API Studio settings and projects with different devices.</value>
+  </data>
+  <data name="WhyAccountHeader" xml:space="preserve">
+    <value>What can you do with an Obisoft account?</value>
+  </data>
+  <data name="YourEmailAccount" xml:space="preserve">
+    <value>Your Email Account</value>
+  </data>
+  <data name="Keepourpride" xml:space="preserve">
+    <value>Keep our pride</value>
+  </data>
+  <data name="WorkIsOurSel" xml:space="preserve">
+    <value>Our work is ourselves</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="AboutUs" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="JoinUs" xml:space="preserve">
+    <value>Join Us</value>
+  </data>
+  <data name="Partners" xml:space="preserve">
+    <value>Partners</value>
+  </data>
+  <data name="VF1Parg" xml:space="preserve">
+    <value>There isn't a rapid path for us startups, but it's better to create masterpieces. Our team have only created less than 10 products in the first year after establishment, obviously, that’s too few. However, there isn’t so strong relationship between us tech-teams and time, since the young is always looking forward to the advanced. Of course there is technology in our blood, not only for the outsources, but also the ability of facing the Internet. Hardly would we share our products with you when it’s finished, bringing you with our view of the Internet. Our program is representing ourselves.</value>
+  </data>
+  <data name="VF2Parg" xml:space="preserve">
+    <value>Although only for the technology, our team is filled with love, belief, and attitude. So we’d like to be in this way, enjoy it, and keep going like it forever. Competing with the advanced technology in this world, we’ll respect them firstly and they’ll push us forward then. We’ll keep what we cherish, what we take pride in, so, we’re always willing to follow our heart. Focus on the tech, at least, it deserves the time we spend. For other things, just to be judged by the users.</value>
+  </data>
+  <data name="APIDoc" xml:space="preserve">
+    <value>API Document</value>
+  </data>
+  <data name="WhatWeDo" xml:space="preserve">
+    <value>What We do</value>
+  </data>
+  <data name="Work" xml:space="preserve">
+    <value>Work</value>
+  </data>
+  <data name="WorkSub" xml:space="preserve">
+    <value>No matter enterprise or students, our products must exist one you need.</value>
+  </data>
+  <data name="WhatWeDoSub" xml:space="preserve">
+    <value>Respect to the technology today gives us the chance to face the Internet today. No matter web application, native app or enterprise solution, maybe you can find something new here.</value>
+  </data>
+</root>

@@ -1,0 +1,27 @@
+﻿@model BeautyTeamWeb.Models.SendCodeViewModel
+@{
+    ViewBag.Title = "Send";
+}
+@Html.Partial("../Home/_StaticSlider")
+<div class="container">
+    <h2>@ViewBag.Title.</h2>
+    <form class="form-horizontal col-md-4" role="form" action="@Url.Action("SendCode", "Account")" method="post" novalidate="novalidate">
+        @Html.AntiForgeryToken()
+        @Html.Hidden("rememberMe", @Model.RememberMe)
+        <h4>Send verification code</h4>
+        <hr />
+        <div class="left_contact form-level">
+            Select Two-Factor Authentication Provider:
+            @Html.DropDownListFor(model => model.SelectedProvider, Model.Providers, new { @class = "form-control" })
+        </div>
+        <hr />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Submit" class="btn btn-main featured" />
+            </div>
+        </div>
+    </form>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

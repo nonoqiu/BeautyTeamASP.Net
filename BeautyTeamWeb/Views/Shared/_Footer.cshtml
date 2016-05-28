@@ -1,0 +1,114 @@
+﻿<section id="footer">
+    <div class="footer_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <h3 class="menu_head">@Resources.lang.Navigation</h3>
+                    <div class="footer_menu">
+                        <ul>
+                            <li><a href="@Url.Action("Index", "Home")">@Resources.lang.Home</a></li>
+                            <li><a href="#service">@Resources.lang.TanZone</a></li>
+                            <li><a href="@Url.Action("Index","Manage")">@Resources.lang.AccManaCenter</a></li>
+                            <li><a href="#">@Resources.lang.Lab</a></li>
+                            <li><a href="@Url.Action("APIDoc","Home")">@Resources.lang.APIDoc</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h3 class="menu_head">@Resources.lang.Link</h3>
+                    <div class="footer_menu">
+                        <ul>
+                            <li><a href="#">@Resources.lang.AboutUs</a></li>
+                            <li><a href="#">@Resources.lang.Partners</a></li>
+                            <li><a href="#">@Resources.lang.JoinUs</a></li>
+                            <li><a href="#">@Resources.lang.Licensing</a></li>
+                            <li><a href="@Url.Action("PrivacyStatement","Home")">@Resources.lang.Permission</a></li>
+                            <li><a href="#">Q&amp;A</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h3 class="menu_head">@Resources.lang.Contact</h3>
+                    <div class="footer_menu_contact">
+                        <ul>
+                            <li>
+                                <i class="fa fa-home"></i>
+                                <span>@Resources.lang.Address</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-globe"></i>
+                                <span>https://www.obisoft.com.cn</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-globe"></i>
+                                <span>https://www.obisoft.com.cn</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-phone"></i>
+                                <span>+86-130-8086-8017</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-phone"></i>
+                                <span>+86-024-83685000</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-map-marker"></i>
+                                <span>Mablo16@Outlook.com </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="menu_head">@Resources.lang.Tags</h3>
+                            <div class="footer_menu tags">
+                                <a href="http://www.asp.net">ASP.Net</a>
+                                <a href="http://www.baidu.com"> SEO</a>
+                                <a href="http://jquery.com/"> jQuery</a>
+                                <a href="http://www.microsoft.com/en-us"> Microsoft</a>
+                                <a href="http://getbootstrap.com/css/"> Bootstrap</a>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <h3 class="menu_head">Subscribe Us</h3>
+                            <div class="footer_menu tags" id="SubscribeDiv">
+                                <form class="form-horizontal" id="form0" role="form" action="@Url.Action("SubScribe","Home")"
+                                      method="post" data-ajax-update="#SubscribeDiv" data-ajax-mode="replace" data-ajax-method="Post" data-ajax="true">
+                                    @Html.AntiForgeryToken()
+                                    <div class="left_contact form-level">
+                                        <input class="input-block" type="text" name="Email" id="Email" placeholder="Email">
+                                    </div>
+                                    <input class="btn btn-main featured" type="submit" value="Subscribe Now" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_b">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="footer_bottom">
+                        <p class="text-block"> © Copyright reserved to <span>Obisoft </span> 辽ICP备15014187号</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer_mid pull-right">
+                        <ul class="social-contact list-inline">
+                            <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li> <a href="#"><i class="fa fa-rss"></i></a></li>
+                            <li> <a href="#"><i class="fa fa-google-plus"></i> </a></li>
+                            <li><a href="#"> <i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"> <i class="fa fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

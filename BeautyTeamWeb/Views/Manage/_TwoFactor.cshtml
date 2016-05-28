@@ -1,0 +1,24 @@
+﻿@model BeautyTeamWeb.Models.IndexViewModel
+
+@if (Model.TwoFactor)
+{
+    <form class="form-horizontal" id="form0" role="form" action="@Url.Action("DisableTwoFactorAuthentication","Manage")"
+          method="post" data-ajax-update="#TwoFactor" data-ajax-mode="replace" data-ajax-method="Post" data-ajax="true">
+        @Html.AntiForgeryToken()
+        <label>
+            Already Enabled
+            <input class="btn btn-link" id="nopadding" type="submit" value="[Disable]">
+        </label>
+    </form>
+}
+else
+{
+    <form class="form-horizontal" id="form0" role="form" action="@Url.Action("EnableTwoFactorAuthentication","Manage")"
+          method="post" data-ajax-update="#TwoFactor" data-ajax-mode="replace" data-ajax-method="Post" data-ajax="true">
+        @Html.AntiForgeryToken()
+        <label>
+            Already Disabled
+            <input class="btn btn-link" id="nopadding" type="submit" value="[Enable]">
+        </label>
+    </form>
+}

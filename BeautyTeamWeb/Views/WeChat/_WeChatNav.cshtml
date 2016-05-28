@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>@ViewBag.Title 嘀嗒校园助手</title>
+    @Styles.Render("~/css/WeUI")
+</head>
+<body ontouchstart="">
+    <div class="container" id="container">
+        <div class="container" id="container">
+            <div class="tabbar">
+                <div class="weui_tab">
+                    <div class="weui_tab_bd">
+                        <div class="weui_panel weui_panel_access">
+                            @RenderBody()
+                        </div>
+                    </div>
+                    <div class="weui_tabbar">
+                        <a class="weui_tabbar_item" href="@Url.Action("Schedule", "WeChat", new { openid = ViewBag.openid })">
+                            <div class="weui_tabbar_icon">
+                                <img alt="" src="~/wwwroot/images/wc/icon_nav_panel.png">
+                            </div>
+                            <p class="weui_tabbar_label">课表</p>
+                        </a>
+                        <a class="weui_tabbar_item" href="@Url.Action("Grade","WeChat",new { openid = ViewBag.openid })">
+                            <div class="weui_tabbar_icon">
+                                <img alt="" src="~/wwwroot/images/wc/icon_nav_article.png">
+                            </div>
+                            <p class="weui_tabbar_label">成绩</p>
+                        </a>
+                        <a class="weui_tabbar_item" href="javascript:;">
+                            <div class="weui_tabbar_icon">
+                                <img alt="" src="~/wwwroot/images/wc/icon_nav_icons.png">
+                            </div>
+                            <p class="weui_tabbar_label">考试</p>
+                        </a>
+                        <a class="weui_tabbar_item" href="@Url.Action("Bind", "WeChat", new { openid = ViewBag.openid })">
+                            <div class="weui_tabbar_icon">
+                                <img alt="" src="~/wwwroot/images/wc/icon_nav_cell.png">
+                            </div>
+                            <p class="weui_tabbar_label">绑定</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

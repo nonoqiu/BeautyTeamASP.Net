@@ -1,0 +1,29 @@
+﻿@using BeautyTeamWeb.Services
+@model BeautyTeamWeb.Services.Schedule
+@{
+    ViewBag.Title = "课表";
+    Layout = "~/Views/WeChat/_WeChatNav.cshtml";
+}
+<div class="weui_panel_hd">当日课表</div>
+<div class="weui_panel_bd">
+    @foreach (var sche in Model.Classes[(DayOfWeek)ViewBag.Day])
+    {
+        <a class="weui_media_box weui_media_appmsg" href="javascript:void(0);">
+            <div class="weui_media_hd">
+                <img class="weui_media_appmsg_thumb" alt="" src="~/wwwroot/images/wc/icon_nav_panel.png">
+            </div>
+            <div class="weui_media_bd">
+                @if (string.IsNullOrWhiteSpace(sche.ClassDes))
+                {
+                    <h4 class="weui_media_title">无课程</h4>
+                                        <p class="weui_media_desc">&nbsp;</p>
+                }
+                else
+                {
+                    <h4 class="weui_media_title">@sche.ClassDes.Take(14)</h4>
+                                    <p class="weui_media_desc">@sche.ClassDes</p>
+                }
+            </div>
+        </a>
+    }
+</div>

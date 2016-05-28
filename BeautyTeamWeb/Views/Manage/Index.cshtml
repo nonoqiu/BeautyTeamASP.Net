@@ -1,0 +1,151 @@
+﻿@model BeautyTeamWeb.Models.IndexViewModel
+@{
+    ViewBag.Title = "Manage";
+}
+
+@Html.Partial("../Home/_StaticSliderII")
+<div class="container">
+    <div class="row">
+        <p class="text-success">
+            @ViewBag.StatusMessage
+        </p>
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+            <div class="about-auther">
+                <h3>Welcome, @Model.NickName!</h3>
+                <hr>
+                <div class="well">
+                    <a href="@Url.Action("ChangeIcon", "Manage")">
+                        <img src="@Model.IconAddress" />
+                    </a>
+
+                    <dl class="dl-horizontal">
+                        <dt></dt>
+                        <dd><a href="@Url.Action("ChangeIcon", "Manage")">Change Icon</a></dd>
+
+                        <dt>@Model.NickName</dt>
+                        <dd><a href="@Url.Action("ChangeNickName")">Change basic info</a></dd>
+
+                        <dt>Login IP Address</dt>
+                        <dd>@Model.IP</dd>
+
+                        <dt>Password Management</dt>
+                        <dd>
+                            @if (Model.HasPassword)
+                            {
+                                <a href="@Url.Action("ChangePassword")">
+                                    [Change Password]
+                                </a>
+                            }
+                            else
+                            {
+                                <a href="@Url.Action("SetPassword")">
+                                    [Set Password]
+                                </a>
+                            }
+                        </dd>
+
+                        <dt>Two Factor Authentication</dt>
+                        <dd id="TwoFactor">@Html.Partial("_TwoFactor", Model)</dd>
+
+                        <dt>External Logins</dt>
+                        <dd>
+                            @Model.Logins.Count
+                            <a href="@Url.Action("ManageLogins")">[Manage Other Logins]</a>
+                        </dd>
+
+                        <dt>Phone Number</dt>
+                        <dd>
+                            @(Model.PhoneNumber ?? "Unset")
+                            @if (Model.PhoneNumber != null)
+                            {
+                                <a href="@Url.Action("AddPhoneNumber")">[Change Phone Number]</a>
+                                @:&nbsp;| &nbsp;
+                                <a href="@Url.Action("RemovePhoneNumber")">[Remove Phone Number]</a>
+                            }
+                            else
+                            {
+                                <a href="@Url.Action("AddPhoneNumber")">[Add Phone Number]</a>
+                            }
+                        </dd>
+
+                        <dt>Attach School</dt>
+                        <dd>
+                            @if (Model.SchoolBinded)
+                            {
+                                <label>Already Attached School.</label>
+                                @Model.School.SchoolName
+                                <a href="@Url.Action("BindSchool")">[Change School]</a>
+
+                            }
+                            else
+                            {
+                                <label>Not Attached School yet.</label>
+                                <a href="@Url.Action("BindSchool")">[Attach School Now]</a>
+                            }
+                        </dd>
+
+                        <dt>Attach AAO</dt>
+                        <dd>
+                            @if (Model.SchoolAccountset)
+                            {
+                                <label>Already Set.</label>
+                                @Model.SchoolAccount
+                                <a href="@Url.Action("BindAAOAccount")">[Change Account]</a>
+                            }
+                            else if (Model.SchoolBinded)
+                            {
+                                <label>Not Binded yet.</label>
+                                @Model.School.SchoolName
+                                <a href="@Url.Action("BindAAOAccount")">[Bind Account]</a>
+                            }
+                            else
+                            {
+                                <label>Not Attached School yet.</label>
+                                <a href="@Url.Action("BindSchool")">[Attach School Now]</a>
+                            }
+                        </dd>
+
+                        <dt>Bind Email Account</dt>
+                        <dd id="BindEmailStatues">
+                            @if (Model.EmailConfirmed)
+                            {
+                                <label>Already confirmed Email: @Model.Email </label>
+                            }
+                            else
+                            {
+                                <label>Not confirmed yet.</label>
+                                <p>@Model.Email</p>
+                                <form class="form-horizontal" id="form0" role="form" action="@Url.Action(" SendConfirmEmail","Manage")" method="post"
+                                      data-ajax="true" data-ajax-method="Post" data-ajax-mode="replace" data-ajax-update="#BindEmailStatues">
+                                    @Html.AntiForgeryToken()
+                                    <input class="btn btn-link" id="nopadding" type="submit" value="Send Validate Email Now">
+                                </form>
+                            }
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="blog-sidebar">
+                <div class="recent-post">
+                    <h4>Other Things</h4>
+                    <hr>
+                    <p>
+                        Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet .
+                    </p>
+                    <p>
+                        Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet .
+                    </p>
+                    <p>
+                        Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet .
+                    </p>
+                    <p>
+                        Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet Lorem ipsit dolor sit amet .
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr />
+    </div>
+</div>

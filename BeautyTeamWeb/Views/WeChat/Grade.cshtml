@@ -1,0 +1,34 @@
+﻿@using BeautyTeamWeb.Services
+@model BeautyTeamWeb.Services.MarkList
+@{
+    ViewBag.Title = "成绩";
+    Layout = "~/Views/WeChat/_WeChatNav.cshtml";
+}
+<div class="weui_panel_hd">
+    绩点:
+    @if (string.IsNullOrWhiteSpace(Model.GPA))
+    {
+        @:@("未知")
+    }
+    else
+    {
+        @Model.GPA
+    }
+</div>
+<div class="weui_panel_bd">
+    @foreach (var sche in Model.markList)
+    {
+        if (!string.IsNullOrWhiteSpace(sche.SubjectName))
+        {
+            <a class="weui_media_box weui_media_appmsg" href="javascript:void(0);">
+                <div class="weui_media_hd">
+                    <img class="weui_media_appmsg_thumb" alt="" src="~/wwwroot/images/wc/icon_nav_article.png">
+                </div>
+                <div class="weui_media_bd">
+                    <h4 class="weui_media_title">期末成绩 @sche.ScoreEnd</h4>
+                    <p class="weui_media_desc">@sche.SubjectName</p>
+                </div>
+            </a>
+        }
+    }
+</div>

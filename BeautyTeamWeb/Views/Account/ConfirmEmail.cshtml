@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Confirm Email";
+}
+@Html.Partial("../Home/_StaticSlider")
+<div class="container">
+    <h3>@ViewBag.Title.</h3>
+    <div>
+        <p>
+            Thank you for confirming your email. Please click
+            <a href="@Url.Action("Login","Account")" id="loginLink">
+                here 
+            </a>
+            to log in
+        </p>
+    </div>
+</div>

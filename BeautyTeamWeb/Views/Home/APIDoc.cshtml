@@ -1,0 +1,910 @@
+﻿@{
+    ViewBag.Title = Resources.lang.APIDoc;
+}
+@Html.Partial("_HomeSlider")
+<ul class="nav nav-tabs tab-default" role="tablist" style="position: fixed;">
+    <li class="active">
+        <a role="tab" aria-expanded="true" href="#ENG" data-toggle="tab">English</a>
+    </li>
+    <li>
+        <a role="tab" aria-expanded="false" href="#CHN" data-toggle="tab">Chinese</a>
+    </li>
+</ul>
+<div class="container">
+    <div class="blog-tab">
+        <div role="tabpanel">
+            <div class="tab-content" style="padding:inherit;">
+                <div class="tab-pane active" id="ENG" role="tabpanel">
+                    <div class="col-md-12">
+                        <div class="vc-preview-content-container">
+                            <div class="rendered-markdown">
+                                <h1 id="welcome-to-beautyteam-api-">Welcome to BeautyTeam API!</h1>
+                                <h2 id="what-is-beautyteam-">What is BeautyTeam?</h2>
+                                <h3 id="background">Background</h3>
+                                <p>For more than thousands years, teamwork has always been an important work form. 3 to 30 people collaborate together to figure out a solution. By now, teamwork happens from kids in kindergarten to big enterprise with thousands of workers. Colloge students have to finish some work in teams. How can we take advantage at the new oppotunities and give all teams a reliable solution? BeautyTeam should not be a software, but a collaborate style. </p>
+                                <h3 id="from-college-to-corporation">From College to Corporation</h3>
+                                <p>We have experiences in college life, also touched common work life style. Lift style is busy and mixed.    </p>
+                                <h2 id="competitors">Competitors</h2>
+                                <h3 id="teambition">Teambition</h3>
+                                <p><a href="https://www.teambition.com" target="_blank" data-original-href="https://www.teambition.com">WebSite</a><span title="External link" class="icon icon-wiki-external-link"></span><br>Teambition is a greate team solution developed in China and has grown for years. Teambition is very successful in China, but somehow it doesn't fit some personal features.</p>
+                                <h3 id="teamwork">Teamwork</h3>
+                                <p><a href="https://www.teamwork.com" target="_blank" data-original-href="https://www.teamwork.com">WebSite</a><span title="External link" class="icon icon-wiki-external-link"></span><br>Teamwork is also a greate team solution developed in US, which is very successful. But however...</p>
+                                <h3 id="qq">QQ</h3>
+                                <p>QQ is commonly used to convey messages.</p>
+                                <h3 id="dingtalk">DingTalk</h3>
+                                <p>Ding talk is simply developed by ali.</p>
+                                <h2 id="core">Core</h2>
+                                <p>Waiiting to be updated...  </p>
+                                <h2 id="server-class-design-map">Server Class Design Map</h2>
+                                <p><img alt="ClassDesign" src="http://www.soldo.com.cn/Public/UploadImage/mindmap.png"></p>
+                                <h2 id="api">API</h2>
+                                <h3 id="server-address">Server Address</h3>
+                                <p>
+                                    Our BeautyTeam project server works on
+                                    <a href="http://www.obisoft.com.cn/api/" target="_blank" data-original-href="http://www.obisoft.com.cn/api/">www.obisoft.com.cn/api/</a><span title="External link" class="icon icon-wiki-external-link"></span><br>Server current ip address is <code>123.56.238.114</code>, currently work by <code>IIS 8.5</code>, in <code>Windows Server 2012 R2</code><br>BeautyTeam project uses <code>URL Encode</code> to serialize object to post to the server.<br>BeautyTeam project uses <code>HTTP</code> to transfer data.<br>BeautyTeam project uses <code>JSON</code> to serialize or deserialize object.
+                                </p>
+                                <h3 id="return-status-code">Return Status Code</h3>
+                                <p>
+                                    We are just using HTTP status code as our api return status code.
+                                    For example, 404 means what you want to search can not be found.<br>500 means the server crashed.
+                                    200 means what you meant was done successfully.<br><strong>But not all http status code means it's meaning in http status code!</strong><br><strong>All api may return these code! These common code may not repeat again in API Document</strong>!<br>200: Success<br>500: Internal Server Error,<br>406: Not Accept Value
+                                </p>
+                                <h3 id="basic-class">Basic class</h3>
+                                <p>Commonly used class are designed in <a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels&amp;_a=contents">Here</a>.<br><code>Server Reply</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">View Details</a><br>Server Reply is a common server reply class. All replied object inherits this class.<br> <code>ObiValue</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">View Details</a><br>ObiValue is a simple class which returns a value which may be a basic type or a struct.<br><code>ObiObject</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">View Details</a><br>ObiObject is a simple class which returns a object which may be an object.<br><code>INoticeable</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FEventAndTask.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FEventAndTask.cs&amp;_a=contents">View Details</a><br>INoticeable is a simple interface which means that this object can be noticed in the user's notice list.<br><code>Event</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FEventAndTask.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FEventAndTask.cs&amp;_a=contents">View Details</a><br>Event implements INoticeable, which is a simple class represents a event. Event have it's own happen time and end time, like a class or a meeting.<br><code>Task</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FEventAndTask.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FEventAndTask.cs&amp;_a=contents">View Details</a><br>Task implements INoticeable, which is a simple class represents a Task. Task only have a deadline not like event.<br><code>Group</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FGroup.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FGroup.cs&amp;_a=contents">View Details</a><br>Group is an abstract class, which means some thing that user can join and create.  </p>
+                                <p><code>PersonalTask</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FPersonal.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FPersonal.cs&amp;_a=contents">View Details</a><br>PersonalTask extends Task, which is a task that has no relationship with any group.<br><code>PersonalEvent</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FPersonal.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FPersonal.cs&amp;_a=contents">View Details</a><br>PersonalEvent extends Event, which is an event that has no relationship with any group.  </p>
+                                <p><code>RadioStation</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FRadioStation.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FRadioStation.cs&amp;_a=contents">View Details</a><br>RadioStation extends Group, which is a group of people that do not work together but have the same tasks and events, like a math class, or an activity joiners.<br><code>RadioTask</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FRadioStation.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FRadioStation.cs&amp;_a=contents">View Details</a><br>RadioTask extends Task,  which is a task from a radiostation, like math homework.<br><code>RadioEvent</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FRadioStation.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FRadioStation.cs&amp;_a=contents">View Details</a><br>RadioEvent extends Event, which is an event from a radiostation, like math class in Friday afternoon.  </p>
+                                <p><code>Team</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FTeam.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FTeam.cs&amp;_a=contents">View Details</a><br>Team extends group, which is a group of people working together and focusing on many projects. For example, if our team name is Obisoft, our team projects contains VSpaceX and BeautyTeam. One team can focusing on lots of projects together.<br><code>Project</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FTeam.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FTeam.cs&amp;_a=contents">View Details</a><br>Project must be in a team. <strong>Project does NOT has the definition of relation people, because team has team member, and tasks in projects have relation people already. </strong><br><code>GroupEvent</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FTeam.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FTeam.cs&amp;_a=contents">View Details</a><br>GroupEvent extends Event, which is an event that belongs to a team and have some relation people to do the group event together, like BeautyTeam developing team will have a meeting this Saturday.<br><code>GroupTask</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FTeam.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FTeam.cs&amp;_a=contents">View Details</a><br>GroupTask extends Task, which is a task that belongs to a team and have some relation people to do the task together, like BeuatyTeam developing team needs to finish the api docs before Saturday.<br><strong>The difference between task and event is that task only has deadline while event has start time and end time</strong>  </p>
+                                <h3 id="hello-world-api">Hello World API</h3>
+                                <p>Hello world API is a simple api which returns a string. If you can get this string, your config and connection to server is correct, and server is normally running.<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">Source Code of this API</a>    </p>
+<pre><code>Address: /api
+Method: HTTP GET
+Argument:null  
+Return Value: ObiObject&lt;string&gt;  
+Authorize: None  
+</code></pre><h3 id="logging-api">Logging API</h3>
+                                <p>Logging API is a api to log client error when unhandled error happed in client like Android and iOS. If an unhandled error happened, use this API to upload the error infor for further analysition.<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FEventLog.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FEventLog.cs&amp;_a=contents">Definition of EventLog</a>  </p>
+<pre><code>Address: /api/Log  
+Method: HTTP POST   
+Post Content:EventLog
+Return Value: ServerReply  
+Authorize: None
+Possible Return Code Meaning: 200 = Success  
+</code></pre><h3 id="log-in-api">Log in API</h3>
+                                <p>Log in API will change the current user state from unauthorized to authorized. User state can be hold for 20 minutes if nothing api called. Please use <code>cookie</code> to hold client user state. User state may be dropped down and please log in again after 20 minutes.<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAccount%2FAccountViewModels.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAccount%2FAccountViewModels.cs&amp;_a=contents">Definition of LoginViewModel</a>  </p>
+<pre><code>Address: /api/Login  
+Method: HTTP POST   
+Post Content:LoginViewModel
+Return Value: ObiObject&lt;string&gt;  
+Authorize: None
+Possible Return Code Meaning: 200 = Success,
+                              403 = The account is locked out or log in failure,
+                              302 = The account Requires Verification
+</code></pre><h3 id="forgot-password-api">Forgot Password API</h3>
+                                <p>This API used to deal the situation when user forget his password.<br><strong>The Post Value is user's email. Server will send an email or send an sms message to the user's phone.</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">Definition of ServerReply</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAccount%2FAccountViewModels.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAccount%2FAccountViewModels.cs&amp;_a=contents">Definition of ForgotPasswordViewModel</a></p>
+<pre><code>Address: /api/ForgotPassword
+Method: HTTP POST
+Post Content: ForgotPasswordViewModel    
+Return Value: ServerReply
+Authorize: None
+Possible Return Code Meaning: 200 = Success,
+                              404 = Not Found User  
+</code></pre><h3 id="change-password-api">Change Password API</h3>
+                                <p>
+                                    This API is for user to change his password. The method is post. It need user's current password, new password and confirm password.The Post value class in server is ChangePasswordViewModel.<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">Definition of ServerReply</a>
+                                    <a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FManage%2FManageViewModels.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FManage%2FManageViewModels.cs&amp;_a=contents">Definition of ChangePasswordViewModel</a>
+                                </p>
+<pre><code>Address: /api/ChangePassword
+Method: HTTP POST
+Post Content: ChangePasswordViewModel    
+Return Value: ServerReply
+Authorize: Logged in
+Possible Return Code Meaning: 200 = Success,
+                              403 = Wrong Password
+</code></pre><h3 id="current-user-information">Current User Information</h3>
+                                <p>Currentuser information will get information of currently logged in user, which includes many properties of an obisoft user. some attributes may not be implemented by Android or iOS and you can just skip them or use dynamic type.<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FObisoftUser.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FObisoftUser.cs&amp;_a=contents">Definition of ObisoftUser</a>  </p>
+<pre><code>Address: /api/currentuser  
+Method: HTTP GET
+Argument:null   
+Return Value: ObiObject&lt;ObisoftUser&gt;  
+Authorize: Logged in
+Possible Return Code Meaning: 200 = Success
+</code></pre><h3 id="search-another-user-info">Search Another User Info</h3>
+                                <p>This API is for client to get a user's info by his id. The info is not include user's privacy.<br><strong> id is user id </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FObisoftUser.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FObisoftUser.cs&amp;_a=contents">Definition of AnotherUser</a>  </p>
+<pre><code>Address: /api/AnotherUser/5
+Method: HTTP GET
+Argument:id(Omitted)
+Return Value: ObiObject&lt;AnotherUser&gt;
+Authorize: None
+Possible Return Code Meaning: 200 = Success
+</code></pre><h3 id="register-api">Register API</h3>
+                                <p>Register API will register a new account. If the user registered successfully, the server will login automaticaly. The client don't need to log in again.<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">Definition of ServerReply</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAccount%2FAccountViewModels.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAccount%2FAccountViewModels.cs&amp;_a=contents">Definition of RegisterViewModel</a>  </p>
+<pre><code>Address: /api/Register  
+Method: HTTP POST
+Post Content: RegisterViewModel
+Return Value: ServerReply  
+Authorize: None
+Possible Return Code Meaning: 200 = Success
+                              409 = Register failed. Maybe some user with the same Email has already registered.
+</code></pre><h3 id="login-status-api">Login status API</h3>
+                                <p>
+                                    loginstatus API will return user's login status.
+                                    <a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">Definition of ObiValue</a>
+                                </p>
+<pre><code>Address: /api/loginstatus  
+Method: HTTP GET
+Argument:null
+Return Value: ObiValue&lt;bool&gt;
+Authorize: None
+Possible Return Code Meaning: 200 = Success  
+</code></pre><h3 id="logoff-api">Logoff API</h3>
+                                <p> logoff API will make the user log off. The cookie will be cleared.<br> <a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">Source Code of this API</a><br> <a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">Definition of ServerReply</a>  </p>
+<pre><code> Address: /api/logoff
+ Method: HTTP POST
+Post Content: null     
+ Return Value: ServerReply  
+ Authorize: Logged in
+Possible Return Code Meaning: 200 = Success  
+</code></pre><h3 id="latest-version-api">Latest version API</h3>
+                                <p> This API will return the latest software current version.<br> <strong>it has two parameters. The method is get, So the parameter need to be append to the url. like this <code>https://www.obisoft.com.cn/api/latestversion?Platform=android&amp;CurrentVersion=0.0.1</code>.</strong><br> <strong>When the client call this kind api, It's important to do url encode. Because some special Symbol will make trouble. Also the data from server is be encoded.   So the client need to decode the data.</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FVersionCheckModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FVersionCheckModel.cs&amp;_a=contents">Definition of VersionChechResult</a>  </p>
+<pre><code>Address: /api/latestversion
+Method: HTTP GET
+Argument: VersionCheckModel
+Return Value: VersionChechResult
+Authorize: None
+Possible Return Code Meaning: 200 = Success
+                              404 = Not found your platform
+</code></pre><h3 id="find-user-id-through-user-s-email">Find User Id through User's Email</h3>
+                                <p>This API can get user's Id through his email.<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">Source Code of this API</a>  </p>
+<pre><code>Address: /api/FindUserByEmail  
+Method: HTTP GET
+Argument: Email
+Return Value: ObiObject&lt;string&gt;  
+Authorize: None
+Possible Return Code Meaning: 200 = Success
+</code></pre><h3 id="set-user-s-basic-info">Set User's Basic Info</h3>
+                                <p>This API can set a user's basic info.<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">Source code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FManage%2FBasicInfoViewModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FManage%2FBasicInfoViewModel.cs&amp;_a=contents">Definition of BasicInfoViewModel</a>  </p>
+<pre><code>Address: /api/SetBasicInfo  
+Method: HTTP POST  
+Argument: null
+Post Content: BasicInfoViewModel  
+Authorize: Logged in  
+Return Value: ServerReply  
+Possible Return Code Meaning: 200 = Success      
+</code></pre><h3 id="upload-a-file-like-a-image-to-our-obisoft-oss-service">Upload a file like a image to our Obisoft OSS Service</h3>
+                                <p>This API will upload a file to our server, and our server will upload the image to our oss service, then return the address of your file.<br><strong>Caution: DO NOT Upload .EXE file! File should not larger than 4MB!</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">Source code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FUploadImageViewModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FUploadImageViewModel.cs&amp;_a=contents">Definition of UploadImageViewModel</a>  </p>
+<pre><code>Address: /api/UploadImage  
+Method: HTTP POST  
+Argument: null
+Post Content: UploadImageViewModel  
+Authorize: Logged in  
+Return Value: ObiObject&lt;string&gt;  
+Possible Return Code Meaning: 200 = Success      
+</code></pre><h3 id="school-list-api">School List API</h3>
+                                <p>This API will get all the school list beauty team support.<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FSchoolApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FSchoolApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">Definition of ObiList&lt;T&gt;</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FServices%2FSchoolService.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FServices%2FSchoolService.cs&amp;_a=contents">Definition of School</a>  </p>
+<pre><code>Address: /api/SchoolList
+Method: HTTP GET
+Argument:null
+Return Value: ObiList&lt;School&gt;
+Authorize: None
+Possible Return Code Meaning: 200 = Success
+</code></pre><h3 id="school-detail-api">School Detail API</h3>
+                                <p>This API will return a school's detail.<br> <strong>The method is get, it has one parameter. The parameter is school's Id. the request url like this <code>/api/SchoolDetail/1</code>.</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FSchoolApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FSchoolApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FServices%2FSchoolService.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FServices%2FSchoolService.cs&amp;_a=contents">Definition of School</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">Definition of ObiObject&lt;T&gt;</a>  </p>
+<pre><code>Address: /api/SchoolDetail/5
+Method: HTTP GET
+Argument:id(omitted)
+Return Value: ObiObject&lt;School&gt;
+Authorize: None
+Possible Return Code Meaning: 200 = Success
+</code></pre><h3 id="bind-school-api">Bind School API</h3>
+                                <p>This API can bind a school and a user.<br><strong>The method is post, but the post value is empty. The post url need append a parameter. The parameter is school Id.</strong><br><strong>The request url like this <code>/api/BindSchool/1</code></strong><br><strong> id means school id </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FSchoolApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FSchoolApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">Definition of ServerReply</a>  </p>
+<pre><code>Address：/api/BindSchool/5
+Method: HTTP POST
+Argument:id(omitted)
+Post Content: null
+Return Value: ServerReply
+Authorize: Logged in
+Possible Return Code Meaning: 200 = Success
+                              404 = Can not find target school  
+</code></pre><h3 id="set-school-account-api">Set School Account API</h3>
+                                <p>This API is used to set school account. It need student's Educational account and password.<br><strong>The method is post.</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FSchoolApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FSchoolApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">Definition of ServerReply</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FSetSchoolAccount.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FSetSchoolAccount.cs&amp;_a=contents">Definition of SetSchoolAccount</a>  </p>
+<pre><code>Address: /api/SetSchoolAccount
+Method: HTTP POST
+Post Content: SetSchoolAccount
+Return Value: ServerReply
+Authorize: Logged in And Already Binded School
+Possible Return Code Meaning: 200 = Success,
+                              400 = Wrong Password,  
+                              403 = Not binded school yet, can not set school account.   
+</code></pre><h3 id="get-user-s-team-statistic-info">Get User's Team Statistic Info</h3>
+                                <p>This api will get some interesting info about team.<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FTeamStatisticInfo.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FTeamStatisticInfo.cs&amp;_a=contents">Definition of TeamStatisticInfo</a>  </p>
+<pre><code>Address：    /api/StatisticInfo
+method：    HTTP POST
+Argument：null
+return value：ObiObject&lt;TeamStatisticInfo&gt;
+Authorize: Logged in And Already Binded School
+Possible Return Code Meaning: 200 = Success,
+</code></pre><h3 id="create-team-api">Create Team API</h3>
+                                <p>This API is used to create a team. It need team name and team description. The post value class in server is CreateTeamModel.<br><strong>The return value is the new team id.</strong><br><strong>The method is post.</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">Definition of ServerReply</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FCreateTeamModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FCreateTeamModel.cs&amp;_a=contents">Definition of CreateTeamModel</a>  </p>
+<pre><code>Address: /api/CreateTeam
+Method: HTTP POST
+Post Content: CreateTeamModel
+Return Value: ObiValue&lt;int&gt;
+Authorize: Logged in 
+Possible Return Code Meaning: 200 = Success,
+</code></pre><h3 id="create-radio-station">Create Radio Station</h3>
+                                <p>
+                                    This API is used to create Radio Station. The method is post. It need RadioStationName and RadioStationDescription.<br>The Post value class in server is CreateRadioStationModel. The return class is ServerReply.
+                                    <strong>The return value is RadioStation id.</strong>
+                                    <strong>Caution: The RadioStation and the Team are stored in the same chart in the Database, and team and radiostation are sharing the same GroupId!</strong>
+                                    <a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FCreateRadioStationModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FCreateRadioStationModel.cs&amp;_a=contents">Definition of CreateRadioStationModel</a>
+                                </p>
+<pre><code>Address: /api/CreateRadioStation
+Method: HTTP POST
+Post Content: CreateRadioStationModel 
+Return Value: ObiValue&lt;int&gt;
+Authorize: Logged in
+Possible Return Code Meaning: 200 = Success                                   
+</code></pre><h3 id="delete-group">Delete Group</h3>
+                                <p>This API will delete the group. This API is the same as bind school api.<br>The post content is null. Append the group Id to the url.<br><strong> id means group id</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">Source Code of this API</a>  </p>
+<pre><code>Address: /api/DeleteGroup/5
+Method: HTTP POST
+Argument: id(omitted)
+Post Content: null
+Return Value: ServerReply 
+Authorize: Logged in and is the admin or the owner of the group
+Possible Return Code Meaning: 200 = Success
+                              404 = Not found group
+                              403 = Not Authorize(Only group admin or owner can delete group)
+</code></pre><h3 id="join-group">Join Group</h3>
+                                <p>This API is for user to join a team. The API call method like bind school API.<br><strong> id means group id</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">Source Code of this API</a>  </p>
+<pre><code>Address: /api/JoinGroup/5
+Method: HTTP POST
+Argument: id(omitted)
+Post Content: null
+Return Value: ServerReply
+Authorize: logged in and not have joined the group
+Possible Return Code Meaning: 200 = Success,
+                              404 = Not exist group,
+                              409 = Conflict(This user already in this group)
+</code></pre><h3 id="leave-group">Leave Group</h3>
+                                <p>This API can make a user leave his group. The API call method like bind school API.<br><strong> If the group owner leave the group, the group and another infomation about this group will be delete. The Client should warn the user, when this situation happened. </strong><br><strong> id is group id </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">Source Code of this API</a>  </p>
+<pre><code>Address: /api/LeaveGroup/5
+Method: HTTP POST
+Argument: id(Omitted)
+Post Content: null
+Return Value: ServerReply
+Authorize: logged in and joined the group
+Possible Return Code Meaning: 200 = Success,
+                              404 = Not exist group,
+                              409 = Conflict(The user is not in this group)
+</code></pre><h3 id="list-user-s-groups-joined-or-created">List User's Groups Joined or Created</h3>
+                                <p>This API is return all the group the user joined.<br><strong> don't need any argument </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FGU_RelationR.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FGU_RelationR.cs&amp;_a=contents">Definition of GU_RelationR</a>  </p>
+<pre><code>Address: /api/Groupsijoined
+Method: HTTP GET
+Argument: null
+Return Value: ObiList&lt;GU_RelationR&gt;
+Authorize: logged in
+Possible Return Code Meaning: 200 = Success  
+</code></pre><h3 id="make-a-user-to-be-admin-in-a-group">Make a user to be Admin in a group</h3>
+                                <p>This API is to make a user to be a Admin in group. It need two kinds of parameter. One is to append to an url, another is post content.<br><strong>id is group id </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FSetGroupAdminModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FSetGroupAdminModel.cs&amp;_a=contents">Definition of SetGroupAdminModel</a>  </p>
+<pre><code>Address: /api/SetAdmin/5
+Method: HTTP POST
+Argument: id(omitted)
+Post Content: SetGroupAdminModel
+Return Value: ServerReply
+Authorize: logged in and be the owner of the group and target user have joined the group and is not the owner or the admin of the group
+Possible Return Code Meaning: 200 = Success,
+                              404 = Not Found this group
+                              403 = Forbidden(The target user is not the group owner)
+                              409 = Conflict(The target user is already owner or admin)
+</code></pre><h3 id="get-group-details">Get Group Details</h3>
+                                <p>This API is to get a group details.<br><strong> id is the group id </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">Source code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FGroup.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FGroup.cs&amp;_a=contents">Definition of Group</a>      </p>
+<pre><code>Address: /api/GroupDetails/5
+Method: HTTP GET
+Argument: id(Omitted)
+Return Value: ObiObject&lt;Group&gt;  
+Authorize: None
+Possible Return Code Meaning: 200 = Success
+</code></pre><h3 id="get-a-team-s-projects">Get A team's projects</h3>
+                                <p>
+                                    This API can get a team's projects.<br><strong> id is the team id </strong>
+                                    <a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">Source code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FTeam.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FTeam.cs&amp;_a=contents">Definition of Project</a>
+                                </p>
+<pre><code>Address: /api/TeamProjects/5
+Method: HTTP GET  
+Argument: id(Omitted)
+Return Value: ObiList&lt;Project&gt;  
+Authorize: None  
+Possible Return Code Meaning: 200 = Success  
+                              404 = Not found Team    
+</code></pre><h3 id="bootuser">BootUser</h3>
+                                <p>This API is make someone to leave this group.<br><strong> id is group id </strong>  </p>
+                                <p><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FBootUserModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FBootUserModel.cs&amp;_a=contents">Definition of BootUserModel</a>  </p>
+<pre><code>Address: /api/BootUser/5
+Method: HTTP POST
+Argument: id(Omitted)
+Post Content: null
+Return Value: ServerReply
+Authorize: logged in and be the owner or the admin of the group and the target user is not the admin if you are not the owner.
+Possible Return Code Meaning: 200 = Success,
+                              404 = Not Found the group
+                              403 = The current user is not a group owner or admin
+                              409 = The current user is not owner but want to kick an admin
+</code></pre><h3 id="search-a-group">Search a Group</h3>
+                                <p>This API can search a group by the keyword. If you set the bool 'isTeamNotRadioStation', result will only contains teams. Otherwise, only radio stations.<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">Source Code of this API</a>   </p>
+<pre><code>Address: /api/SearchGroup
+Method: HTTP GET
+Argument: string keyword, bool isTeamNotRadioStation
+Post Content: null
+Return Value: List&lt;Group&gt;
+Authorize: 
+Possible Return Code Meaning: 200 = Success,
+</code></pre><h3 id="create-project">Create Project</h3>
+                                <p>This API is to make user to create project in the group. The call method like SetAdmin API.<br><strong> id is team (group) id </strong><br><strong> The return value is the new project id </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FCreateProjectModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FCreateProjectModel.cs&amp;_a=contents">Definition of CreateProjectModel</a>  </p>
+<pre><code>Address: /api/CreateProject/5
+Method: HTTP POST
+Argument: id(Omitted)
+Post Content: CreateProjectModel
+Return Value: ObiValue&lt;int&gt;
+Authorize: logged in and is the admin or the owner of the group
+Possible Return Code Meaning: 200 = Success,
+                              404 = Not exist group
+                              403 = The current user is not group owner or admin
+</code></pre><h3 id="delete-project">Delete Project</h3>
+                                <p>This API is to delete a project in a group.<br><strong> id is project id </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">Source Code of this API</a>  </p>
+<pre><code>Address: /api/DeleteProject/5
+Method: HTTP POST
+Argument: id(Omitted)
+Post Content: null
+Return Value: ServerReply
+Authorize: logged in and be an owner or an admin of current team
+Possible Return Code Meaning: 200 = Success,
+                              404 = Not Found Project,
+                              403 = Forbidden Result(Not Authorized)
+</code></pre><h3 id="create-personal-task">Create Personal Task</h3>
+                                <p>This API is for user to create a new task.<br><strong>In CreatePersonalTaskModel, NoticeBefore is not required. If user not give, server will save one day defautly. </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FCreatePersonalTaskModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FCreatePersonalTaskModel.cs&amp;_a=contents">Definition of CreatePersonalTaskModel</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">Definition of ObiValue&lt;T&gt;</a>  </p>
+<pre><code>Address: /api/CreatePersonalTask
+Method: HTTP POST
+Argument: null
+Post Content: CreatePersonalTaskModel
+Return Value: ObiValue&lt;int&gt;
+Authorize: logged in
+Possible Return Code Meaning: 200 = Success
+</code></pre><h3 id="create-personal-event">Create Personal Event</h3>
+                                <p>This API is for user to create a new Event.<br><strong> In CreatePersonalEventModel, NoticeBefore is not required, If user not give, Server will save 25 minutes defaultly.</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FCreatePersonalEventModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FCreatePersonalEventModel.cs&amp;_a=contents">Definition of CreatePersonalEventModel</a>  </p>
+<pre><code>Address: /api/CreatePersonalEvent
+Method: HTTP POST
+Argument: null
+Post Content: CreatePersonalEventModel
+Return Value: ObiValue&lt;int&gt;
+AUthorize: logged in
+Possible Return Code Meaning: 200 = Success
+</code></pre><h3 id="delete-personal-task">Delete Personal Task</h3>
+                                <p>This API will delete a user's task. Its call method like Join Group API.<br><strong> id is task id </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents">Source Code of this API</a>  </p>
+<pre><code>Address: /api/DeletePersonalTask/5
+Method: HTTP POST
+Argument: id(omitted)
+Post Content: null
+Return Value: ServerReply
+Authorize: logged in
+Possible Return Code Meaning: 200 = Success,
+                              404 = Not Found Task
+                              403 = Forbidden(The task's user id is not the current user's id)
+</code></pre><h3 id="delete-personal-event">Delete Personal Event</h3>
+                                <p>This API can delete a user's event. Its call method like join group API.<br><strong> id is event id </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents">Source Code of this API</a>  </p>
+<pre><code>Address: /api/DeletePersonalEvent/5
+Method: HTTP POST  
+Argument: id(omitted)
+Post Content: null
+Return Value: ServerReply  
+Authorize: logged in
+Possible Return Code Meaning: 200 = Success,
+                              404 = Not Found this event
+                              403 = Forbidden(The current user is not the event's user)
+</code></pre><h3 id="personal-task-details">Personal Task Details</h3>
+                                <p>This API is to get a task details. The method is get, so the argument should append to the url.<br><strong> id is task's id </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FPersonal.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FPersonal.cs&amp;_a=contents">Definition of PersonalTask</a>  </p>
+<pre><code>Address: /api/PersonalTaskDetails/5
+Method: HTTP GET
+Argument: id(Omitted)
+Return Value: ObiObject&lt;PersonalTask&gt;(If Success)
+Authorize: logged in
+Possible Return Code Meaning: 200 = Success,
+                              404 = Not Found this task,
+                              403 = Forbidden(The task' owner is not the current user)
+</code></pre><h3 id="personal-event-details">Personal Event Details</h3>
+                                <p>This APi is to get a user's event. Like the Get personal task details API.<br><strong> id is event's id </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FPersonal.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FPersonal.cs&amp;_a=contents">Definition of PersonalEvent</a>  </p>
+<pre><code>Address: /api/PersonalEventDetails/5
+Method: HTTP GET
+Argument: id(Omitted)
+Return Value: ObiObject&lt;PersonalEvent&gt;(If Success)
+Authorize: logged in 
+Possible Return Code Meaning: 200 = Success,
+                              404 = Not Found This Event
+                              403 = Forbiddent(the event's owner is not the current user)  
+</code></pre><h3 id="get-all-user-s-notice">Get All User's Notice</h3>
+                                <p>This API Can get All user notice in time order. The time order is calulated by the time when task and event created gived.  </p>
+                                <p><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents">Source Code of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">Definition of ObiList</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FEventAndTask.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FEventAndTask.cs&amp;_a=contents">Definition of INoticeable</a>  </p>
+<pre><code>Address: /api/AllNoticeForMe 
+Method: HTTP GET
+Argument: null
+Return Value: ObiList&lt;INoticeable&gt;
+Authorize: logged in
+Possible Return Code Meaning: 200 = Success  
+</code></pre><h3 id="get-user-s-notice">Get User's Notice</h3>
+                                <p>This API can get a user's Notice. The Argument <code>amount</code> means the number of notice. The order is depend on the notice time. If not give amount, server will default set to 10.  </p>
+                                <p><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents">Source Code of this API</a>  </p>
+<pre><code>Address: /api/AllNoticeForMe  
+Method: HTTP GET
+Argument: Amount
+Return Value: ObiList&lt;INoticeable&gt;  
+Authorize: logged in 
+Possible Return Code Meaning: 200 = Success   
+</code></pre><h3 id="get-user-s-privacy-state">Get User's Privacy State</h3>
+                                <p>This API will get a user's Privacy State.<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPrivacyApi.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPrivacyApi.cs&amp;_a=contents">Source Code Of this API</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAccount%2FPrivacyStateViewModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAccount%2FPrivacyStateViewModel.cs&amp;_a=contents">Definition of PrivacyStateViewModel</a>  </p>
+<pre><code>Address: /api/PrivacyState  
+Method: HTTP GET
+Argument: null  
+Return Value: ObiObject&lt;PrivacyStateViewModel&gt;  
+Authorize: logged in
+Possible Return Code Meaning: 200 = Success
+</code></pre><h3 id="set-user-s-privacy-state">Set User's Privacy State</h3>
+                                <p>This API can set a user's privacy state.<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPrivacyApi.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPrivacyApi.cs&amp;_a=contents">Source Code Of this API</a>  </p>
+<pre><code>Address: /api/SetPrivacyState
+Method: HTTP POST
+Argument: null
+Post Content:  PrivacyStateViewModel
+Return Value: ServerReply
+Authorize: logged in
+Possible Return Code Meaning: 200 = Success
+</code></pre><p><strong>Update this README.md file, God Yu!</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="CHN" role="tabpanel">
+                    <div class="col-md-12" ">
+                        <div class="vc-preview-content-container">
+                            <div class="rendered-markdown">
+                                <h1 id="-beautyteam-api-">欢迎来到BeautyTeam API文档!</h1>
+                                <h2 id="-beautyteam-">什么是BeautyTeam?</h2>
+                                <h3 id="-">背景</h3>
+                                <p>
+                                    从历史来看，团队协作一直是极其重要的工作形式。 3到30人的团队一起关注一个重点，给出一个解决方案。到现在，无论是幼儿园的小同学一起探讨，到拥有几千名员工的大型企业都离不开团队协作。另外，尤其对于大学生而言，更多的任务是必须由团队才能完成的。
+                                    我们如何利用团队协作的机遇，来给全世界的团队一个可靠的解决方案呢？BeautyTeam不是一种软件服务，而是一种协作方式。
+                                </p>
+                                <h3 id="-">从大学到企业</h3>
+                                <p>从目前来看，我们只有大学的经历，也了解了基本的工作方式。而这些工作、生活方式又是复杂混合的。</p>
+                                <h2 id="-">竞争对手</h2>
+                                <h3 id="teambition">Teambition</h3>
+                                <p>
+                                    <a href="https://www.teambition.com" target="_blank" data-original-href="https://www.teambition.com">网站</a><span title="External link" class="icon icon-wiki-external-link"></span>
+                                    Teambition 是一个中国团队打造的强大的解决方案。在最近几年内，Teambition非常成功，但是，它在很多特性上做得并不是完美。
+                                </p>
+                                <h3 id="teamwork">Teamwork</h3>
+                                <p><a href="https://www.teamwork.com" target="_blank" data-original-href="https://www.teamwork.com">WebSite</a><span title="External link" class="icon icon-wiki-external-link"></span><br>Teamwork是由国外团队打造的解决方案。它也很棒，但是……</p>
+                                <h3 id="qq">QQ</h3>
+                                <p>QQ目前广泛应用于即时通信和消息传输。</p>
+                                <h3 id="dingtalk">DingTalk</h3>
+                                <p>钉钉是一款由阿里开发的团队协作工具</p>
+                                <h2 id="core">Core</h2>
+                                <p><strong>等待更新</strong></p>
+                                <h2 id="-">基本类关系</h2>
+                                <p><img alt="ClassDesign" src="http://www.soldo.com.cn/Public/UploadImage/mindmap.png"></p>
+                                <h2 id="api">API</h2>
+                                <h3 id="-">服务器地址</h3>
+                                <p>BeautyTeam项目API服务器工作在：<br><a href="http://www.obisoft.com.cn/api/" target="_blank" data-original-href="http://www.obisoft.com.cn/api/">www.obisoft.com.cn/api/</a><span title="External link" class="icon icon-wiki-external-link"></span><br>当前服务器IP地址为 <code>123.56.238.114</code>, 基于<code>IIS 8.5</code>, 在 <code>Windows Server 2012 R2</code>中工作<br>使用 <code>URL 编码</code> 来编码传入服务器的值<br>使用 <code>HTTP</code> 进行基本交互通信.<br>使用 <code>JSON</code> 进行序列化和反序列化对象.  </p>
+                                <h3 id="-">通用返回错误码</h3>
+                                <p>
+                                    返回值的错误码将直接使用HTTP状态码的含义进行表示。
+                                    比如：404代表你要查找的东西不存在。<br>500代表服务器内部错误.
+                                    200代表操作成功完成。
+                                    <strong>并不是所有返回状态码都和HTTP标准状态码具有相同演绎</strong><br><strong>所有API都可能返回下面的状态码！后面将不再指出</strong>!<br>200: 成功<br>500: 内部服务器错误,<br>406: 无法接受这个值
+                                </p>
+                                <h3 id="-">基类设计</h3>
+                                <p>基类设计在<a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels&amp;_a=contents">这里</a>.<br><code>Server Reply</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">View Details</a><br>Server Reply 是通用的服务器返回类。 所有回复的对象都继承于这个类。<br> <code>ObiValue</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">View Details</a><br>ObiValue 是一个简单的类，返回一个值，这个值是按值传递的结构体。<br><code>ObiObject</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">View Details</a><br>ObiObject 是一个简单的类，返回一个对象。<br><code>INoticeable</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FEventAndTask.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FEventAndTask.cs&amp;_a=contents">View Details</a><br>INoticeable 是一个接口，表示这个对象可以出现在用户的通知区域。<br><code>Event</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FEventAndTask.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FEventAndTask.cs&amp;_a=contents">View Details</a><br>Event 实现INoticeable。是一个类代表一个事件，事件有起始时间和终止时间。就像一场会议。<br><code>Task</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FEventAndTask.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FEventAndTask.cs&amp;_a=contents">View Details</a><br>Task 实现INoticeable, 是一个类代表一项任务，任务有死期。<br><code>Group</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FGroup.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FGroup.cs&amp;_a=contents">View Details</a><br>Group 是一个抽象类，表示用户可以创建或加入的一个团体。  </p>
+                                <p><code>PersonalTask</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FPersonal.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FPersonal.cs&amp;_a=contents">View Details</a><br>PersonalTask 继承于Task,是一种和任何团队都没关系的私人任务.<br><code>PersonalEvent</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FPersonal.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FPersonal.cs&amp;_a=contents">View Details</a><br>PersonalEvent 继承于Event,是一种和任何团队都没关系的私人事件.  </p>
+                                <p><code>RadioStation</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FRadioStation.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FRadioStation.cs&amp;_a=contents">View Details</a><br>RadioStation继承于Group, 是一种团队，里面的成员不一起工作，却拥有共享的任务和事件，就像一个数学课堂，或一些活动的参与团体。<br><code>RadioTask</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FRadioStation.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FRadioStation.cs&amp;_a=contents">View Details</a><br>RadioTask 继承于Task,  是来自信息站的一种任务，就像数学作业。<br><code>RadioEvent</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FRadioStation.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FRadioStation.cs&amp;_a=contents">View Details</a><br>RadioEvent 继承于Event, 是一种来自信息站的事件，就像周五下午要上数学课.  </p>
+                                <p>
+                                    <code>Team</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FTeam.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FTeam.cs&amp;_a=contents">View Details</a><br>Team继承于group,是一种团队，里面的成员共同面对项目并给出解决方案。就像Obisoft。团队中拥有VSpaceX和BeautyTeam这些项目。团队可以共同面对多个项目。<br><code>Project</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FTeam.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FTeam.cs&amp;_a=contents">View Details</a><br>Project一定在团队中. <strong>项目没有“项目相关人”的定义。项目中包含项目事件和项目任务，这些通知已经包含了相关人了 </strong><br><code>GroupEvent</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FTeam.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FTeam.cs&amp;_a=contents">View Details</a><br>GroupEvent 继承于 Event, 是一种事件属于一个项目，并且拥有很多相关人一起完成。就像BeautyTeam的开发团队会在周六开会。<br><code>GroupTask</code><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FTeam.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FTeam.cs&amp;_a=contents">View Details</a><br>GroupTask继承于Task，是一种任务属于特定的项目，有很多相关人共同完成，就像BeautyTeam的开发团队需要共同完成API文档的设计。
+                                    <strong>Task和Event的区别就是Task只有死期而Event是有开始时间和结束时间的</strong>
+                                </p>
+                                <h3 id="-api">测试API</h3>
+                                <p>测试API是一个简单的API，只返回一个字符串。如果你能够得到这个字符串，证明你的配置和到服务器的连接是正常的，服务器也在正常工作。<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">这个API的源代码</a>    </p>
+<pre><code>地址： /api
+调用方法： HTTP GET
+参数：null  
+返回值： ObiObject&lt;string&gt;  
+权限要求： None  
+</code></pre><h3 id="-api">日志API</h3>
+                                <p>日志API是一个API记录客户端错误，就是Android和iOS客户端产生的崩溃。如果发生了未捕获的错误，请使用这个API将错误发送到服务器进行日志记录，以便日后进行分析。<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FEventLog.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FEventLog.cs&amp;_a=contents">关于它的定义： EventLog</a>  </p>
+<pre><code>地址： /api/Log  
+调用方法： HTTP POST   
+发送的内容:EventLog
+返回值： ServerReply  
+权限要求： None
+可能的返回值及含义： 200 = Success  
+</code></pre><h3 id="-api">登录API</h3>
+                                <p>登录API会将当前用户的状态从未认证改变成已认证。如果登录后没有调用过任何API，用户状态只会保持20分钟。请使用静态的cookie来保持用户状态。用户状态随时可能会变成未登录，必须随时准备重新登录。<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAccount%2FAccountViewModels.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAccount%2FAccountViewModels.cs&amp;_a=contents">关于它的定义： LoginViewModel</a>  </p>
+<pre><code>地址： /api/Login  
+调用方法： HTTP POST   
+发送的内容:LoginViewModel
+返回值： ObiObject&lt;string&gt;  
+权限要求： None
+可能的返回值及含义： 200 = Success,
+                              403 = The account is locked out or log in failure,
+                              302 = The account Requires Verification
+</code></pre><h3 id="-api">忘记密码API</h3>
+                                <p>忘记密码API用于解决用户忘记密码的情况<br><strong>发送的值应当是用户的Email。服务器将直接给Email发送可以重置他密码的链接。不需要客户端做额外操作。</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">关于它的定义： ServerReply</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAccount%2FAccountViewModels.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAccount%2FAccountViewModels.cs&amp;_a=contents">关于它的定义： ForgotPasswordViewModel</a></p>
+<pre><code>地址： /api/ForgotPassword
+调用方法： HTTP POST
+发送的内容: ForgotPasswordViewModel    
+返回值： ServerReply
+权限要求： None
+可能的返回值及含义： 200 = Success,
+                              404 = Not Found User  
+</code></pre><h3 id="-api">修改密码API</h3>
+                                <p>
+                                    修改密码API用于修改用户的密码。需要进行POST。<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">关于它的定义： ServerReply</a>
+                                    <a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FManage%2FManageViewModels.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FManage%2FManageViewModels.cs&amp;_a=contents">关于它的定义： ChangePasswordViewModel</a>
+                                </p>
+<pre><code>地址： /api/ChangePassword
+调用方法： HTTP POST
+发送的内容: ChangePasswordViewModel    
+返回值： ServerReply
+权限要求： Logged in
+可能的返回值及含义： 200 = Success,
+                              403 = Wrong Password
+</code></pre><h3 id="-">当前用户的详细信息</h3>
+                                <p>当前用户详细信息将查询到当前已经登录的用户的详细信息，包含了用户的所有属性。部分对象在iOS和Android中可能根本无法实现，对于这些对象，请使用弱类型或直接忽略它们。<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FObisoftUser.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FObisoftUser.cs&amp;_a=contents">关于它的定义： ObisoftUser</a>  </p>
+<pre><code>地址： /api/currentuser  
+调用方法： HTTP GET
+参数：null   
+返回值： ObiObject&lt;ObisoftUser&gt;  
+权限要求： Logged in
+可能的返回值及含义： 200 = Success
+</code></pre><h3 id="-">查询其它用户的信息</h3>
+                                <p>这可以根据其他用户的ID查询到其他用户的基本信息。不涉及隐私。<br><strong> id是用户ID </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FObisoftUser.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FObisoftUser.cs&amp;_a=contents">关于它的定义： AnotherUser</a>  </p>
+<pre><code>地址： /api/AnotherUser/5
+调用方法： HTTP GET
+参数：id（ID应该在斜杠后面填写）
+返回值： ObiObject&lt;AnotherUser&gt;
+权限要求： None
+可能的返回值及含义： 200 = Success
+</code></pre><h3 id="-api">注册API</h3>
+                                <p>注册API将创建一个新账号。 如果用户成功注册，服务器会直接将其登录。不需要客户端再进行登录。<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">关于它的定义： ServerReply</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAccount%2FAccountViewModels.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAccount%2FAccountViewModels.cs&amp;_a=contents">关于它的定义： RegisterViewModel</a>  </p>
+<pre><code>地址： /api/Register  
+调用方法： HTTP POST
+发送的内容: RegisterViewModel
+返回值： ServerReply  
+权限要求： None
+可能的返回值及含义： 200 = Success
+                409 = 其它人已经用这个邮箱进行过注册了。
+</code></pre><h3 id="-api-api">检查权限API API</h3>
+                                <p>登录状态检查API。由于用户的登录状态随时可能过期，调用每一个需要登录权限的API必须使用这个API来检查用户是否已经登录。如果没有登录，应当将用户静默登录。如果无法登录，应当将用户定向回登录页面。<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">关于它的定义： ObiValue</a>  </p>
+<pre><code>地址： /api/loginstatus  
+调用方法： HTTP GET
+参数：null
+返回值： ObiValue&lt;bool&gt;
+权限要求： None
+可能的返回值及含义： 200 = Success  
+</code></pre><h3 id="-api">注销API</h3>
+                                <p> 注销API将清空客户端cookie<br> <a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">这个API的源代码</a><br> <a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">关于它的定义： ServerReply</a>  </p>
+<pre><code> 地址： /api/logoff
+ 调用方法： HTTP POST
+发送的内容: null     
+ 返回值： ServerReply  
+ 权限要求： Logged in
+可能的返回值及含义： 200 = Success  
+</code></pre><h3 id="-apiapi">检查版本更新APIAPI</h3>
+                                <p> 这个api将用于检查客户端版本。如果客户端版本不是最新版本，这个API将给出最新版本的版本号以及最新版本的特性。客户端应当将用户定向到新版本下载页面或静默下载新版本安装程序。<br> <strong>调用的URL示例： <code>https://www.obisoft.com.cn/api/latestversion?Platform=android&amp;CurrentVersion=0.0.1</code>.</strong><br> <strong>调用时请不要忘记URL编码</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FVersionCheckModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FVersionCheckModel.cs&amp;_a=contents">关于它的定义： VersionChechResult</a>  </p>
+<pre><code>地址： /api/latestversion
+调用方法： HTTP GET
+参数： VersionCheckModel
+返回值： VersionChechResult
+权限要求： None
+可能的返回值及含义： 200 = Success
+                    404 = Not found your platform
+</code></pre><h3 id="-id">根据用户的邮箱账号查找用户ID</h3>
+                                <p>更多情况下我们可能无法得到用户ID而只能得到用户邮箱。这种情况下务必将用户的邮箱更新为用户的ID。<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">这个API的源代码</a>  </p>
+<pre><code>地址： /api/FindUserByEmail  
+调用方法： HTTP GET
+参数： Email
+返回值： ObiObject&lt;string&gt;  
+权限要求： None
+可能的返回值及含义： 200 = Success
+</code></pre><h3 id="-">设置用户基本信息</h3>
+                                <p>这个API可以设置用户基本信息。包含昵称、电话、签名、头像、真实姓名等。没有传入的值不会进行更新而会保留原有值。<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FManage%2FBasicInfoViewModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FManage%2FBasicInfoViewModel.cs&amp;_a=contents">关于它的定义： BasicInfoViewModel</a>  </p>
+<pre><code>地址： /api/SetBasicInfo  
+调用方法： HTTP POST  
+参数： null
+发送的内容: BasicInfoViewModel  
+权限要求： Logged in  
+返回值： ServerReply  
+可能的返回值及含义： 200 = Success      
+</code></pre><h3 id="-">将图片上传到服务器，并得到图片地址</h3>
+                                <p>这个API将向服务器上传一张图片，服务器将会将图片转移到对象存储服务中，并返回传入图片的地址。为了避免滥用，必须登录使用。请尝试将文件file直接在请求流中传入。<br>这个API将允许将图片地址更新用户基本信息或设置团队头像等。<br><strong>不要上传非图片。客户端请首先进行检查。图片不得超过4MB</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FBasicApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FUploadImageViewModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FUploadImageViewModel.cs&amp;_a=contents">关于它的定义： UploadImageViewModel</a>  </p>
+<pre><code>地址： /api/UploadImage  
+调用方法： HTTP POST  
+参数： null
+发送的内容: UploadImageViewModel  
+权限要求： Logged in  
+返回值： ObiObject&lt;string&gt;  
+可能的返回值及含义： 200 = Success      
+</code></pre><h3 id="-api">得到可用的学校列表API</h3>
+                                <p>这个API将得到所有BeautyTeam已经支持的大学列表。客户端将利用这个API更新用户的学校信息。<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FSchoolApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FSchoolApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">关于它的定义： ObiList&lt;T&gt;</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FServices%2FSchoolService.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FServices%2FSchoolService.cs&amp;_a=contents">关于它的定义： School</a>  </p>
+<pre><code>地址： /api/SchoolList
+调用方法： HTTP GET
+参数：null
+返回值： ObiList&lt;School&gt;
+权限要求： None
+可能的返回值及含义： 200 = Success
+</code></pre><h3 id="-api">查询学校详细信息API</h3>
+                                <p>这个API将对特定学校查询学校的详细信息。目前这个API没有有意义的作用。<br> <strong>调用示例 <code>/api/SchoolDetail/1</code>.</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FSchoolApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FSchoolApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FServices%2FSchoolService.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FServices%2FSchoolService.cs&amp;_a=contents">关于它的定义： School</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">关于它的定义： ObiObject&lt;T&gt;</a>  </p>
+<pre><code>地址： /api/SchoolDetail/5
+调用方法： HTTP GET
+参数：id（ID应该在斜杠后面填写）
+返回值： ObiObject&lt;School&gt;
+权限要求： None
+可能的返回值及含义： 200 = Success
+</code></pre><h3 id="-api">绑定学校API</h3>
+                                <p>设置用户的学校.<br><strong>这个API的方法是HTTP POST，但是不需要提交任何表单。</strong><br><strong>目标URL应该像这样 <code>/api/BindSchool/1</code></strong><br><strong> ID指的是学校ID </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FSchoolApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FSchoolApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">关于它的定义： ServerReply</a>  </p>
+<pre><code>Address：/api/BindSchool/5
+调用方法： HTTP POST
+参数：id（ID应该在斜杠后面填写）
+发送的内容: null
+返回值： ServerReply
+权限要求： Logged in
+可能的返回值及含义： 200 = Success
+                              404 = Can not find target school  
+</code></pre><h3 id="-api">设置用户的学校API</h3>
+                                <p>设置用户的学校信息，需要用户的教务处账号和密码。<br><strong>方法是HTTP POST.</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FSchoolApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FSchoolApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">关于它的定义： ServerReply</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FSetSchoolAccount.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FSetSchoolAccount.cs&amp;_a=contents">关于它的定义： SetSchoolAccount</a>  </p>
+<pre><code>地址： /api/SetSchoolAccount
+调用方法： HTTP POST
+发送的内容: SetSchoolAccount
+返回值： ServerReply
+权限要求： Logged in And Already Binded School
+可能的返回值及含义： 200 = Success,
+                              400 = Wrong Password,  
+                              403 = Not binded school yet, can not set school account.   
+</code></pre><h3 id="-">得到用户的团队方面统计信息</h3>
+                                <p>这个API将得到一些有趣的用户统计信息。<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FTeamStatisticInfo.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FTeamStatisticInfo.cs&amp;_a=contents">关于它的定义: TeamStatisticInfo</a>  </p>
+<pre><code>地址：    /api/StatisticInfo
+调用方法：    HTTP POST
+参数：无
+返回值：ObiObject&lt;TeamStatisticInfo&gt;
+权限要求： 已经登录
+可能的返回值及其含义：    200 = Success    
+</code></pre><h3 id="-team-api">创建Team团队API</h3>
+                                <p>这个API将创建一个团队。<br><strong>返回值就是刚刚创建成功的学校的ID</strong><br><strong>方法是POST.</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">关于它的定义： ServerReply</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FCreateTeamModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FCreateTeamModel.cs&amp;_a=contents">关于它的定义： CreateTeamModel</a>  </p>
+<pre><code>地址： /api/CreateTeam
+调用方法： HTTP POST
+发送的内容: CreateTeamModel
+返回值： ObiValue&lt;int&gt;
+权限要求： Logged in 
+可能的返回值及含义： 200 = Success,
+</code></pre><h3 id="-radiostation-">创建RadioStation信息站</h3>
+                                <p>这个API将创建一个信息站<br> <strong>返回值就是刚刚成功创建的信息站ID</strong><br> <strong>注意:信息站和团队在数据库中共享ID。返回的ID都是GroupID。</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FCreateRadioStationModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FCreateRadioStationModel.cs&amp;_a=contents">关于它的定义： CreateRadioStationModel</a>  </p>
+<pre><code>地址： /api/CreateRadioStation
+调用方法： HTTP POST
+发送的内容: CreateRadioStationModel 
+返回值： ObiValue&lt;int&gt;
+权限要求： Logged in
+可能的返回值及含义： 200 = Success                                   
+</code></pre><h3 id="-">删除团队</h3>
+                                <p>这个API将删除一个团队。<br><strong>ID是GroupID</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">这个API的源代码</a>  </p>
+<pre><code>地址： /api/DeleteGroup/5
+调用方法： HTTP POST
+参数： id（ID应该在斜杠后面填写）
+发送的内容: null
+返回值： ServerReply 
+权限要求： 已经登录，并且就是这个团队的创始人
+可能的返回值及含义： 200 = Success
+                              404 = Not found group
+                              403 = Not Authorize(没有权限)
+</code></pre><h3 id="-">直接加入一个团队</h3>
+                                <p>加入一个团队。注意，这并不需要管理员或创始人同意。<br><strong> id就是groupid</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">这个API的源代码</a>  </p>
+<pre><code>地址： /api/JoinGroup/5
+调用方法： HTTP POST
+参数： id（ID应该在斜杠后面填写）
+发送的内容: null
+返回值： ServerReply
+权限要求： 已经登录，并且和目标团队没有任何关系
+可能的返回值及含义： 200 = Success,
+                              404 = Not exist group,
+                              409 = Conflict(用户和目标团队已经有关系)
+</code></pre><h3 id="-">离开一个团队</h3>
+                                <p>这个API将直接让当前用户离开目标团队<br><strong>团队创始人离开团队会直接删除团队！</strong><br><strong> id is group id </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">这个API的源代码</a>  </p>
+<pre><code>地址： /api/LeaveGroup/5
+调用方法： HTTP POST
+参数： id（ID应该在斜杠后面填写）
+发送的内容: null
+返回值： ServerReply
+权限要求： logged in and joined the group
+可能的返回值及含义： 200 = Success,
+                              404 = Not exist group,
+                              409 = Conflict(用户根本不在这个团队中)
+</code></pre><h3 id="-">列出当前用户加入、管理的所有团队</h3>
+                                <p>这个API将列出所有和当前用户有关系的所有团队。这些团队将出现在团队列表中。<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FRelations.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FRelations.cs&amp;_a=contents">关于它的定义： GU_RelationR</a>  </p>
+<pre><code>地址： /api/Groupsijoined
+调用方法： HTTP GET
+参数： null
+返回值： ObiList&lt;GU_RelationR&gt;
+权限要求： logged in
+可能的返回值及含义： 200 = Success  
+</code></pre><h3 id="-">将一个团队成员设置为管理员</h3>
+                                <p>这个API将会把一个团队成员设置为管理员<br><strong>ID是GroupID</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FSetGroupAdminModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FSetGroupAdminModel.cs&amp;_a=contents">关于它的定义： SetGroupAdminModel</a>  </p>
+<pre><code>地址： /api/SetAdmin/5
+调用方法： HTTP POST
+参数： id（ID应该在斜杠后面填写）
+发送的内容: SetGroupAdminModel
+返回值： ServerReply
+权限要求： 已经登录，是这个团队的创始人，并且要提拔的人在这个团队里，且不是创始人，也不是管理员。
+可能的返回值及含义： 200 = Success,
+                              404 = Not Found this group
+                              403 = Forbidden(The target user is not the group owner)
+                              409 = Conflict(The target user is already owner or admin)
+</code></pre><h3 id="-">得到一个团队的详细信息</h3>
+                                <p>这个API将用于得到一个团队的详细信息.<br><strong>ID是GroupID </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FGroup.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FGroup.cs&amp;_a=contents">关于它的定义： Group</a>      </p>
+<pre><code>地址： /api/GroupDetails/5
+调用方法： HTTP GET
+参数： id（ID应该在斜杠后面填写）
+返回值： ObiObject&lt;Group&gt;  
+权限要求： None
+可能的返回值及含义： 200 = Success
+</code></pre><h3 id="-">得到一个团队所有项目</h3>
+                                <p>这个API将得到一个团队的所有项目<br><strong> ID是TeamID，也就是GroupID </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FTeam.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FTeam.cs&amp;_a=contents">关于它的定义： Project</a>        </p>
+<pre><code>地址： /api/TeamProjects/5
+调用方法： HTTP GET  
+参数： id（ID应该在斜杠后面填写）
+返回值： ObiList&lt;Project&gt;  
+权限要求： None  
+可能的返回值及含义： 200 = Success  
+                              404 = Not found Team    
+</code></pre><h3 id="-">踢出成员</h3>
+                                <p>这个API将直接让一个人离开一个团队.<br><strong> id是团队ID </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FBootUserModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FBootUserModel.cs&amp;_a=contents">关于它的定义： BootUserModel</a>  </p>
+<pre><code>地址： /api/BootUser/5
+调用方法： HTTP POST
+参数： id（ID应该在斜杠后面填写）
+发送的内容: null
+返回值： ServerReply
+权限要求： 已经登录，并且是团队的创始人或者管理员，在当前用户不是创始人的情况下没有踢出管理员。
+可能的返回值及含义： 200 = Success,
+                              404 = 没有找到团队
+                              403 = 当前用户不是创始人或者是管理员
+                              409 = 当前用户不是创始人却企图踢出管理员
+</code></pre><h3 id="-">搜索一个团队</h3>
+                                <p>这将搜索一个Group根据Keyword。如果你将'isTeamNotRadioStation'置位，结果中将只包含团队。否则，只包含信息站。<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">这个API的源代码</a>   </p>
+<pre><code>地址： /api/SearchGroup
+调用方法： HTTP GET
+参数： string keyword, bool isTeamNotRadioStation
+发送的内容: null
+返回值： List&lt;Group&gt;
+权限要求： 
+可能的返回值及含义： 200 = Success,
+</code></pre><h3 id="-">创建一个项目</h3>
+                                <p>这将直接在团队中新建一个项目<br><strong> id是团队(group) id </strong><br><strong>返回值是刚刚成功创建的项目id</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FCreateProjectModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FCreateProjectModel.cs&amp;_a=contents">关于它的定义： CreateProjectModel</a>  </p>
+<pre><code>地址： /api/CreateProject/5
+调用方法： HTTP POST
+参数： id（ID应该在斜杠后面填写）
+发送的内容: CreateProjectModel
+返回值： ObiValue&lt;int&gt;
+权限要求： 已经登录并且是团队的管理员或创始人
+可能的返回值及含义： 200 = Success,
+                              404 = 团队不存在
+                              403 = 当前用户不是创始人或管理员
+</code></pre><h3 id="-">删除项目</h3>
+                                <p>这个API将在团队中直接删除一个项目<br><strong> id is项目id </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FTeamApiController.cs&amp;_a=contents">这个API的源代码</a>  </p>
+<pre><code>地址： /api/DeleteProject/5
+调用方法： HTTP POST
+参数： id（ID应该在斜杠后面填写）
+发送的内容: null
+返回值： ServerReply
+权限要求： 已经登录并且是项目所属团队管理员或创始人
+可能的返回值及含义： 200 = Success,
+                              404 = Not Found Project,
+                              403 = Forbidden Result(Not Authorized)
+</code></pre><h3 id="-">创建私人任务（便签功能）</h3>
+                                <p>这个API将直接为当前用户创建一个私人任务。利用这个API可以实现便签功能。<br><strong>DeadLine不是必需的，也就是用户在创建的时候不必要指定截止日期。如果用户没有指定，服务器将会设置它为五天后。同时，通知时间也不是必需的。服务器默认设置为24小时 </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FCreatePersonalTaskModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FCreatePersonalTaskModel.cs&amp;_a=contents">关于它的定义： CreatePersonalTaskModel</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">关于它的定义： ObiValue&lt;T&gt;</a>  </p>
+<pre><code>地址： /api/CreatePersonalTask
+调用方法： HTTP POST
+参数： null
+发送的内容: CreatePersonalTaskModel
+返回值： ObiValue&lt;int&gt;
+权限要求： logged in
+可能的返回值及含义： 200 = Success
+</code></pre><h3 id="-">创建私人事件（日历功能）</h3>
+                                <p>这个API将为当前用户创建私人事件。利用这个API可以实现日历功能。<br><strong>就像上一个API那样，HappenTime时间默认为5天后，EndTime默认为6天后，NoticeBefore默认为25分钟</strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FCreatePersonalEventModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FBeautyTeam%2FCreatePersonalEventModel.cs&amp;_a=contents">关于它的定义： CreatePersonalEventModel</a>  </p>
+<pre><code>地址： /api/CreatePersonalEvent
+调用方法： HTTP POST
+参数： null
+发送的内容: CreatePersonalEventModel
+返回值： ObiValue&lt;int&gt;
+权限要求： logged in
+可能的返回值及含义： 200 = Success
+</code></pre><h3 id="-">删除私人任务</h3>
+                                <p>这个API将删除用户的一个私人任务。<br><strong> id是task id </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents">这个API的源代码</a>  </p>
+<pre><code>地址： /api/DeletePersonalTask/5
+调用方法： HTTP POST
+参数： id（ID应该在斜杠后面填写）
+发送的内容: null
+返回值： ServerReply
+权限要求： logged in
+可能的返回值及含义： 200 = Success,
+                              404 = Not Found Task
+                              403 = Forbidden(The task's user id is not the current user's id)
+</code></pre><h3 id="-">删除私人事件</h3>
+                                <p>这个API将删除一个私人事件。<br><strong> id 是 event id </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents">这个API的源代码</a>  </p>
+<pre><code>地址： /api/DeletePersonalEvent/5
+调用方法： HTTP POST  
+参数： id（ID应该在斜杠后面填写）
+发送的内容: null
+返回值： ServerReply  
+权限要求： logged in
+可能的返回值及含义： 200 = Success,
+                              404 = Not Found this event
+                              403 = Forbidden(The current user is not the event's user)
+</code></pre><h3 id="-">得到私人任务详细信息</h3>
+                                <p>这个API将得到一个私人任务的详细信息。<br><strong> id 是 task id </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FPersonal.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FPersonal.cs&amp;_a=contents">关于它的定义： PersonalTask</a>  </p>
+<pre><code>地址： /api/PersonalTaskDetails/5
+调用方法： HTTP GET
+参数： id（ID应该在斜杠后面填写）
+返回值： ObiObject&lt;PersonalTask&gt;(If Success)
+权限要求： logged in
+可能的返回值及含义： 200 = Success,
+                              404 = Not Found this task,
+                              403 = Forbidden(The task' owner is not the current user)
+</code></pre><h3 id="-">得到私人事件详细信息</h3>
+                                <p>这个API将得到一个私人事件详细信息。<br><strong> id 是 event id </strong><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FPersonal.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FPersonal.cs&amp;_a=contents">关于它的定义： PersonalEvent</a>  </p>
+<pre><code>地址： /api/PersonalEventDetails/5
+调用方法： HTTP GET
+参数： id（ID应该在斜杠后面填写）
+返回值： ObiObject&lt;PersonalEvent&gt;(If Success)
+权限要求： logged in 
+可能的返回值及含义： 200 = Success,
+                              404 = Not Found This Event
+                              403 = Forbiddent(the event's owner is not the current user)  
+</code></pre><h3 id="-">得到用户所有可用的通知。</h3>
+                                <p>这将得到用户所有可用的通知。所谓可用，指的是没有发生，或者是正在发生。排序原则是NoticeDate逆序排序。<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAPI%2FBasicServer.cs&amp;_a=contents">关于它的定义： ObiList</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FEventAndTask.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FModels%2FEventAndTask.cs&amp;_a=contents">关于它的定义： INoticeable</a>  </p>
+<pre><code>地址： /api/AllNoticeForMe 
+调用方法： HTTP GET
+参数： null
+返回值： ObiList&lt;INoticeable&gt;
+权限要求： logged in
+可能的返回值及含义： 200 = Success  
+</code></pre><h3 id="-">得到前几个用户可用的通知。</h3>
+                                <p>考虑到上面的API返回值可能过大。使用这个API来进行约束。参数Amount在没有设置时为10。<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPersonalApiController.cs&amp;_a=contents">这个API的源代码</a>  </p>
+<pre><code>地址： /api/AllNoticeForMe  
+调用方法： HTTP GET
+参数： Amount
+返回值： ObiList&lt;INoticeable&gt;  
+权限要求： logged in 
+可能的返回值及含义： 200 = Success   
+</code></pre><h3 id="-">得到用户的隐私设置</h3>
+                                <p>这个API将得到用户的隐私设置<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPrivacyApi.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPrivacyApi.cs&amp;_a=contents">这个API的源代码</a><br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAccount%2FPrivacyStateViewModel.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FViewModels%2FAccount%2FPrivacyStateViewModel.cs&amp;_a=contents">关于它的定义： PrivacyStateViewModel</a>  </p>
+<pre><code>地址： /api/PrivacyState  
+调用方法： HTTP GET
+参数： null  
+返回值： ObiObject&lt;PrivacyStateViewModel&gt;  
+权限要求： logged in
+可能的返回值及含义： 200 = Success
+</code></pre><h3 id="-">设置用户的隐私状态</h3>
+                                <p>这个API将直接修改用户的隐私设置<br><a href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPrivacyApi.cs&amp;_a=contents" data-original-href="http://source.obisoft.com.cn/tfs/DefaultCollection/BeautyTeam/_versionControl#path=%24%2FBeautyTeam%2FBeautyTeamSolution%2FBeautyTeamWeb%2FControllers%2FAPI%2FPrivacyApi.cs&amp;_a=contents">这个API的源代码</a>  </p>
+<pre><code>地址： /api/SetPrivacyState
+调用方法： HTTP POST
+参数： null
+发送的内容:  PrivacyStateViewModel
+返回值： ServerReply
+权限要求： logged in
+可能的返回值及含义： 200 = Success
+</code></pre><p>
+                                    <strong>Update this README.md file, God Yu!</strong>.
+                                    <strong>昱神这次我帮你翻译了</strong>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

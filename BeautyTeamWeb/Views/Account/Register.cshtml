@@ -1,0 +1,66 @@
+﻿@model BeautyTeamWeb.Models.RegisterViewModel
+@{
+    ViewBag.Title = Resources.lang.Register;
+}
+
+@Html.Partial("../Home/_StaticSlider")
+
+<div class="container">
+    <h3>@ViewBag.Title.</h3>
+    <div class="col-md-4">
+        <form action="@Url.Action("Register","Account")" method="post" class="form-horizontal" role="form">
+            @Html.AntiForgeryToken()
+            <h4>@Resources.lang.CreateNewAccount</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="left_contact form-level">
+                <input name="Email" class="input-block" id="Email" type="text" value="" data-val="true" 
+                       placeholder="@Resources.lang.YourEmailAccount"
+                       data-val-email="The Email field is not a valid e-mail address."
+                       data-val-required="The Email field is required." />
+                <span class="form-icon fa fa-envelope-o"></span>
+            </div>
+            <span class="field-validation-valid text-danger" data-valmsg-replace="true" data-valmsg-for="Email"></span>
+
+            <div class="left_contact form-level">
+                <input name="Password" class="input-block" id="Password" type="password" 
+                       placeholder="@Resources.lang.NewPassword"
+                       data-val-required="The Password field is required."
+                       data-val-length="The Password must be at least 6 characters long."
+                       data-val="true"
+                       data-val-length-min="6"
+                       data-val-length-max="100" />
+                <span class="form-icon fa fa-unlock"></span>
+            </div>
+            <span class="field-validation-valid text-danger" data-valmsg-replace="true" data-valmsg-for="Password"></span>
+
+            <div class="left_contact form-level">
+                <input name="ConfirmPassword" class="input-block" id="ConfirmPassword" type="password" 
+                       placeholder="@Resources.lang.ConfirmPassword"
+                       data-val="true"
+                       data-val-equalto-other="*.Password"
+                       data-val-equalto="The password and confirmation password do not match.">
+                <span class="form-icon fa fa-lock"></span>
+            </div>
+            <span class="field-validation-valid text-danger" data-valmsg-replace="true" data-valmsg-for="ConfirmPassword"></span>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" class="btn btn-main featured" value="Register" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-8">
+        @Html.Partial("_WhyAccount")
+        <section>
+            <h4>Already have an account?</h4>
+            <hr />
+            <p><a href="@Url.Action("Login","Account")">Log in now</a></p>
+            <p><a href="@Url.Action("ForgotPassword","Account")">Forgot your password?</a></p>
+        </section>
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

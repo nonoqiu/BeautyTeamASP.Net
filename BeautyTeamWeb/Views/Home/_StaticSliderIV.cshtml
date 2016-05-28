@@ -1,0 +1,29 @@
+﻿<section id="slider_part">
+    <div class="carousel slide" id="carousel-example-generic" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="overlay-slide">
+                    <img src="~/wwwroot/images/slider/s3.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="hero-content text-center">
+                            <div class="hero-text wow fadeIn" data-wow-delay=".8s">
+                                <h2 style="font-size: 40px;">@ViewBag.Title</h2>
+                                <h3 class="animated2"> @Resources.Lang.tantanfind</h3>
+                                <p class="hero-buttons">
+                                    <strong>@Html.ActionLink(Resources.Lang.Publishedarticle, "Publish", "TanZone", new { PartId = Request.QueryString["PartId"] }, new { @class = "btn btn-dark" })</strong>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <strong>@Html.ActionLink(Resources.Lang.personal, "UserDetail", "TanZone", new { id = User.Identity.GetUserId() }, new { @class = "btn btn-main featured" }) </strong>
+                                    }
+                                </p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

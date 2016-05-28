@@ -1,0 +1,73 @@
+﻿@using BeautyTeamWeb.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = Resources.lang.Login;
+}
+@Html.Partial("../Home/_StaticSlider")
+<div class="container">
+    <h3>@ViewBag.Title.</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <section id="loginForm">
+                <form action="@Url.Action("Login","Account",new { ReturnUrl = ViewBag.ReturnUrl })" method="post" class="form-horizontal" role="form">
+                    @Html.AntiForgeryToken()
+                    <h4>@Resources.lang.UserSerToLog</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="left_contact form-level">
+                        <input name="Email" class="input-block" id="Email" type="text" value=""
+                               placeholder="@Resources.lang.ObisoftAccount"
+                               data-val-required="@Resources.lang.EmailAddressRequired"
+                               data-val-email="@Resources.lang.InvalidEmailAddress"
+                               data-val="true">
+                        <span class="form-icon fa fa-user"></span>
+                    </div>
+                    <span class="field-validation-valid text-danger" data-valmsg-replace="true" data-valmsg-for="Email"></span>
+
+                    <div class="left_contact form-level">
+                        <input name="Password" class="input-block" id="Password" type="password"
+                               placeholder="@Resources.lang.Password"
+                               data-val-required="The Password field is required."
+                               data-val="true">
+                        <span class="form-icon fa fa-lock"></span>
+                    </div>
+                    <span class="field-validation-valid text-danger" data-valmsg-replace="true" data-valmsg-for="Password"></span>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <div class="checkbox">
+                                <input name="RememberMe" id="RememberMe" type="checkbox" value="true" data-val="true">
+                                <label for="RememberMe">@Resources.lang.RememberMe</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="@Resources.lang.Login" class="btn btn-main featured" />
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <div class="col-md-8">
+            @Html.Partial("_WhyAccount")
+            <section id="socialLoginForm">
+                <h4>@Resources.lang.UnabletoLogin</h4>
+                <hr />
+                <p><a href="@Url.Action("Register","Account")">@Resources.lang.RegisterasaNewUser</a></p>
+                <p><a href="@Url.Action("ForgotPassword","Account")">@Resources.lang.ForgotPassword</a></p>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <section id="socialLoginForm">
+                @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+            </section>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

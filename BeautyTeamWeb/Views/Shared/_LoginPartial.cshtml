@@ -1,0 +1,25 @@
+﻿@using Microsoft.AspNet.Identity
+<form action="@Url.Action("LogOff","Account")" method="post" id="logoutForm" class="navbar-right">
+    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+            <a class="dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">@Resources.lang.Lang<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">@Resources.lang.Lang</li>
+                <li><a href="@Url.RouteUrl(ViewContext.RouteData.Values.ChangeAndReturn("lang","zh-CN"))">Chinese</a></li>
+                <li><a href="@Url.RouteUrl(ViewContext.RouteData.Values.ChangeAndReturn("lang","en-US"))">English</a></li>
+                <li><a href="@Url.RouteUrl(ViewContext.RouteData.Values.ChangeAndReturn("lang","ja-JP"))">Japanese</a></li>
+            </ul>
+        </li>
+        @if (Request.IsAuthenticated)
+        {
+            @Html.AntiForgeryToken()
+            <li><a href="@Url.Action("Index","Manage")">@Resources.lang.Hello, @User.Identity.GetUserName().Split('@')[0]!</a></li>
+            <li><a href="javascript:document.getElementById('logoutForm').submit()">@Resources.lang.Logout</a></li>
+        }
+        else
+        {
+            <li><a href="@Url.Action("Register","Account")" id="registerLink">@Resources.lang.Register</a></li>
+            <li><a href="@Url.Action("Login","Account")" id="loginLink">@Resources.lang.Login</a></li>
+        }
+    </ul>
+</form>

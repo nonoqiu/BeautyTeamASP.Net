@@ -1,0 +1,15 @@
+﻿@model BeautyTeamWeb.ViewModels.HomeIndexViewModel
+@{
+    ViewBag.Title = Resources.lang.Home;
+}
+@section css
+{
+    @Styles.Render("~/css/ForHome")
+}
+@section scripts
+{
+    @Scripts.Render("~/js/ForHome")
+}
+@Html.Partial("_HomeSlider")
+@Html.Partial("_Services")
+@Html.Partial("_Portfolio",Model)
