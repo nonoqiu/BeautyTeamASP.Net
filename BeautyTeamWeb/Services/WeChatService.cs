@@ -1,7 +1,6 @@
 ﻿#pragma warning disable CS0618
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
@@ -21,7 +20,7 @@ namespace BeautyTeamWeb.Services
         {
             return await System.Threading.Tasks.Task.Factory.StartNew(() =>
             {
-                var Token = ConfigurationManager.AppSettings["Token"];
+                var Token = Secrets.Token;
                 string[] ArrTmp = { Token, timestamp, nonce };
                 Array.Sort(ArrTmp);
                 var tmpStr = string.Join("", ArrTmp);
@@ -43,8 +42,8 @@ namespace BeautyTeamWeb.Services
             {
                 var HTTPContainer = new HTTPService();
                 var URL = _WeChatServerAddress + $@"token?grant_type=client_credential&appid={
-                    ConfigurationManager.AppSettings["AppID"]}&secret={
-                    ConfigurationManager.AppSettings["AppSecret"]}";
+                    Secrets.AppID}&secret={
+                    Secrets.AppSecret}";
                 var JResult = await HTTPContainer.SendDataByGETAsync(URL);
                 var Result = JsonConvert.DeserializeObject<_AccessTokenResult>(JResult);
                 _AccessTokenRefreshTime = DateTime.Now;
@@ -58,7 +57,7 @@ namespace BeautyTeamWeb.Services
             return await System.Threading.Tasks.Task.Factory.StartNew(() =>
             {
                 string result = @"https://open.weixin.qq.com" + $@"/connect/oauth2/authorize?appid={
-                 ConfigurationManager.AppSettings["AppID"]}&redirect_uri={
+                 Secrets.AppID}&redirect_uri={
                  HttpUtility.UrlEncode(Destination)}&response_type=code&scope=snsapi_base&state={Argument}#wechat_redirect";
                 return result;
             });
@@ -68,8 +67,8 @@ namespace BeautyTeamWeb.Services
         {
             var HTTPContainer = new HTTPService();
             var URL = $@"https://api.weixin.qq.com/sns/oauth2/access_token?appid={
-                ConfigurationManager.AppSettings["AppID"]}&secret={
-                ConfigurationManager.AppSettings["AppSecret"]}&code={code}&grant_type=authorization_code ";
+                Secrets.AppID}&secret={
+                Secrets.AppSecret}&code={code}&grant_type=authorization_code ";
             var result = await HTTPContainer.SendDataByGETAsync(URL);
             var JResult = JsonConvert.DeserializeObject<AuthAccessToken>(result);
             return JResult;

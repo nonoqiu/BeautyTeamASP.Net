@@ -238,3 +238,4 @@ _Pvt_Extensions
 #Secret
 Web.Debug.config
 Web.Release.config
+Secrets.cs

@@ -16,9 +16,9 @@ namespace BeautyTeamWeb.Services
         {
             string Target = HTTPS ? "https" : "http";
             OssClient client = new OssClient(
-            ConfigurationManager.AppSettings["endpoint"],
-            ConfigurationManager.AppSettings["accessKeyId"],
-            ConfigurationManager.AppSettings["accessKeySecret"]);
+            Secrets.endpoint,
+            Secrets.accessKeyId,
+            Secrets.accessKeySecret);
             await Task.Run(() =>
             {
                 client.PutObject("obisoft", fileName, LocalPath);

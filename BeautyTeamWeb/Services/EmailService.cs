@@ -13,15 +13,15 @@ namespace BeautyTeamWeb
         {
             MailMessage mailMsg = new MailMessage();
             mailMsg.To.Add(new MailAddress(message.Destination));
-            mailMsg.From = new MailAddress(ConfigurationManager.AppSettings["EmailAddress"],
+            mailMsg.From = new MailAddress(Secrets.EmailAddress,
                 "Obisoft服务邮件");
             mailMsg.Subject = message.Subject;
             mailMsg.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(
                 message.Body, null, MediaTypeNames.Text.Html));
             SmtpClient smtpClient = new SmtpClient("smtpdm.aliyun.com", 25);
             System.Net.NetworkCredential credentials = new System.Net.NetworkCredential(
-                ConfigurationManager.AppSettings["EmailAddress"],
-                ConfigurationManager.AppSettings["EmailSmtpPassword"]);
+                Secrets.EmailAddress,
+                Secrets.EmailSmtpPassword);
             smtpClient.Credentials = credentials;
             await smtpClient.SendMailAsync(mailMsg);
         }

@@ -69,7 +69,7 @@ namespace BeautyTeamWeb.Services
         {
             if (string.IsNullOrEmpty(toEncrypt))
                 return string.Empty;
-            byte[] keyArray = Encoding.UTF8.GetBytes(ConfigurationManager.AppSettings["AESKey"]);
+            byte[] keyArray = Encoding.UTF8.GetBytes(Secrets.AESKey);
             byte[] toEncryptArray = Encoding.UTF8.GetBytes(toEncrypt);
 
             RijndaelManaged rDel = new RijndaelManaged
@@ -89,7 +89,7 @@ namespace BeautyTeamWeb.Services
         {
             if (string.IsNullOrEmpty(toDecrypt))
                 return string.Empty;
-            byte[] keyArray = Encoding.UTF8.GetBytes(ConfigurationManager.AppSettings["AESKey"]);
+            byte[] keyArray = Encoding.UTF8.GetBytes(Secrets.AESKey);
             byte[] toEncryptArray = Convert.FromBase64String(toDecrypt);
 
             RijndaelManaged rDel = new RijndaelManaged
