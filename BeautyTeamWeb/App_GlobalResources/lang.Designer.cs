@@ -97,6 +97,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Careers.
+        /// </summary>
+        internal static string Careers {
+            get {
+                return ResourceManager.GetString("Careers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Confirm Password.
         /// </summary>
         internal static string ConfirmPassword {
@@ -475,6 +484,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SourceCode.
+        /// </summary>
+        internal static string SourceCode {
+            get {
+                return ResourceManager.GetString("SourceCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Breath with reliable service..
         /// </summary>
         internal static string Sta1Ani1 {
@@ -489,6 +507,15 @@ namespace Resources {
         internal static string Sta1Ani2 {
             get {
                 return ResourceManager.GetString("Sta1Ani2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Support.
+        /// </summary>
+        internal static string Support {
+            get {
+                return ResourceManager.GetString("Support", resourceCulture);
             }
         }
         

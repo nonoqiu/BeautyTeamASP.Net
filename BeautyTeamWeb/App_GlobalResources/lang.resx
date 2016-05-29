@@ -309,4 +309,13 @@
   <data name="WhatWeDoSub" xml:space="preserve">
     <value>Respect to the technology today gives us the chance to face the Internet today. No matter web application, native app or enterprise solution, maybe you can find something new here.</value>
   </data>
+  <data name="SourceCode" xml:space="preserve">
+    <value>SourceCode</value>
+  </data>
+  <data name="Careers" xml:space="preserve">
+    <value>Careers</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Support</value>
+  </data>
 </root>

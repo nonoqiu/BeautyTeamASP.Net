@@ -309,4 +309,13 @@
   <data name="WhatWeDoSub" xml:space="preserve">
     <value>尊重今天的技术，让我们面对今天的互联网。无论是Web、App还是企业级应用，或许在这里你会对它们有新的感悟</value>
   </data>
+  <data name="SourceCode" xml:space="preserve">
+    <value>源代码</value>
+  </data>
+  <data name="Careers" xml:space="preserve">
+    <value>生涯职位</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>技术支援</value>
+  </data>
 </root>
