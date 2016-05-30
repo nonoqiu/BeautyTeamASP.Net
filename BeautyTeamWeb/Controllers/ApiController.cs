@@ -586,7 +586,7 @@ namespace BeautyTeamWeb.Controllers
             return await this._apiReplyTool(async () =>
             {
                 var Result = new List<GU_RelationR>();
-                (await userAsync()).GU_Relations.ForEach((GU_Relation t) =>Result.Add(new GU_RelationR(t)));
+                (await userAsync()).GU_Relations.ForEach((GU_Relation t) => Result.Add(new GU_RelationR(t)));
                 return await _JsongAsync(new ObiList<GU_RelationR>
                 {
                     List = Result,
@@ -1147,14 +1147,21 @@ namespace BeautyTeamWeb.Controllers
             return await this._apiReplyTool(async () =>
             {
                 var Return = new List<Posts>();
-                //Union
-                foreach (var Relation in (await userAsync()).GU_Relations)
+                var cuser = await userAsync();
+                //Group
+                foreach (var Relation in cuser.GU_Relations)
                 {
                     foreach (var Posts in Relation.Group.GroupPostss)
                     {
                         Return.Add(Posts);
                     }
                 }
+                //Friends
+                foreach(var Friend in cuser.AllFriends())
+                {
+                    Return.AddRange(Friend.PersonalPostss);
+                }
+                //OrderBy
                 return await _JsongAsync(new ObiList<Posts>
                 {
                     StatusCode = HttpStatusCode.OK,
@@ -1426,6 +1433,105 @@ namespace BeautyTeamWeb.Controllers
             });
         }
 
+        #endregion
+
+        #region FriendPart Management
+        [ApiAuthorize]
+        public async Task<string> MyParts()
+        {
+            return await this._apiReplyTool(async () =>
+            {
+                var cuser = await userAsync();
+                var Result = cuser.FriendsPart.ToList();
+                return await _JsongAsync(new ObiList<FriendsPart>
+                {
+                    List = Result,
+                    StatusCode = HttpStatusCode.OK
+                });
+            });
+        }
+
+        [ApiAuthorize]
+        [HttpPost]
+        public async Task<string> CreatePart(string PartName)
+        {
+            return await this._apiReplyTool(async () =>
+            {
+                var cuser = await userAsync();
+                var NewPart = new FriendsPart
+                {
+                    PartName = PartName,
+                    ParentId = cuser.Id
+                };
+                cuser.FriendsPart.Add(NewPart);
+                await UserManager.UpdateAsync(cuser);
+                return OkResult;
+            });
+        }
+
+        [ApiAuthorize]
+        [HttpPost]
+        public async Task<string> DeletePart(int Id/*PartId*/)
+        {
+            return await this._apiReplyTool(async () =>
+            {
+                var cuser = await userAsync();
+                var TPart = await DbContext.FriendsParts.FindAsync(Id);
+                if (TPart == null)
+                {
+                    return NotFoundResult;
+                }
+                if (TPart.ParentId != cuser.Id)
+                {
+                    return ForbiddenResult;
+                }
+                DbContext.FriendsParts.Remove(TPart);
+                await DbContext.SaveChangesAsync();
+                return OkResult;
+            });
+        }
+
+        [ApiAuthorize]
+        [HttpPost]
+        public async Task<string> RenamePart(int Id/*PartId*/, string NewPartName)
+        {
+            return await this._apiReplyTool(async () =>
+            {
+                var cuser = await userAsync();
+                var TPart = cuser.FriendsPart.Find(t => t.FriendsPartId == Id);
+                if (TPart == null)
+                {
+                    return NotFoundResult;
+                }
+                if (TPart.ParentId != cuser.Id)
+                {
+                    return ForbiddenResult;
+                }
+                TPart.PartName = NewPartName;
+                await DbContext.SaveChangesAsync();
+                return OkResult;
+            });
+        }
+        #endregion
+
+        #region Friends Management
+
+
+
+        [ApiAuthorize]
+        [HttpPost]
+        public async Task<string> RemoveFriend(string id/*FriendId*/)
+        {
+            return await this._apiReplyTool(async () =>
+            {
+                var cuser = await userAsync();
+                var Target = DbContext.FU_Relation.Where(t => t.FriendId == id).ToList()
+                .Find(t => t.Parent.ParentId == User.Identity.GetUserId());
+                DbContext.FU_Relation.Remove(Target);
+                await DbContext.SaveChangesAsync();
+                return OkResult;
+            });
+        }
         #endregion
 
         #region WeChat API

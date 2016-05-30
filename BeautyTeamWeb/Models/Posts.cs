@@ -7,6 +7,8 @@ using System.Web;
 
 namespace BeautyTeamWeb.Models
 {
+    //1. 个人的盆友圈
+    //2. 团队的事项版
     public abstract class Posts
     {
         public virtual int PostsId { get; set; }
@@ -19,8 +21,6 @@ namespace BeautyTeamWeb.Models
         public virtual List<FirComment> Comments { get; set; } = new List<FirComment>();
         [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}")]
         public virtual DateTime PublishDate { get; set; } = DateTime.Now;
-
-
     }
     public class GroupPosts : Posts
     {
@@ -41,12 +41,12 @@ namespace BeautyTeamWeb.Models
     }
     public enum PostResposneType : short
     {
-        Roger,
-        Like,
-        Love,
-        Sorry,
-        Angry,
-        Wow
+        Roger=1,
+        Like=2,
+        Love=4,
+        Sorry=8,
+        Angry=16,
+        Wow=32
     }
     public class PostResponse
     {

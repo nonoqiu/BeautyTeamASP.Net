@@ -7,6 +7,7 @@ using BeautyTeamWeb.Services;
 using System;
 using System.Threading.Tasks;
 using System.Linq;
+using Newtonsoft.Json;
 
 namespace BeautyTeamWeb.Models
 {
@@ -137,42 +138,18 @@ namespace BeautyTeamWeb.Models
         /// If this is set allow, others can see my school and account information.
         /// </summary>
         public virtual bool AllowSeeMySchoolAndAccount { get; set; } = true;
-        public virtual int FriendsPartId { get; set; }
-        /// <summary>
-        /// This will create a friend part for the current user. 
-        /// </summary>
-        /// <param name="PartName">The name of the new part to be created</param>
-        /// <param name="Context">Database Context</param>
-        /// <returns>The Id of the new part</returns>
-        public virtual async Task<int> AddFriendPart(string PartName, BeautyTeamDbContext Context = null)
-        {
-            Context = Context ?? new BeautyTeamDbContext();
-            var NewPart = new FriendsPart
-            {
-                PartName = PartName,
-                ParentId = Id
-            };
-            Context.FriendsParts.Add(NewPart);
-            await Context.SaveChangesAsync();
-            return NewPart.FriendsPartId;
-        }
-        /// <summary>
-        /// This will delete the existing part. Search from the existing part id.
-        /// </summary>
-        /// <param name="PartId">Existing part id</param>
-        /// <param name="Context">Database</param>
-        /// <returns></returns>
-        public virtual async System.Threading.Tasks.Task DeletFriendPart(int PartId, BeautyTeamDbContext Context = null)
-        {
-            Context = Context ?? new BeautyTeamDbContext();
-            var OldPart = await Context.FriendsParts.FindAsync(PartId);
-            if (OldPart.ParentId != Id)
-            {
-                throw new Exception("Target Part Is Not User's Part.");
-            }
-            Context.FriendsParts.Remove(OldPart);
-            await Context.SaveChangesAsync();
-        }
+        //public virtual int FriendsPartId { get; set; }
+        //public virtual async System.Threading.Tasks.Task DeletFriendPart(FriendsPart PartId, BeautyTeamDbContext Context = null)
+        //{
+        //    Context = Context ?? new BeautyTeamDbContext();
+        //    var OldPart = await Context.FriendsParts.FindAsync(PartId);
+        //    if (OldPart.ParentId != Id)
+        //    {
+        //        throw new Exception("Target Part Is Not User's Part.");
+        //    }
+        //    Context.FriendsParts.Remove(OldPart);
+        //    await Context.SaveChangesAsync();
+        //}
         public virtual async Task<int> AddFriend(ObisoftUser TargetFriend, int MyPartId, int HisPartId, BeautyTeamDbContext Context = null)
         {
             Context = Context ?? new BeautyTeamDbContext();
@@ -222,27 +199,20 @@ namespace BeautyTeamWeb.Models
             await Context.SaveChangesAsync();
             return;
         }
-
         public virtual List<FriendsPart> FriendsPart { get; set; } = new List<FriendsPart>();
-        //var Users = DbContext.Users.ToList();
-        //var Yu = Users[0];
-        //var Xu = Users[1];
-        //var YuPart = new FriendsPart
-        //{
-        //    ObisoftUserId = Yu.Id
-        //};
-        //Yu.FriendsPart.Add(YuPart);
-        //await DbContext.SaveChangesAsync();
-        //int ResultPartId = YuPart.FriendsPartId;
 
-        //var OldYuPart = await DbContext.FriendsParts.FindAsync(ResultPartId);
-        //var YtoXRelatin = new FU_Relation
-        //{
-        //    FriendId = Xu.Id,
-        //    FriendsPartId= OldYuPart.FriendsPartId,
-        //};
-        //OldYuPart.Friends.Add(YtoXRelatin);
-        //await DbContext.SaveChangesAsync();
+        public virtual List<ObisoftUser> AllFriends()
+        {
+            var AllFriends = new List<ObisoftUser>();
+            foreach(var Part in FriendsPart)
+            {
+                foreach(var FU_Relation in Part.Friends)
+                {
+                    AllFriends.Add(FU_Relation.Friend);
+                }
+            }
+            return AllFriends;
+        }
     }
     /// <summary>
     /// WeChat info
@@ -259,10 +229,12 @@ namespace BeautyTeamWeb.Models
     public class FriendsPart
     {
         public virtual int FriendsPartId { get; set; }
+
         public virtual List<FU_Relation> Friends { get; set; } = new List<FU_Relation>();
         public virtual string PartName { get; set; }
         //Parent
         public virtual string ParentId { get; set; }
+        [JsonIgnore]
         public virtual ObisoftUser Parent { get; set; }
     }
     public class FU_Relation
@@ -270,9 +242,11 @@ namespace BeautyTeamWeb.Models
         public virtual int FU_RelationId { get; set; }
         //Parent
         public virtual int ParentId { get; set; }
+        [JsonIgnore]
         public virtual FriendsPart Parent { get; set; }
 
         public virtual string FriendId { get; set; }
+        [JsonIgnore]
         public virtual ObisoftUser Friend { get; set; }
     }
 }

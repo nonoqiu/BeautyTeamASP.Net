@@ -284,6 +284,10 @@
     <Compile Include="Migrations\201605240103203_addname.Designer.cs">
       <DependentUpon>201605240103203_addname.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605301045486_deleteAnUnknownPro.cs" />
+    <Compile Include="Migrations\201605301045486_deleteAnUnknownPro.Designer.cs">
+      <DependentUpon>201605301045486_deleteAnUnknownPro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Calendar.cs" />
     <Compile Include="Models\EmailSubscribe.cs" />
@@ -643,6 +647,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605240103203_addname.resx">
       <DependentUpon>201605240103203_addname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605301045486_deleteAnUnknownPro.resx">
+      <DependentUpon>201605301045486_deleteAnUnknownPro.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

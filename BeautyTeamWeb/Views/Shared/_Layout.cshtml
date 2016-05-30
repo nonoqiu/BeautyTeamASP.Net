@@ -6,7 +6,7 @@
     <title>@ViewBag.Title - Obisoft</title>
     <link rel="stylesheet" href="~/wwwroot/css/font-awesome.min.css" />
     @Styles.Render("~/css")
-    @RenderSection("css",false)
+    @RenderSection("css", false)
 </head>
 <body>
     <header class="navbar-fixed-top navbar-inverse video-menu" id="header" role="banner">
@@ -25,28 +25,11 @@
             <nav class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" role="navigation">
                 <ul class="nav navbar-nav navbar-left ">
                     <li class="active"><a href="@Url.Action("Index","Home")">@Resources.lang.Home</a></li>
-                    @*<li class="dropdown">
-                        <a class="dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">@Resources.lang.TanZone<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li class="navbar-form navbar-right">
-                                <form action="@Url.Action("Search","TanZone")" method="get">
-                                    <div class="form-group">
-                                        <input class="form-control" type="text" name="q" placeholder="Title">
-                                    </div>
-                                    <input class="btn btn-main featured search" type="submit" value="Search Now" />
-                                </form>
-                            </li>
-                            <li><a href="@Url.Action("Index","Home")">@Resources.lang.Home</a></li>
-                            <li><a href="@Url.Action("Index","Home")">Public Zone</a></li>
-                            <li><a href="@Url.Action("Index","Home")">Publish new</a></li>
-                            <li><a href="@Url.Action("Index","Home")">My TanZone</a></li>
-                        </ul>
-                    </li>*@
-                    <li class=""><a href="@Url.Action("Index","Home")">@Resources.lang.AboutUs</a></li>
+                    <li class=""><a href="@Url.Action("About","Home")">@Resources.lang.AboutUs</a></li>
                     <li class=""><a href="@Url.Action("Index","Home")">@Resources.lang.Portfolio</a></li>
                     <li class=""><a href="@Url.Action("Index","Home")">@Resources.lang.Support</a></li>
                     <li class=""><a href="@Url.Action("Index","Home")">@Resources.lang.Careers</a></li>
-                    <li class=""><a href="@Url.Action("Index","Home")">@Resources.lang.Contact</a></li>
+                    <li class=""><a href="@Url.Action("Contact","Home")">@Resources.lang.Contact</a></li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </nav>
@@ -60,6 +43,6 @@
         </a>
     </div>
     @Scripts.Render("~/js")
-    @RenderSection("scripts",false)
+    @RenderSection("scripts", false)
 </body>
 </html>
