@@ -318,4 +318,10 @@
   <data name="Support" xml:space="preserve">
     <value>技术支援</value>
   </data>
+  <data name="Subscribe" xml:space="preserve">
+    <value>订阅Obisoft新闻</value>
+  </data>
+  <data name="SubscribeNow" xml:space="preserve">
+    <value>立即订阅</value>
+  </data>
 </root>

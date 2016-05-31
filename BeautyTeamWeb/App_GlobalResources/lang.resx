@@ -318,4 +318,10 @@
   <data name="Support" xml:space="preserve">
     <value>Support</value>
   </data>
+  <data name="Subscribe" xml:space="preserve">
+    <value>Subscribe Us</value>
+  </data>
+  <data name="SubscribeNow" xml:space="preserve">
+    <value>Subscribe Now</value>
+  </data>
 </root>

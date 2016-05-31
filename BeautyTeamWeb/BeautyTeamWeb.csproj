@@ -556,6 +556,16 @@
     <Content Include="Views\WeChat\_WeChatNav.cshtml" />
     <Content Include="Views\Home\APIDoc.cshtml" />
     <None Include="Properties\PublishProfiles\Azure Server.pubxml" />
+    <None Include="Properties\PublishProfiles\Yoolee Server.pubxml" />
+    <Content Include="Views\Home\_WhatWeDo.cshtml" />
+    <Content Include="Views\Home\_Counter.cshtml" />
+    <Content Include="Views\Home\_VideoFact.cshtml" />
+    <Content Include="Views\Home\_TeamMembers.cshtml" />
+    <Content Include="Views\Home\_Blog.cshtml" />
+    <Content Include="Views\Home\_Skill.cshtml" />
+    <Content Include="Views\Home\_FeedBack.cshtml" />
+    <Content Include="Views\Home\_Collabrators.cshtml" />
+    <Content Include="Views\Home\_Contact.cshtml" />
     <None Include="wwwroot\js\jquery.validate-vsdoc.js" />
     <Content Include="wwwroot\js\jquery.validate.js" />
     <Content Include="wwwroot\js\jquery.validate.min.js" />
@@ -567,6 +577,7 @@
     </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>

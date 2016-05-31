@@ -511,6 +511,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Subscribe Us.
+        /// </summary>
+        internal static string Subscribe {
+            get {
+                return ResourceManager.GetString("Subscribe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subscribe Now.
+        /// </summary>
+        internal static string SubscribeNow {
+            get {
+                return ResourceManager.GetString("SubscribeNow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Support.
         /// </summary>
         internal static string Support {
