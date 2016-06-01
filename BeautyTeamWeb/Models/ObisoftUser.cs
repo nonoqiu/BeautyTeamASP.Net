@@ -138,18 +138,7 @@ namespace BeautyTeamWeb.Models
         /// If this is set allow, others can see my school and account information.
         /// </summary>
         public virtual bool AllowSeeMySchoolAndAccount { get; set; } = true;
-        //public virtual int FriendsPartId { get; set; }
-        //public virtual async System.Threading.Tasks.Task DeletFriendPart(FriendsPart PartId, BeautyTeamDbContext Context = null)
-        //{
-        //    Context = Context ?? new BeautyTeamDbContext();
-        //    var OldPart = await Context.FriendsParts.FindAsync(PartId);
-        //    if (OldPart.ParentId != Id)
-        //    {
-        //        throw new Exception("Target Part Is Not User's Part.");
-        //    }
-        //    Context.FriendsParts.Remove(OldPart);
-        //    await Context.SaveChangesAsync();
-        //}
+
         public virtual async Task<int> AddFriend(ObisoftUser TargetFriend, int MyPartId, int HisPartId, BeautyTeamDbContext Context = null)
         {
             Context = Context ?? new BeautyTeamDbContext();
@@ -226,27 +215,4 @@ namespace BeautyTeamWeb.Models
     }
 
 
-    public class FriendsPart
-    {
-        public virtual int FriendsPartId { get; set; }
-
-        public virtual List<FU_Relation> Friends { get; set; } = new List<FU_Relation>();
-        public virtual string PartName { get; set; }
-        //Parent
-        public virtual string ParentId { get; set; }
-        [JsonIgnore]
-        public virtual ObisoftUser Parent { get; set; }
-    }
-    public class FU_Relation
-    {
-        public virtual int FU_RelationId { get; set; }
-        //Parent
-        public virtual int ParentId { get; set; }
-        [JsonIgnore]
-        public virtual FriendsPart Parent { get; set; }
-
-        public virtual string FriendId { get; set; }
-        [JsonIgnore]
-        public virtual ObisoftUser Friend { get; set; }
-    }
 }

@@ -1157,7 +1157,7 @@ namespace BeautyTeamWeb.Controllers
                     }
                 }
                 //Friends
-                foreach(var Friend in cuser.AllFriends())
+                foreach (var Friend in cuser.AllFriends())
                 {
                     Return.AddRange(Friend.PersonalPostss);
                 }
@@ -1200,19 +1200,19 @@ namespace BeautyTeamWeb.Controllers
 
         [ApiAuthorize]
         // GET: /api/AllPostsFromPerson/werw23rkasf23r4?Take=10
-        public async Task<string> AllPostsFromPerson(string id/*Obisoft User Id*/,int Take)
+        public async Task<string> AllPostsFromPerson(string id/*Obisoft User Id*/, int Take)
         {
-            return await this._apiReplyTool(async ()=>
+            return await this._apiReplyTool(async () =>
             {
                 var TargetUser = await UserManager.FindByIdAsync(id);
                 //Not Found
-                if(TargetUser==null)
+                if (TargetUser == null)
                 {
                     return NotFoundResult;
                 }
                 var Relation = TargetUser.AllFriends().Find(t => t.Id == User.Identity.GetUserId());
                 //Not Friend
-                if (Relation==null)
+                if (Relation == null)
                 {
                     return ForbiddenResult;
                 }
@@ -1221,7 +1221,7 @@ namespace BeautyTeamWeb.Controllers
                 return await _JsongAsync(new ObiList<PersonalPosts>
                 {
                     List = Result,
-                    StatusCode=HttpStatusCode.OK
+                    StatusCode = HttpStatusCode.OK
                 });
             });
         }

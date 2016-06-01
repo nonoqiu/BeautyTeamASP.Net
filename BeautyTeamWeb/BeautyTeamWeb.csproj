@@ -292,6 +292,7 @@
     <Compile Include="Models\Calendar.cs" />
     <Compile Include="Models\EmailSubscribe.cs" />
     <Compile Include="Models\EventAndTask.cs" />
+    <Compile Include="Models\FU_Relation.cs" />
     <Compile Include="Models\Group.cs" />
     <Compile Include="Models\Invitations.cs" />
     <Compile Include="Models\Personal.cs" />
@@ -299,7 +300,6 @@
     <Compile Include="Models\Relations.cs" />
     <Compile Include="Models\RadioStation.cs" />
     <Compile Include="Models\Team.cs" />
-    <Compile Include="Models\UU_Relation.cs" />
     <Compile Include="Models\WeChatModels.cs" />
     <Compile Include="Secrets.cs" />
     <Compile Include="Services\HTTPService.cs" />

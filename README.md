@@ -1,20 +1,114 @@
-# Welcome to BeautyTeam API!
+# 欢迎来到BeautyTeam文档中心
+欢迎来到BeautyTeam开发文档。这里是所有愿意为BeautyTeam提交代码、提供Bug并给出宝贵意见的中心，同时也是BeautyTeam全部功能的实现方式基本文档。在这里你将可以完整的看到BeautyTeam全部源代码和最具体的功能调用方法和权限，也可以看到全部API接口。请在右侧查看文档的目录，并根据目录找到你最需要阅读的内容。  
+  
+BeautyTeam是开发者通过API开发客户端，并为用户提供敏捷办公的平台。BeautyTeam API则是这些服务的基础，开发者在准备开发BeautyTeam客户端或仅仅是调用BeautyTeam数据时，通过本文档来帮助开发。  
+  
+为了识别用户，每个用户针对BeautyTeam会产生一个唯一的ID。如果需要实现BeautyTeam账号登录第三方网站，则必须获取到当前用户的ID。注意，BeautyTeam并没有接入OAuth，而采用文档自主的认证方式。它的实现方式请参考用户账户控制的API了解详情。  
+  
+请开发者注意：  
 
-## What is BeautyTeam?
-###Background
-For more than thousands years, teamwork has always been an important work form. 3 to 30 people collaborate together to figure out a solution. By now, teamwork happens from kids in kindergarten to big enterprise with thousands of workers. Colloge students have to finish some work in teams. How can we take advantage at the new oppotunities and give all teams a reliable solution? BeautyTeam should not be a software, but a collaborate style. 
-###From College to Corporation
-We have experiences in college life, also touched common work life style. Lift style is busy and mixed.	
-## Competitors
-###Teambition  
-[WebSite](https://www.teambition.com)  
-Teambition is a greate team solution developed in China and has grown for years. Teambition is very successful in China, but somehow it doesn't fit some personal features.
-###Teamwork
-[WebSite](https://www.teamwork.com)  
-Teamwork is also a greate team solution developed in US, which is very successful. But however...
-###QQ
-QQ is commonly used to convey messages.
-###DingTalk
-Ding talk is simply developed by ali.
-## Core
-Waiiting to be updated...  
+    1、BeautyTeam是Obisoft公司的主要产品。BeautyTeam使用Obisoft公司的Obisoft账号管理用户权限系统。对于Obisoft账号的数据和BeautyTeam完全同步。开发者可以通过Obisoft用户账户管理系统来管理BeautyTeam数据。
+
+    2、在开始开发之前，你可以下载这些代码并进行研究，来对BeautyTeam快速上手。
+
+    3、在开发过程中，可以使用接口调试工具来在线调试某些接口。
+
+    4、强烈建议客户端将未捕获的异常上传到服务器来供开发团队进一步处理。如果发现500返回值，请尽快联系我们。
+
+    5、在开发出现问题时，可以通过接口调用的返回码，来发现和解决问题。
+
+    6、BeautyTeam使用Cookie技术来保留用户信息，并保持用户状态。客户端可以观察服务器对于Cookie的操作。携带Cookie才可以调用需要登录的API。在进行Web开发时，务必进行跨站Cookie存储。
+
+    7、公众平台接口调用仅支持443端口，并强制使用HTTPS加密。
+##客户端开发基本规范
+BeautyTeam采用B/S和C/S结合进行工作。在C/S模式下，BeautyTeam将可以拥有更多优秀的特性，诸如推送通知等。BeautyTeam的重点解决问题是通知的有效传达性，将会有更多为团队设计的功能。同时BeautyTeam更注重敏捷协作，拥有更多协同办公的设计。同时BeautyTeam重点将放在日程管理，不但为团队设计，更能够将个人的事项管理与团队事项整合。  
+  
+客户端在设计上，如果采用了菜单，菜单结构应该如下：
+* 双菜单：个人，团队
+* 三菜单：通知，团队，个人中心
+* 四菜单：通知，团队，动态，个人中心
+* 五菜单：通知，团队，动态，好友，个人中心
+* 六菜单：通知，团队，动态，好友，消息，个人中心
+* 七菜单：仪表板，时间线，团队，动态，好友，消息，个人中心
+* 八菜单：仪表板，时间线，团队，动态，好友，消息，通知，个人中心
+* 更多菜单：仪表板，时间线，任务，事件，团队，动态，好友，消息，通知，个人中心，设置，帮助  
+
+为了避免给开发人员过多压力，开发人员可以先尝试进行少量功能模块开发，并完成测试和发布。对于复杂功能模块可以在后续开发周期中进行。  
+在其他方面上，客户端拥有更多自定义的空间。但务必注意：  
+* 遵守BeautyTeam权限控制原则
+* 遵守BeautyTeam API调用频率限制
+
+**开始前必读**
+* [首页](https://github.com/Obisoft2017/BeautyTeamASP.Net/wiki)
+* [更新日志](https://github.com/Obisoft2017/BeautyTeamASP.Net/wiki/Update)
+* 开发者规范
+* 权限说明
+* 频率限制机制
+* 错误码说明
+* 关系地图
+
+**开始开发**
+* [接入指南](https://github.com/Obisoft2017/BeautyTeamASP.Net/wiki/Connect)
+* 权限机制
+* 获取服务器地址
+* 常见问题
+* 测试账号
+
+**基本功能接口**  
+* 将错误信息上传到服务器
+* 将图片上传到服务器
+* 检查版本更新 
+* 检查用户组权限
+
+**用户账户控制**
+* 基本登录注册
+* 忘记密码
+* 密码管理
+* 用户属性管理
+
+**用户教务数据**
+* 学校管理
+* 绑定学校
+
+**用户动态板管理**
+* 用户动态板
+* 团队动态板
+* 发表动态
+* 评论管理
+
+**团队面板**
+* 新建团队
+* 加入和离开
+* 团队用户管理
+* 信息管理
+* 团队项目管理
+
+**项目管理**
+* 新建项目
+* 项目中的通知
+
+**私人数据管理**
+* 私人任务计划
+* 任务计划中心
+
+**用户关系管理**
+* 邀请功能
+* 好友分块管理
+* 好友管理
+
+**站内信**
+* 发送和接收
+* 转发和管理
+
+**系统通知**
+* 推送通知实现
+* 站内信推送
+* 邀请推送
+* 新团队通知推送
+
+**代码示例**
+* 开发案例
+* 接入通信
+* 权限管理
+* 异步设计
+* 推送通知
