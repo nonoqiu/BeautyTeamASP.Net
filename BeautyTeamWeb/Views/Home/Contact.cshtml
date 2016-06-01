@@ -1,19 +1,34 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = Resources.lang.Contact;
 }
-<div class="container">
-    <h2>@ViewBag.Title.</h2>
-    <h3>@ViewBag.Message</h3>
+@section ContactClass{active}
+@Html.Partial("_StaticSliderVI")
 
-    <address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
-        <abbr title="Phone">P:</abbr>
-        425.555.0100
-    </address>
 
-    <address>
-        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-    </address>
-</div>
+
+
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="feature_header text-center">
+                    <h2>@ViewBag.Title.</h2>
+                    <h3>越了解，越热爱</h3>
+                     <div class="divider"></div>
+                    <address>
+                        公司名称：沈阳欧软科技有限公司<br />
+                        地址：沈阳市和平区三好街84号204-2房间<br />
+                        邮编：110819 <br />
+                        <abbr title="Phone">电话：</abbr>024-83685000
+                    </address>
+
+                    <address>
+                        <strong>Support:</strong>   <a href="mailto:MMA@Obisoft.com.cn">MMA@Obisoft.com.cn</a><br />
+                        <strong>Service:</strong>(Machine) <a href="service@notice.obisoft.com.cn">service@notice.obisoft.com.cn</a>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@Html.Partial("_Contact")

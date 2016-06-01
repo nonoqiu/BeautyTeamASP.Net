@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = Resources.lang.Home;
 }
+@section IndexClass{active}
 @section css
 {
     @Styles.Render("~/css/ForHome")
@@ -13,12 +14,11 @@
 @Html.Partial("_HomeSlider")
 @Html.Partial("_Services")
 @Html.Partial("_Portfolio")
+@Html.Partial("_Pricing")
 @Html.Partial("_WhatWeDo")
 @Html.Partial("_Counter", Model)
-@Html.Partial("_VideoFact")
-@Html.Partial("_TeamMembers")
+
 @Html.Partial("_Blog")
 @Html.Partial("_Skill")
-@Html.Partial("_FeedBack")
 @Html.Partial("_Collabrators")
-@Html.Partial("_Contact")
+@Html.Partial("_FeedBack")

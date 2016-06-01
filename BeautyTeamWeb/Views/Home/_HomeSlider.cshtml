@@ -11,10 +11,13 @@
             <div class="hero-text wow fadeIn" data-wow-delay=".8s">
                 <h3 class="hero-title"><span>Obisoft </span>@Resources.lang.HomeTitle</h3>
                 <p class="hero-description">@Resources.lang.HomeSubTitle</p>
-                <p class="hero-buttons">
-                    <strong><a href="@Url.Action("Register","Account")" class="btn btn-dark">@Resources.lang.Register</a></strong>
-                    <strong><a href="@Url.Action("Login","Account")" class="btn btn-main featured">@Resources.lang.Login</a></strong>
-                </p>
+                @if (!User.Identity.IsAuthenticated)
+                {
+                    <p class="hero-buttons">
+                        <strong><a href="@Url.Action("Register", "Account")" class="btn btn-dark">@Resources.lang.Register</a></strong>
+                        <strong><a href="@Url.Action("Login", "Account")" class="btn btn-main featured">@Resources.lang.Login</a></strong>
+                    </p>
+                }
             </div>
         </div>
     </div>

@@ -1198,6 +1198,34 @@ namespace BeautyTeamWeb.Controllers
             });
         }
 
+        [ApiAuthorize]
+        // GET: /api/AllPostsFromPerson/werw23rkasf23r4?Take=10
+        public async Task<string> AllPostsFromPerson(string id/*Obisoft User Id*/,int Take)
+        {
+            return await this._apiReplyTool(async ()=>
+            {
+                var TargetUser = await UserManager.FindByIdAsync(id);
+                //Not Found
+                if(TargetUser==null)
+                {
+                    return NotFoundResult;
+                }
+                var Relation = TargetUser.AllFriends().Find(t => t.Id == User.Identity.GetUserId());
+                //Not Friend
+                if (Relation==null)
+                {
+                    return ForbiddenResult;
+                }
+                //Result
+                var Result = TargetUser.PersonalPostss.Take(Take).ToList();
+                return await _JsongAsync(new ObiList<PersonalPosts>
+                {
+                    List = Result,
+                    StatusCode=HttpStatusCode.OK
+                });
+            });
+        }
+
         [HttpPost]
         [ApiAuthorize]
         // POST: /api/PostAsAGroup/5

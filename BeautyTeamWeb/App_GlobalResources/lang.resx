@@ -324,4 +324,25 @@
   <data name="SubscribeNow" xml:space="preserve">
     <value>Subscribe Now</value>
   </data>
+  <data name="AboutUsD" xml:space="preserve">
+    <value>Obisoft Corporation is a premier developer and publisher of development software and co-working solution. After establishing the corporation in 2015, the company quickly became one of the very popular and well-respected makers of software in China. By focusing on creating well-designed, highly enjoyable using experiences, Obisoft Corporation has maintained an unparalleled reputation for quality since its inception.</value>
+  </data>
+  <data name="CompanyBackground" xml:space="preserve">
+    <value>Company Background</value>
+  </data>
+  <data name="CompanyBackgroundD" xml:space="preserve">
+    <value>Each member of the Obisoft Corporation staff is a true program enthusiast, giving the company invaluable insight into creating products for programmers.</value>
+  </data>
+  <data name="CompanyBackgroundD2" xml:space="preserve">
+    <value>Headquartered in Shenyang, Liaoning. Obisoft was founded in 2015 under the destination of OSpace by MMA, president &amp; CEO, and chief development officer God Yu.</value>
+  </data>
+  <data name="NewWorld" xml:space="preserve">
+    <value>New World</value>
+  </data>
+  <data name="NewWorldD" xml:space="preserve">
+    <value>In addition to the BeautyTeam universes, Obisoft is now exploring new worlds—and mashing them together. The upcoming API Studio, announced on 2016, is a SaaS based communication test and development tool. Set in an all-new Obisoft universe, API Studio makes every unit test and API management in the cloud.</value>
+  </data>
+  <data name="JobOpenings" xml:space="preserve">
+    <value>Job Openings</value>
+  </data>
 </root>

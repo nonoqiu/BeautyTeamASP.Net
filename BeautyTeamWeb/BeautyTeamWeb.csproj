@@ -360,6 +360,7 @@
     <Content Include="wwwroot\css\Sitefont.css" />
     <Content Include="wwwroot\css\weui.min.css" />
     <Content Include="wwwroot\images\Icon.jpg" />
+    <Content Include="wwwroot\images\slider\s4.jpg" />
     <Content Include="wwwroot\images\wc\icon_nav_actionSheet.png" />
     <Content Include="wwwroot\images\wc\icon_nav_article.png" />
     <Content Include="wwwroot\images\wc\icon_nav_button.png" />
@@ -531,7 +532,7 @@
     <Content Include="Views\Home\_HomeSlider.cshtml" />
     <Content Include="Views\Home\_Portfolio.cshtml" />
     <Content Include="Views\Home\_Services.cshtml" />
-    <Content Include="Views\Home\_StaticSlider.cshtml" />
+    <Content Include="Views\Home\_StaticSliderVI.cshtml" />
     <Content Include="Views\Home\_StaticSliderII.cshtml" />
     <Content Include="Views\Home\_StaticSliderIII.cshtml" />
     <Content Include="Views\Home\_StaticSliderIV.cshtml" />
@@ -566,6 +567,10 @@
     <Content Include="Views\Home\_FeedBack.cshtml" />
     <Content Include="Views\Home\_Collabrators.cshtml" />
     <Content Include="Views\Home\_Contact.cshtml" />
+    <Content Include="Views\Home\_StaticSlider.cshtml" />
+    <Content Include="Views\Home\_Pricing.cshtml" />
+    <Content Include="Views\Home\Careers.cshtml" />
+    <Content Include="Views\Home\_Destiny.cshtml" />
     <None Include="wwwroot\js\jquery.validate-vsdoc.js" />
     <Content Include="wwwroot\js\jquery.validate.js" />
     <Content Include="wwwroot\js\jquery.validate.min.js" />

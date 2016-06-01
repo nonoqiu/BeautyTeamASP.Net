@@ -22,12 +22,15 @@ namespace BeautyTeamWeb.Models
         [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}")]
         public virtual DateTime PublishDate { get; set; } = DateTime.Now;
     }
+
+    //以团队名义发布的信息
     public class GroupPosts : Posts
     {
+        //爹
         public virtual int GroupId { get; set; }
         [JsonIgnore]
         public virtual Group Group { get; set; }
-
+        //执行人
         public virtual string PublisherFormGroupId { get; set; }
         [JsonIgnore]
         public virtual ObisoftUser PublisherFormGroup { get; set; }
@@ -35,6 +38,7 @@ namespace BeautyTeamWeb.Models
     }
     public class PersonalPosts : Posts
     {
+        //发表人
         public virtual string ObisoftUserId { get; set; }
         [JsonIgnore]
         public virtual ObisoftUser ObisoftUser { get; set; }
@@ -64,21 +68,30 @@ namespace BeautyTeamWeb.Models
     {
         public virtual int FirCommentId { get; set; }
         public virtual string Content { get; set; }
+        //评论人
         public virtual string ObisoftUserId { get; set; }
         public virtual ObisoftUser ObisoftUser { get; set; }
+        //评论时间
         public virtual DateTime PublishDate { get; set; }
+        //二级评论
         public virtual List<SecComment> SecComments { get; set; }
+        //爹
         public virtual int PostsId { get; set; }
         public virtual Posts Posts { get; set; }
     }
     public class SecComment
     {
         [Key]
+        //评论id
         public virtual int SecCommentId { get; set; }
+        //评论内容
         public virtual string Content { get; set; }
+        //执行人
         public virtual string ObisoftUserId { get; set; }
         public virtual ObisoftUser ObisoftUser { get; set; }
+        //评论时间
         public virtual DateTime PublishDate { get; set; }
+        //爹
         public virtual int FirCommentId { get; set; }
         public virtual FirComment Parent { get; set; }
     }

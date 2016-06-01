@@ -1,12 +1,42 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = Resources.lang.AboutUs;
 }
-@Html.Partial("_StaticSliderII")
+
+@section css
+{
+    @Styles.Render("~/css/ForHome")
+}
+
+@section scripts
+{
+    @Scripts.Render("~/js/ForHome")
+}
+
+@section AboutClass{active}
+
+@Html.Partial("_StaticSliderVI")
 
 <div class="container">
-
-    <h2>@ViewBag.Title.</h2>
-    <h3>@ViewBag.Message</h3>
-
-    <p>Use this area to provide additional information.</p>
+    <div class="col-md-12">
+        <h3>@ViewBag.Title</h3>
+        <p>
+            @Resources.lang.AboutUsD
+        </p>
+        <h3>@Resources.lang.NewWorld</h3>
+        <p>
+            @Resources.lang.NewWorldD
+        </p>
+        <h3>@Resources.lang.CompanyBackground</h3>
+        <p>
+            @Resources.lang.CompanyBackgroundD
+        </p>
+        <p>
+            @Resources.lang.CompanyBackgroundD2
+        </p>
+    </div>
+    <div class="col-md-12 text-center">
+        <a class="btn btn-main featured text-center" href="@Url.Action("Careers","Home")">@Resources.lang.JobOpenings</a>
+    </div>
 </div>
+@Html.Partial("_VideoFact")
+@Html.Partial("_Collabrators")

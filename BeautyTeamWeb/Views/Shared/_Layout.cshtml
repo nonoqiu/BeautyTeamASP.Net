@@ -24,12 +24,12 @@
             </div>
             <nav class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" role="navigation">
                 <ul class="nav navbar-nav navbar-left ">
-                    <li class="active"><a href="@Url.Action("Index","Home")">@Resources.lang.Home</a></li>
-                    <li class=""><a href="@Url.Action("About","Home")">@Resources.lang.AboutUs</a></li>
-                    <li class=""><a href="@Url.Action("Index","Home")">@Resources.lang.Portfolio</a></li>
-                    <li class=""><a href="@Url.Action("Index","Home")">@Resources.lang.Support</a></li>
-                    <li class=""><a href="@Url.Action("Index","Home")">@Resources.lang.Careers</a></li>
-                    <li class=""><a href="@Url.Action("Contact","Home")">@Resources.lang.Contact</a></li>
+                    <li class="@RenderSection("IndexClass",false)"><a href="@Url.Action("Index","Home")">@Resources.lang.Home</a></li>
+                    <li class="@RenderSection("PortfolioClass",false)"><a href="@Url.Action("Index","Home")">@Resources.lang.Portfolio</a></li>
+                    <li class="@RenderSection("SupportClass",false)"><a href="@Url.Action("Index","Home")">@Resources.lang.Support</a></li>
+                    <li class="@RenderSection("CareersClass",false)"><a href="@Url.Action("Careers","Home")">@Resources.lang.Careers</a></li>
+                    <li class="@RenderSection("AboutClass",false)"><a href="@Url.Action("About","Home")">@Resources.lang.AboutUs</a></li>
+                    <li class="@RenderSection("ContactClass",false)"><a href="@Url.Action("Contact","Home")">@Resources.lang.Contact</a></li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </nav>

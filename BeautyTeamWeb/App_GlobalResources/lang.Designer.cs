@@ -70,6 +70,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Obisoft Corporation is a premier developer and publisher of development software and co-working solution. After establishing the corporation in 2015, the company quickly became one of the very popular and well-respected makers of software in China. By focusing on creating well-designed, highly enjoyable using experiences, Obisoft Corporation has maintained an unparalleled reputation for quality since its inception..
+        /// </summary>
+        internal static string AboutUsD {
+            get {
+                return ResourceManager.GetString("AboutUsD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Account Management.
         /// </summary>
         internal static string AccManaCenter {
@@ -102,6 +111,33 @@ namespace Resources {
         internal static string Careers {
             get {
                 return ResourceManager.GetString("Careers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Company Background.
+        /// </summary>
+        internal static string CompanyBackground {
+            get {
+                return ResourceManager.GetString("CompanyBackground", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Each member of the Obisoft Corporation staff is a true program enthusiast, giving the company invaluable insight into creating products for programmers..
+        /// </summary>
+        internal static string CompanyBackgroundD {
+            get {
+                return ResourceManager.GetString("CompanyBackgroundD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Headquartered in Shenyang, Liaoning. Obisoft was founded in 2015 under the destination of OSpace by MMA, president &amp; CEO, and chief development officer God Yu..
+        /// </summary>
+        internal static string CompanyBackgroundD2 {
+            get {
+                return ResourceManager.GetString("CompanyBackgroundD2", resourceCulture);
             }
         }
         
@@ -205,6 +241,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Job Openings.
+        /// </summary>
+        internal static string JobOpenings {
+            get {
+                return ResourceManager.GetString("JobOpenings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Join Us.
         /// </summary>
         internal static string JoinUs {
@@ -300,6 +345,24 @@ namespace Resources {
         internal static string NewPassword {
             get {
                 return ResourceManager.GetString("NewPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New World.
+        /// </summary>
+        internal static string NewWorld {
+            get {
+                return ResourceManager.GetString("NewWorld", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In addition to the BeautyTeam universes, Obisoft is now exploring new worlds—and mashing them together. The upcoming API Studio, announced on 2016, is a SaaS based communication test and development tool. Set in an all-new Obisoft universe, API Studio makes every unit test and API management in the cloud..
+        /// </summary>
+        internal static string NewWorldD {
+            get {
+                return ResourceManager.GetString("NewWorldD", resourceCulture);
             }
         }
         

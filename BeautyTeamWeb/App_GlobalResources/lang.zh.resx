@@ -324,4 +324,25 @@
   <data name="SubscribeNow" xml:space="preserve">
     <value>立即订阅</value>
   </data>
+  <data name="AboutUsD" xml:space="preserve">
+    <value>在开发工具和协同办公领域中，Obisoft公司一直作为开发商和出版商。在2015年成立之后，Obisoft迅速成为知名而广受关注的软件提供商。关注于极端优质的设计和极端优良的用户体验，Obisoft公司一直靠质量保持着自成立以来的声誉。</value>
+  </data>
+  <data name="CompanyBackground" xml:space="preserve">
+    <value>公司背景</value>
+  </data>
+  <data name="CompanyBackgroundD" xml:space="preserve">
+    <value>Obisoft公司每一个成员都是狂热的开发技术爱好者，给公司不可估量的创造力和洞察力，为用户和开发者提供产品。</value>
+  </data>
+  <data name="CompanyBackgroundD2" xml:space="preserve">
+    <value>公司总部在辽宁沈阳市。2015年，在打造OSpace的目标驱动之下，Obisoft由首席执行官薛锋和首席发展官林为昱共同创建。</value>
+  </data>
+  <data name="NewWorld" xml:space="preserve">
+    <value>在新的世界</value>
+  </data>
+  <data name="NewWorldD" xml:space="preserve">
+    <value>在BeautyTeam的环境基础上，Obisoft一直在探索新的世界，并把他们加入生态中。即将在2016年发布的API Studio，是一个基于SaaS的连接和开发测试工具。基于全新的Obisoft生态系统，API Studio也将使单元测试和API管理走向云。</value>
+  </data>
+  <data name="JobOpenings" xml:space="preserve">
+    <value>开放职位申请</value>
+  </data>
 </root>

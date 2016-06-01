@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = Resources.lang.Careers;
+}
+
+@section CareersClass{active}
+
+@Html.Partial("_HomeSlider")
+@Html.Partial("_Destiny")
+
+<div class="clearfix"></div>
+<section id="video-fact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="landing-video">
+                    <img class="img-responsive" src="~/wwwroot/images/slider/s1.jpg" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="video-text">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                      <h3>Who We Are</h3>
+                        <p>
+                            @Resources.lang.CompanyBackgroundD
+                        </p>
+                        <p>
+                            @Resources.lang.AboutUsD
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <p>Note to Recruiters and Placement Agencies: We do not accept unsolicited agency resumes. Please do not forward unsolicited agency resumes to our website or to any of our employees. We will not pay fees to any third party agency, outside recruiter or firm without a mutually agreed-upon contract and will not be responsible for any agency fees associated with unsolicited resumes. Unsolicited resumes received will be considered our property and will be processed accordingly. </p>
+</div>
