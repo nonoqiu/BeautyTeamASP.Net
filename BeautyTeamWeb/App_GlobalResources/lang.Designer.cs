@@ -169,6 +169,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Choose Your Destiny.
+        /// </summary>
+        internal static string DestinyTitle {
+            get {
+                return ResourceManager.GetString("DestinyTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Details.
         /// </summary>
         internal static string Details {
@@ -363,6 +372,15 @@ namespace Resources {
         internal static string NewWorldD {
             get {
                 return ResourceManager.GetString("NewWorldD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Note to Recruiters and Placement Agencies: We do not accept unsolicited agency resumes. Please do not forward unsolicited agency resumes to our website or to any of our employees. We will not pay fees to any third party agency, outside recruiter or firm without a mutually agreed-upon contract and will not be responsible for any agency fees associated with unsolicited resumes. Unsolicited resumes received will be considered our property and will be processed accordingly..
+        /// </summary>
+        internal static string NoteTo {
+            get {
+                return ResourceManager.GetString("NoteTo", resourceCulture);
             }
         }
         
@@ -669,6 +687,15 @@ namespace Resources {
         internal static string WhatWeDoSub {
             get {
                 return ResourceManager.GetString("WhatWeDoSub", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Who We Are.
+        /// </summary>
+        internal static string WhoWeAre {
+            get {
+                return ResourceManager.GetString("WhoWeAre", resourceCulture);
             }
         }
         
