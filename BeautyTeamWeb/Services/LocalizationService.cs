@@ -16,14 +16,14 @@ namespace BeautyTeamWeb
             var Language = filterContext.RouteData.Values["lang"].ToString();
             if (string.IsNullOrWhiteSpace(Language))
             {
-                try
-                {
-                    Language = filterContext.HttpContext.Request.UserLanguages[0].Split(';')[0];
-                }
-                catch
-                {
+                //try
+                //{
+                  //  Language = filterContext.HttpContext.Request.UserLanguages[0].Split(';')[0];
+                //}
+                //catch
+                //{
                     Language = "en-US";
-                }
+                //}
                 filterContext.RouteData.Values["lang"] = Language;
             }
             try

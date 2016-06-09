@@ -188,9 +188,9 @@ namespace BeautyTeamWeb
             app.UseTwoFactorSignInCookie(DefaultAuthenticationTypes.TwoFactorCookie, TimeSpan.FromMinutes(5));
             app.UseTwoFactorRememberBrowserCookie(DefaultAuthenticationTypes.TwoFactorRememberBrowserCookie);
 
-            app.UseMicrosoftAccountAuthentication("000000004C191545", "BOhdMxdyVPdsTH8qZLyiiqU");
-            app.UseFacebookAuthentication("1755093041403342", "14745cd185959ac9d19d75b079592c6e");
-            app.UseTwitterAuthentication("1usofmLObsFymH7hUo6sF6DFi", "T7KiA4HxH4LRsgYFAFFsEpLRYQWnKj7DzXy4cx6OeNVviSzdB6");
+            //app.UseMicrosoftAccountAuthentication("000000004C191545", "BOhdMxdyVPdsTH8qZLyiiqU");
+            //app.UseFacebookAuthentication("1755093041403342", "14745cd185959ac9d19d75b079592c6e");
+            //app.UseTwitterAuthentication("1usofmLObsFymH7hUo6sF6DFi", "T7KiA4HxH4LRsgYFAFFsEpLRYQWnKj7DzXy4cx6OeNVviSzdB6");
             app.UseGitHubAuthentication("a2921a92d97e3d903fe4", "881bb2326621323230b36c2ad32f895a6b26a183");
             //    app.UseVisualStudioAuthentication(nameof(waitting), nameof(waitting));
             //    app.UseInstagramInAuthentication(nameof(waitting), nameof(waitting));

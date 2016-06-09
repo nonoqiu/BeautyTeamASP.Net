@@ -43,7 +43,7 @@ namespace BeautyTeamWeb.Controllers
                 return OkResult;
             });
         }
-
+        
         [HttpPost]
         // POST: /api/Login
         public async Task<string> Login(LoginViewModel model)
@@ -1094,11 +1094,11 @@ namespace BeautyTeamWeb.Controllers
                     return NotAcceptableResult;
                 }
                 //Create Invitaion
-                DbContext.Invitations.Add(new Invitation
-                {
-                    GroupId = id,
-                    ObisoftUserId = UserId
-                });
+                //DbContext.Invitations.Add(new Invitation
+                //{
+                //    GroupId = id,
+                //    ObisoftUserId = UserId
+                //});
                 return OkResult;
             });
         }

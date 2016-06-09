@@ -169,6 +169,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to We’re on a quest: bring our dream ideas to life, and make them as awesome on the screen as they are in our heads. To accomplish that, we need smart, driven people with serious talents. Want in? What do you want to do?.
+        /// </summary>
+        internal static string DestinyDes {
+            get {
+                return ResourceManager.GetString("DestinyDes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Choose Your Destiny.
         /// </summary>
         internal static string DestinyTitle {
@@ -399,6 +408,15 @@ namespace Resources {
         internal static string Our {
             get {
                 return ResourceManager.GetString("Our", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Our Partner.
+        /// </summary>
+        internal static string OurPartner {
+            get {
+                return ResourceManager.GetString("OurPartner", resourceCulture);
             }
         }
         
