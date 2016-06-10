@@ -292,19 +292,26 @@
     <Compile Include="Migrations\201606071301284_Unknown.Designer.cs">
       <DependentUpon>201606071301284_Unknown.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606100824486_AddJobOpenings.cs" />
+    <Compile Include="Migrations\201606100824486_AddJobOpenings.Designer.cs">
+      <DependentUpon>201606100824486_AddJobOpenings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606101053250_CreateViewTImes.cs" />
+    <Compile Include="Migrations\201606101053250_CreateViewTImes.Designer.cs">
+      <DependentUpon>201606101053250_CreateViewTImes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Calendar.cs" />
-    <Compile Include="Models\EmailSubscribe.cs" />
-    <Compile Include="Models\EventAndTask.cs" />
-    <Compile Include="Models\FU_Relation.cs" />
-    <Compile Include="Models\Group.cs" />
-    <Compile Include="Models\Invitations.cs" />
-    <Compile Include="Models\Personal.cs" />
-    <Compile Include="Models\Posts.cs" />
-    <Compile Include="Models\Relations.cs" />
-    <Compile Include="Models\RadioStation.cs" />
-    <Compile Include="Models\Team.cs" />
-    <Compile Include="Models\WeChatModels.cs" />
+    <Compile Include="ViewModels\Home\EmailSubscribe.cs" />
+    <Compile Include="Models\BeautyTeam\EventAndTask.cs" />
+    <Compile Include="Models\UserService\FU_Relation.cs" />
+    <Compile Include="Models\BeautyTeam\Group.cs" />
+    <Compile Include="Models\BeautyTeam\Invitations.cs" />
+    <Compile Include="Models\BeautyTeam\Personal.cs" />
+    <Compile Include="Models\BeautyTeam\Posts.cs" />
+    <Compile Include="Models\BeautyTeam\Relations.cs" />
+    <Compile Include="Models\BeautyTeam\RadioStation.cs" />
+    <Compile Include="Models\BeautyTeam\Team.cs" />
+    <Compile Include="Models\ServiceModels\WeChatModels.cs" />
     <Compile Include="Secrets.cs" />
     <Compile Include="Services\HTTPService.cs" />
     <Compile Include="Services\OSSService.cs" />
@@ -319,8 +326,8 @@
     <Compile Include="ViewModels\API\EventLog.cs" />
     <Compile Include="ViewModels\API\GU_RelationR.cs" />
     <Compile Include="ViewModels\API\Platform.cs" />
-    <Compile Include="Models\ApiServerModels.cs" />
-    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\BeautyTeam\EventLog.cs" />
+    <Compile Include="Models\DatabaseModel\ApplicationDbContext.cs" />
     <Compile Include="Services\ApiService.cs" />
     <Compile Include="Services\EmailService.cs" />
     <Compile Include="Services\LocalizationService.cs" />
@@ -333,7 +340,7 @@
     </Compile>
     <Compile Include="Services\SmsService.cs" />
     <Compile Include="ViewModels\Account\AccountViewModels.cs" />
-    <Compile Include="Models\ObisoftUser.cs" />
+    <Compile Include="Models\UserService\ObisoftUser.cs" />
     <Compile Include="ViewModels\API\SetSchoolAccount.cs" />
     <Compile Include="ViewModels\API\TeamStatisticInfo.cs" />
     <Compile Include="ViewModels\API\UploadImageViewModel.cs" />
@@ -347,6 +354,7 @@
     <Compile Include="ViewModels\BeautyTeam\Posts.cs" />
     <Compile Include="ViewModels\BeautyTeam\SetGroupAdminModel.cs" />
     <Compile Include="ViewModels\Home\IndexViewModel.cs" />
+    <Compile Include="ViewModels\Home\JobOpening.cs" />
     <Compile Include="ViewModels\Manage\BasicInfoViewModel.cs" />
     <Compile Include="ViewModels\Manage\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -575,6 +583,8 @@
     <Content Include="Views\Home\_Pricing.cshtml" />
     <Content Include="Views\Home\Careers.cshtml" />
     <Content Include="Views\Home\_Destiny.cshtml" />
+    <Content Include="Views\Home\AllJobs.cshtml" />
+    <Content Include="Views\Home\JobDetails.cshtml" />
     <None Include="wwwroot\js\jquery.validate-vsdoc.js" />
     <Content Include="wwwroot\js\jquery.validate.js" />
     <Content Include="wwwroot\js\jquery.validate.min.js" />
@@ -673,6 +683,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606071301284_Unknown.resx">
       <DependentUpon>201606071301284_Unknown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606100824486_AddJobOpenings.resx">
+      <DependentUpon>201606100824486_AddJobOpenings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606101053250_CreateViewTImes.resx">
+      <DependentUpon>201606101053250_CreateViewTImes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

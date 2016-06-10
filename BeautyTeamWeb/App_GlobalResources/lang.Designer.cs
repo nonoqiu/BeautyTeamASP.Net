@@ -205,6 +205,33 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pine Zhao.
+        /// </summary>
+        internal static string FeedBack1 {
+            get {
+                return ResourceManager.GetString("FeedBack1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to I&apos;m really envy you young and energetic team. This team the most suitable investment and training, hope you get better and better..
+        /// </summary>
+        internal static string FeedBack1C {
+            get {
+                return ResourceManager.GetString("FeedBack1C", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exectuive Officer of Yoolee Network.
+        /// </summary>
+        internal static string FeedBack1D {
+            get {
+                return ResourceManager.GetString("FeedBack1D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Forgot your password?.
         /// </summary>
         internal static string ForgotPassword {

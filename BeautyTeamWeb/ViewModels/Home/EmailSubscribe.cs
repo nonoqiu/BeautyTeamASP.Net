@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace BeautyTeamWeb.Models
+namespace BeautyTeamWeb.ViewModels
 {
     public class EmailSubscribe
     {

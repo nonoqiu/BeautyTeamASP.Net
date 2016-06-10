@@ -360,4 +360,13 @@
   <data name="DestinyDes" xml:space="preserve">
     <value>我们拥有共同的梦想：把我们梦中的想法变成现实，让屏幕上的它们如同我们梦想中的生动。为了这个梦想，我们需要敏捷、热忱而有天分的人。想要加入？你喜欢做什么呢？</value>
   </data>
+  <data name="FeedBack1" xml:space="preserve">
+    <value>赵清松</value>
+  </data>
+  <data name="FeedBack1C" xml:space="preserve">
+    <value>真羡慕你们年轻而富有活力的团队。这样的团队最适合投资和培养，也希望你们越来越好。</value>
+  </data>
+  <data name="FeedBack1D" xml:space="preserve">
+    <value>油利网科技总经理</value>
+  </data>
 </root>

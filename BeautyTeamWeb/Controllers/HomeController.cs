@@ -1,4 +1,5 @@
 ﻿using BeautyTeamWeb.ViewModels;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -46,13 +47,46 @@ namespace BeautyTeamWeb.Controllers
             return View();
         }
 
+        public ActionResult TheLightOfTheory()
+        {
+            return View();
+        }
+
+        public async Task<ActionResult> AllJobs(JobType? id)
+        {
+            if (id == null)
+            {
+                var Jobs = await DbContext.JobOpenings.ToListAsync();
+                return View(Jobs);
+            }
+            else
+            {
+                var Jobs = await DbContext.JobOpenings.Where(t=>t.JobType==id).ToListAsync();
+                return View(Jobs);
+            }
+        }
+
+        public async Task<ActionResult> JobDetails(int? id)
+        {
+            if(id == null)
+            {
+                return RedirectToAction("AllJobs");
+            }
+            var CurrentJob = await DbContext.JobOpenings.FindAsync(id);
+            if(CurrentJob==null)
+            {
+                return RedirectToAction("AllJobs");
+            }
+            return View(CurrentJob);
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<PartialViewResult> SubScribe(SubScribeViewModel model)
         {
             if (ModelState.IsValid)
             {
-                DbContext.EmailSubscribes.Add(new Models.EmailSubscribe
+                DbContext.EmailSubscribes.Add(new EmailSubscribe
                 {
                     Email = model.Email
                 });

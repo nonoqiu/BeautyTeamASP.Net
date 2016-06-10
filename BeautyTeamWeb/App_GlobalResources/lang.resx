@@ -360,4 +360,13 @@
   <data name="DestinyDes" xml:space="preserve">
     <value>We’re on a quest: bring our dream ideas to life, and make them as awesome on the screen as they are in our heads. To accomplish that, we need smart, driven people with serious talents. Want in? What do you want to do?</value>
   </data>
+  <data name="FeedBack1" xml:space="preserve">
+    <value>Pine Zhao</value>
+  </data>
+  <data name="FeedBack1C" xml:space="preserve">
+    <value>I'm really envy you young and energetic team. This team the most suitable investment and training, hope you get better and better.</value>
+  </data>
+  <data name="FeedBack1D" xml:space="preserve">
+    <value>Exectuive Officer of Yoolee Network</value>
+  </data>
 </root>

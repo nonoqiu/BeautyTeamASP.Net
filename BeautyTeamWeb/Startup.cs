@@ -36,13 +36,6 @@ using System.Data.Entity.Migrations;
 [assembly: OwinStartupAttribute(typeof(BeautyTeamWeb.Startup))]
 namespace BeautyTeamWeb
 {
-    public class ObiHandleErrorAttribute : HandleErrorAttribute
-    {
-        public override void OnException(ExceptionContext filterContext)
-        {
-            base.OnException(filterContext);
-        }
-    }
     public class Startup
     {
         public static void Main(string[] args)
@@ -54,7 +47,7 @@ namespace BeautyTeamWeb
         }
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new ObiHandleErrorAttribute());
+            filters.Add(new HandleErrorAttribute());
         }
         public static RouteCollection RegisterRoutes(RouteCollection routes)
         {

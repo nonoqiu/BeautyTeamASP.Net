@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
+﻿using BeautyTeamWeb.ViewModels;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
 
 namespace BeautyTeamWeb.Models
@@ -20,6 +21,7 @@ namespace BeautyTeamWeb.Models
         public DbSet<GroupTask> GroupTasks { get; set; }
         public DbSet<GU_Relation> GU_Relation { get; set; }
         public DbSet<Invitation> Invitations { get; set; }
+        public DbSet<JobOpening> JobOpenings { get; set; }
         public DbSet<PersonalEvent> PersonalEvents { get; set; }
         public DbSet<PersonalTask> PersonalTasks { get; set; }
         public DbSet<PostResponse> PostResponses { get; set; }

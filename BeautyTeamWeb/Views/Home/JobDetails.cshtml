@@ -1,0 +1,53 @@
+﻿@model BeautyTeamWeb.ViewModels.JobOpening
+
+@{
+    ViewBag.Title = "JobDetails";
+}
+
+@Html.Partial("../Home/_StaticSliderIV")
+
+
+<section id="blog-single">
+    <div class="container">
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+            <div class="blog-desc">
+                <h3>@Html.DisplayFor(t => t.JobOpeningName)</h3>
+                <ul class="post-meta-links list-inline">
+                    <li><a href="#"><span> <i class="fa fa-bookmark"></i></span> @Html.DisplayFor(t => t.PublishTime)</a></li>
+                    <li><a href="#"> <span><i class="fa fa-folder"></i></span>@Model.JobType.ToString()</a></li>
+                    <li><a href="#"> <span><i class="fa fa-eye"></i></span>@Model.Views</a></li>
+                </ul>
+                @Html.DisplayFor(t => t.JobDescription)
+            </div>
+            <hr>
+            <div class="clearfix"></div>
+            <div class="share1">
+                <h4>Share</h4>
+                <div class="social-contact list-inline">
+                    <div class="bdsharebuttonbox">
+                        <span class='st_facebook_large' displayText='Facebook'></span>
+                        <span class='st_twitter_large' displayText='Tweet'></span>
+                        <span class='st_linkedin_large' displayText='LinkedIn'></span>
+                        <span class='st_googleplus_large' displayText='Google +'></span>
+                        <span class='st_flipboard_large' displayText='Flipboard'></span>
+                        <span class='st_email_large' displayText='Email'></span>
+                    </div>
+                    <script type="text/javascript">var switchTo5x=true;</script>
+                    <script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+                    <script type="text/javascript">stLight.options({publisher: "39a8c1ac-2d7a-4c23-9391-01567a6d71a9", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
+                 </div>
+            </div>
+            <div class="clearfix"></div>
+            <hr>
+            <div class="about-auther">
+                <h4>About Obisoft</h4>
+                <hr>
+                <div class="well">
+                    <p>
+                        @Resources.lang.AboutUsD
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
