@@ -58,6 +58,10 @@ namespace BeautyTeamWeb.Services
         {
             string s = string.Empty;
             Content = HttpUtility.HtmlDecode(Content?.ToString() ?? string.Empty);
+            if((!Content.Contains("<"))&&(!Content.Contains(">")))
+            {
+                return Content;
+            }
             while (Content.Length > 5)
             {
                 s = s + Content.Substring(0, Content.IndexOf("<"));

@@ -1,38 +1,42 @@
 ﻿@using BeautyTeamWeb.Services
 
 @model List<BeautyTeamWeb.ViewModels.JobOpening>
+@section CareersClass{active}
+
 @{
     ViewBag.Title = "AllJobs";
 }
+
 @Html.Partial("_HomeSlider")
+
 <div class="container">
     <h2>All Jobs</h2>
     @foreach (var Job in Model)
     {
-    <div class="row">
-        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-            <div class="sidebar">
-                <div class="portfolio-desc">
-                    <h4>@Html.DisplayFor(modelItem => Job.JobOpeningName)</h4>
-                    <p>
-                        @Job.JobDescription.Take(200)
-                    </p>
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <div class="sidebar">
+                    <div class="portfolio-desc">
+                        <h4>@Html.DisplayFor(modelItem => Job.JobOpeningName)</h4>
+                        <p>
+                            @Job.JobDescription.Take(200)
+                        </p>
+                    </div>
+                    <div>
+                        <a class="btn btn-main featured" style="margin-left: 10px;" href="@Url.Action("JobDetails","Home",new { id=Job.JobOpeningId})">Details</a>
+                    </div>
                 </div>
-                <div>
-                    <a class="btn btn-main featured" style="margin-left: 10px;" href="@Url.Action("JobDetails","Home",new { id=Job.JobOpeningId})">Details</a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="right-sidebar">
+                    <h4>Job Properties</h4>
+                    <ul class="circle">
+                        <li><span>Publish Time</span>@Html.DisplayFor(modelItem => Job.PublishTime)</li>
+                        <li><span>Job Type</span>@Job.JobType.ToString()</li>
+                        <li><span>View Times</span>@Job.Views</li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-            <div class="right-sidebar">
-                <h4>Job Properties</h4>
-                <ul class="circle">
-                    <li><span>Publish Time</span>@Html.DisplayFor(modelItem => Job.PublishTime)</li>
-                    <li><span>Job Type</span>@Job.JobType.ToString()</li>
-                    <li><span>View Times</span>@Job.Views</li>
-                </ul>
-            </div>
-        </div>
-    </div>
     }
 </div>

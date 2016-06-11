@@ -31,5 +31,7 @@ namespace BeautyTeamWeb.Models
         public DbSet<RadioTask> RadioTasks { get; set; }
         public DbSet<SecComment> SecComments { get; set; }
         public DbSet<TU_Relation> TU_Relation { get; set; }
+        public DbSet<UserApplyJobModel> UserApplyJobModels { get; set; }
+
     }
 }
