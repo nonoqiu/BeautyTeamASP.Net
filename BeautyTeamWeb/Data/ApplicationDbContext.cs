@@ -22,6 +22,8 @@ namespace BeautyTeamWeb.Models
         public DbSet<GU_Relation> GU_Relation { get; set; }
         public DbSet<Invitation> Invitations { get; set; }
         public DbSet<JobOpening> JobOpenings { get; set; }
+        public DbSet<LightOfTheory> LightOfTheorys { get; set; }
+        public DbSet<NewsViewModel> NewsViewModels { get; set; }
         public DbSet<PersonalEvent> PersonalEvents { get; set; }
         public DbSet<PersonalTask> PersonalTasks { get; set; }
         public DbSet<PostResponse> PostResponses { get; set; }
@@ -32,6 +34,5 @@ namespace BeautyTeamWeb.Models
         public DbSet<SecComment> SecComments { get; set; }
         public DbSet<TU_Relation> TU_Relation { get; set; }
         public DbSet<UserApplyJobModel> UserApplyJobModels { get; set; }
-
     }
 }

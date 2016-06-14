@@ -164,7 +164,11 @@ namespace BeautyTeamWeb.Controllers
                     NickName = Target.NickName,
                     UserName = Target.UserName
                 };
-                return await _JsongAsync(new ObiObject<AnotherUser> { Object = Result, StatusCode = HttpStatusCode.OK });
+                return await _JsongAsync(new ObiObject<AnotherUser>
+                {
+                    Object = Result,
+                    StatusCode = HttpStatusCode.OK
+                });
             });
         }
 
@@ -174,7 +178,12 @@ namespace BeautyTeamWeb.Controllers
         {
             return await this._apiReplyTool(async () =>
             {
-                var user = new ObisoftUser { UserName = model.Email, Email = model.Email, NickName = model.Email.Split('@')[0] };
+                var user = new ObisoftUser
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    NickName = model.Email.Split('@')[0]
+                };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

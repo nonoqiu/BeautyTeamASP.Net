@@ -14,7 +14,7 @@
     <div class="container">
         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
             <div class="blog-desc">
-                <h3>@Html.DisplayFor(t => t.JobOpeningName)</h3>
+                <h3>@Model.JobOpeningName</h3>
                 <ul class="post-meta-links list-inline">
                     <li><a href="#"><span> <i class="fa fa-bookmark"></i></span> @Html.DisplayFor(t => t.PublishTime)</a></li>
                     <li><a href="#"> <span><i class="fa fa-folder"></i></span>@Model.JobType.ToString()</a></li>
@@ -25,7 +25,7 @@
             <hr>
             <div class="clearfix"></div>
             <div class="share1">
-                <h4>Share</h4>
+                <h4>@Resources.lang.Share</h4>
                 <div class="social-contact list-inline">
                     <div class="bdsharebuttonbox">
                         <span class='st_facebook_large' displayText='Facebook'></span>
@@ -36,14 +36,14 @@
                         <span class='st_email_large' displayText='Email'></span>
                     </div>
                     <script type="text/javascript">var switchTo5x = true;</script>
-                    <script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
-                    <script type="text/javascript">stLight.options({ publisher: "39a8c1ac-2d7a-4c23-9391-01567a6d71a9", doNotHash: false, doNotCopy: false, hashAddressBar: true });</script>
+                    <script type="text/javascript" src="~/wwwroot/js/buttons.js"></script>
+                    <script type="text/javascript">stLight.options({ publisher: "39a8c1ac-2d7a-4c23-9391-01567a6d71a9", doNotHash: false, doNotCopy: false, hashAddressBar: false });</script>
                 </div>
             </div>
             <div class="clearfix"></div>
             <hr>
             <div class="about-auther">
-                <h4>About Obisoft</h4>
+                <h4>@Resources.lang.About Obisoft</h4>
                 <hr>
                 <div class="well">
                     <p>
@@ -52,13 +52,13 @@
                 </div>
             </div>
             <div class="col-md-12 text-center">
-                <a class="btn btn-main featured text-center" href="@Url.Action("ApplyJob","Home",new { id=Model.JobOpeningId })">Apply Online</a>
+                <a class="btn btn-main featured text-center" href="@Url.Action("ApplyJob","Home",new { id=Model.JobOpeningId })">@Resources.lang.ApplyOnline</a>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="related-post">
-                    <h4>Job Suggestion</h4>
+                    <h4>@Resources.lang.JobSuggestion</h4>
                     <hr>
                     <div class="row">
                         @foreach (var SuggestArticle in (ViewBag.Suggestion as List<BeautyTeamWeb.ViewModels.JobOpening>)?.Take(5))
@@ -76,7 +76,6 @@
                         }
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

@@ -369,4 +369,64 @@
   <data name="FeedBack1D" xml:space="preserve">
     <value>油利网科技总经理</value>
   </data>
+  <data name="About" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="AllJobs" xml:space="preserve">
+    <value>全部职位</value>
+  </data>
+  <data name="ApplyOnline" xml:space="preserve">
+    <value>在线申请</value>
+  </data>
+  <data name="JobProperties" xml:space="preserve">
+    <value>职位属性</value>
+  </data>
+  <data name="JobSuggestion" xml:space="preserve">
+    <value>职位推荐</value>
+  </data>
+  <data name="JobType" xml:space="preserve">
+    <value>职位类型</value>
+  </data>
+  <data name="PublishTime" xml:space="preserve">
+    <value>发布时间</value>
+  </data>
+  <data name="Share" xml:space="preserve">
+    <value>分享</value>
+  </data>
+  <data name="ViewTimes" xml:space="preserve">
+    <value>浏览量</value>
+  </data>
+  <data name="FeedBack2" xml:space="preserve">
+    <value>杨子杰</value>
+  </data>
+  <data name="FeedBack2C" xml:space="preserve">
+    <value>掌握的技能和交付的成果都媲美多年经验的专业开发团队，在新技术的运用上更甚。这一切来源于背后超出常人的勤奋。希望你们坚持下去，我会一直在我的经验领域提供帮助。</value>
+  </data>
+  <data name="FeedBack2D" xml:space="preserve">
+    <value>星云科技研发部部长</value>
+  </data>
+  <data name="SubThanks" xml:space="preserve">
+    <value>感谢订阅! 现在你将收到我们的新闻邮件</value>
+  </data>
+  <data name="NewsCenter" xml:space="preserve">
+    <value>新闻中心</value>
+  </data>
+  <data name="ForChina" xml:space="preserve">
+    <value>辽ICP备15014187号</value>
+  </data>
+  <data name="LatestNews" xml:space="preserve">
+    <value>新闻和事件</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>团队</value>
+  </data>
+  <data name="Project" xml:space="preserve">
+    <value>项目</value>
+  </data>
+  <data name="Task" xml:space="preserve">
+    <value>任务</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>用户</value>
+  </data>
 </root>

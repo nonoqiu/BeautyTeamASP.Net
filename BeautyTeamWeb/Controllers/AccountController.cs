@@ -12,12 +12,12 @@ namespace BeautyTeamWeb.Controllers
     [ObisoftAuthorize]
     [ObisoftLocalization]
     [RequireHttps]
+
     public class AccountController : ControllerWithAuthorize
     {
         public AccountController()
         {
         }
-
         public AccountController(ObisoftUserManager u, ObisoftSignInManager s) : base(u, s)
         {
 

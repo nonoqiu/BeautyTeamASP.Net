@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -26,12 +27,39 @@
                 <ul class="nav navbar-nav navbar-left ">
                     <li class="@RenderSection("IndexClass",false)"><a href="@Url.Action("Index","Home")">@Resources.lang.Home</a></li>
                     <li class="@RenderSection("PortfolioClass",false)"><a href="@Url.Action("Index","Home")">@Resources.lang.Portfolio</a></li>
-                    <li class="@RenderSection("SupportClass",false)"><a href="@Url.Action("Index","Home")">@Resources.lang.Support</a></li>
-                    <li class="@RenderSection("CareersClass",false)"><a href="@Url.Action("Careers","Home")">@Resources.lang.Careers</a></li>
+                     <li class="@RenderSection("CareersClass",false)"><a href="@Url.Action("Careers","Home")">@Resources.lang.Careers</a></li>
                     <li class="@RenderSection("AboutClass",false)"><a href="@Url.Action("About","Home")">@Resources.lang.AboutUs</a></li>
                     <li class="@RenderSection("ContactClass",false)"><a href="@Url.Action("Contact","Home")">@Resources.lang.Contact</a></li>
                 </ul>
-                @Html.Partial("_LoginPartial")
+                <form action="@Url.Action("LogOff","Account")" method="post" id="logoutForm" class="navbar-right">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">@Resources.lang.Lang<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-header">@Resources.lang.Lang</li>
+                                <li @if (ViewContext.RouteData.Values["lang"].ToString().ToLower()=="zh-cn")
+                                {
+                                    @:class="active" 
+                                    }><a  href="@Url.RouteUrl(ViewContext.RouteData.Values.ChangeAndReturn("lang","zh-CN"))">简体中文</a></li>
+                                <li @if (ViewContext.RouteData.Values["lang"].ToString().ToLower()=="en-us")
+                                {
+                                    @:class="active" 
+                                    }><a href="@Url.RouteUrl(ViewContext.RouteData.Values.ChangeAndReturn("lang","en-US"))">English</a></li>
+                            </ul>
+                        </li>
+                        @if (Request.IsAuthenticated)
+                        {
+                            @Html.AntiForgeryToken()
+                            <li class="@RenderSection("ManageClass",false)"><a href="@Url.Action("Index","Manage")">@Resources.lang.Hello, @User.Identity.GetUserName().Split('@')[0]!</a></li>
+                            <li><a href="javascript:document.getElementById('logoutForm').submit()">@Resources.lang.Logout</a></li>
+                        }
+                        else
+                        {
+                            <li class="@RenderSection("RegisterClass",false)"><a href="@Url.Action("Register","Account")" id="registerLink">@Resources.lang.Register</a></li>
+                            <li class="@RenderSection("LoginClass",false)"><a href="@Url.Action("Login","Account")" id="loginLink">@Resources.lang.Login</a></li>
+                        }
+                    </ul>
+                </form>
             </nav>
         </div>
     </header>

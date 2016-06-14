@@ -7,67 +7,34 @@
 @Html.Partial("../Home/_StaticSliderIV")
 
 <div class="container">
-    <h4>Job Opening</h4>
+    <h4>Apply Job</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.JobOpeningName)
+            Job Name
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.JobOpeningName)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.JobDescription)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.JobDescription)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PublishTime)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PublishTime)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.JobType)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.JobType)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Views)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Views)
-        </dd>
-
     </dl>
     <div class="row">
         <form class="contact_full" method="post" action="@Url.Action("ApplyJob","Home")">
             <div class="col-md-6 left">
                 <div class="left_contact">
-        <input type="hidden" value="@Model.JobOpeningId" name="JobId" id="JobId" />
-                        <div class="form-level">
-                            <input name="Name" placeholder="Your Name" id="Name" value="" type="text" class="input-block">
-                            <span class="form-icon fa fa-user"></span>
-                        </div>
-                        <div class="form-level">
-                            <input name="Email" placeholder="Your Email Address" id="Email" class="input-block" value="" type="email">
-                            <span class="form-icon fa fa-envelope-o"></span>
-                        </div>
-                        <div class="form-level">
-                            <input name="Phone" placeholder="Your Phone Number" id="Phone" class="input-block" value="" type="text">
-                            <span class="form-icon fa fa-phone"></span>
-                        </div>
+                    <input type="hidden" value="@Model.JobOpeningId" name="JobId" id="JobId" />
+                    <div class="form-level">
+                        <input name="Name" placeholder="Your Name" id="Name" value="" type="text" class="input-block">
+                        <span class="form-icon fa fa-user"></span>
+                    </div>
+                    <div class="form-level">
+                        <input name="Email" placeholder="Your Email Address" id="Email" class="input-block" value="" type="email">
+                        <span class="form-icon fa fa-envelope-o"></span>
+                    </div>
+                    <div class="form-level">
+                        <input name="Phone" placeholder="Your Phone Number" id="Phone" class="input-block" value="" type="text">
+                        <span class="form-icon fa fa-phone"></span>
+                    </div>
                 </div>
             </div>
             <div class="col-md-6 right">
@@ -81,8 +48,7 @@
             </div>
         </form>
     </div>
+    <p>
+        @Html.ActionLink("Back to List", "JobDetails", "Home", new { id = Model.JobOpeningId })
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.JobOpeningId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

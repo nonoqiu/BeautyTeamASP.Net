@@ -91,6 +91,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -304,6 +305,22 @@
     <Compile Include="Migrations\201606101331219_CreateUserApplyJobModels.Designer.cs">
       <DependentUpon>201606101331219_CreateUserApplyJobModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606121427234_CreateWebsiteNews.cs" />
+    <Compile Include="Migrations\201606121427234_CreateWebsiteNews.Designer.cs">
+      <DependentUpon>201606121427234_CreateWebsiteNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606121441313_AddActiontoNews.cs" />
+    <Compile Include="Migrations\201606121441313_AddActiontoNews.Designer.cs">
+      <DependentUpon>201606121441313_AddActiontoNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606121505597_addimage.cs" />
+    <Compile Include="Migrations\201606121505597_addimage.Designer.cs">
+      <DependentUpon>201606121505597_addimage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606131237521_whatchanged.cs" />
+    <Compile Include="Migrations\201606131237521_whatchanged.Designer.cs">
+      <DependentUpon>201606131237521_whatchanged.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ViewModels\Home\ApplyJobModel.cs" />
     <Compile Include="ViewModels\Home\EmailSubscribe.cs" />
@@ -332,7 +349,7 @@
     <Compile Include="ViewModels\API\GU_RelationR.cs" />
     <Compile Include="ViewModels\API\Platform.cs" />
     <Compile Include="Models\BeautyTeam\EventLog.cs" />
-    <Compile Include="Models\DatabaseModel\ApplicationDbContext.cs" />
+    <Compile Include="Data\ApplicationDbContext.cs" />
     <Compile Include="Services\ApiService.cs" />
     <Compile Include="Services\EmailService.cs" />
     <Compile Include="Services\LocalizationService.cs" />
@@ -360,6 +377,8 @@
     <Compile Include="ViewModels\BeautyTeam\SetGroupAdminModel.cs" />
     <Compile Include="ViewModels\Home\IndexViewModel.cs" />
     <Compile Include="ViewModels\Home\JobOpening.cs" />
+    <Compile Include="ViewModels\Home\LightOfTheory.cs" />
+    <Compile Include="ViewModels\Home\NewsViewModel.cs" />
     <Compile Include="ViewModels\Manage\BasicInfoViewModel.cs" />
     <Compile Include="ViewModels\Manage\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -377,6 +396,7 @@
     <Content Include="wwwroot\css\Sitefont.css" />
     <Content Include="wwwroot\css\weui.min.css" />
     <Content Include="wwwroot\images\Icon.jpg" />
+    <Content Include="wwwroot\images\Resources\News1.jpg" />
     <Content Include="wwwroot\images\slider\s4.jpg" />
     <Content Include="wwwroot\images\wc\icon_nav_actionSheet.png" />
     <Content Include="wwwroot\images\wc\icon_nav_article.png" />
@@ -394,6 +414,7 @@
     <Content Include="wwwroot\images\wc\pic_article_1.jpg" />
     <Content Include="wwwroot\images\wc\pic_article_2.jpg" />
     <Content Include="wwwroot\images\wc\vcode.jpg" />
+    <Content Include="wwwroot\js\buttons.js" />
     <Content Include="wwwroot\js\custom.js" />
     <Content Include="wwwroot\js\customBack.js" />
     <Content Include="wwwroot\js\jquery.bxslider.js" />
@@ -592,6 +613,9 @@
     <Content Include="Views\Home\JobDetails.cshtml" />
     <Content Include="Views\Home\ApplyJob.cshtml" />
     <Content Include="Views\Home\Applied.cshtml" />
+    <Content Include="Views\Home\AllNews.cshtml" />
+    <Content Include="Views\Home\_StaticSliderVII.cshtml" />
+    <Content Include="Views\Home\Light.cshtml" />
     <None Include="wwwroot\js\jquery.validate-vsdoc.js" />
     <Content Include="wwwroot\js\jquery.validate.js" />
     <Content Include="wwwroot\js\jquery.validate.min.js" />
@@ -637,7 +661,6 @@
     <Content Include="Views\Manage\SetPassword.cshtml" />
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -699,6 +722,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606101331219_CreateUserApplyJobModels.resx">
       <DependentUpon>201606101331219_CreateUserApplyJobModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606121427234_CreateWebsiteNews.resx">
+      <DependentUpon>201606121427234_CreateWebsiteNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606121441313_AddActiontoNews.resx">
+      <DependentUpon>201606121441313_AddActiontoNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606121505597_addimage.resx">
+      <DependentUpon>201606121505597_addimage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606131237521_whatchanged.resx">
+      <DependentUpon>201606131237521_whatchanged.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

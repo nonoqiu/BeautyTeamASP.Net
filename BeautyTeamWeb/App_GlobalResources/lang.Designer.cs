@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to About.
+        /// </summary>
+        internal static string About {
+            get {
+                return ResourceManager.GetString("About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to About Us.
         /// </summary>
         internal static string AboutUs {
@@ -79,7 +88,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Account Management.
+        ///   Looks up a localized string similar to Account.
         /// </summary>
         internal static string AccManaCenter {
             get {
@@ -97,11 +106,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All Jobs.
+        /// </summary>
+        internal static string AllJobs {
+            get {
+                return ResourceManager.GetString("AllJobs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to API Document.
         /// </summary>
         internal static string APIDoc {
             get {
                 return ResourceManager.GetString("APIDoc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apply Online.
+        /// </summary>
+        internal static string ApplyOnline {
+            get {
+                return ResourceManager.GetString("ApplyOnline", resourceCulture);
             }
         }
         
@@ -232,11 +259,56 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Zijie Yang.
+        /// </summary>
+        internal static string FeedBack2 {
+            get {
+                return ResourceManager.GetString("FeedBack2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to With the continued efforts beyond their peers, this team provides high-quality delivery which rivals professional teams with years of experiences,  while the applications of latest technology are even better. Hope you keep on working and I will always offer help in my universe..
+        /// </summary>
+        internal static string FeedBack2C {
+            get {
+                return ResourceManager.GetString("FeedBack2C", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Head of R&amp;D Department of XY HOME.
+        /// </summary>
+        internal static string FeedBack2D {
+            get {
+                return ResourceManager.GetString("FeedBack2D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string ForChina {
+            get {
+                return ResourceManager.GetString("ForChina", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Forgot your password?.
         /// </summary>
         internal static string ForgotPassword {
             get {
                 return ResourceManager.GetString("ForgotPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Groups.
+        /// </summary>
+        internal static string Group {
+            get {
+                return ResourceManager.GetString("Group", resourceCulture);
             }
         }
         
@@ -268,7 +340,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Create Greate Things.
+        ///   Looks up a localized string similar to Create Great Things.
         /// </summary>
         internal static string HomeTitle {
             get {
@@ -291,6 +363,33 @@ namespace Resources {
         internal static string JobOpenings {
             get {
                 return ResourceManager.GetString("JobOpenings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Job Properties.
+        /// </summary>
+        internal static string JobProperties {
+            get {
+                return ResourceManager.GetString("JobProperties", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Job Suggestion.
+        /// </summary>
+        internal static string JobSuggestion {
+            get {
+                return ResourceManager.GetString("JobSuggestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Job Type.
+        /// </summary>
+        internal static string JobType {
+            get {
+                return ResourceManager.GetString("JobType", resourceCulture);
             }
         }
         
@@ -327,6 +426,15 @@ namespace Resources {
         internal static string Lang {
             get {
                 return ResourceManager.GetString("Lang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to News &amp; Event.
+        /// </summary>
+        internal static string LatestNews {
+            get {
+                return ResourceManager.GetString("LatestNews", resourceCulture);
             }
         }
         
@@ -390,6 +498,15 @@ namespace Resources {
         internal static string NewPassword {
             get {
                 return ResourceManager.GetString("NewPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to News.
+        /// </summary>
+        internal static string NewsCenter {
+            get {
+                return ResourceManager.GetString("NewsCenter", resourceCulture);
             }
         }
         
@@ -489,6 +606,24 @@ namespace Resources {
         internal static string PortSub {
             get {
                 return ResourceManager.GetString("PortSub", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Projects.
+        /// </summary>
+        internal static string Project {
+            get {
+                return ResourceManager.GetString("Project", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Publish Time.
+        /// </summary>
+        internal static string PublishTime {
+            get {
+                return ResourceManager.GetString("PublishTime", resourceCulture);
             }
         }
         
@@ -610,6 +745,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Share.
+        /// </summary>
+        internal static string Share {
+            get {
+                return ResourceManager.GetString("Share", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SourceCode.
         /// </summary>
         internal static string SourceCode {
@@ -655,6 +799,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Thanks for subscription. You now will recieve our news Emails..
+        /// </summary>
+        internal static string SubThanks {
+            get {
+                return ResourceManager.GetString("SubThanks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Support.
         /// </summary>
         internal static string Support {
@@ -682,11 +835,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tasks.
+        /// </summary>
+        internal static string Task {
+            get {
+                return ResourceManager.GetString("Task", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unable to Log in?.
         /// </summary>
         internal static string UnabletoLogin {
             get {
                 return ResourceManager.GetString("UnabletoLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Users.
+        /// </summary>
+        internal static string User {
+            get {
+                return ResourceManager.GetString("User", resourceCulture);
             }
         }
         
@@ -714,6 +885,15 @@ namespace Resources {
         internal static string VF2Parg {
             get {
                 return ResourceManager.GetString("VF2Parg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View Times.
+        /// </summary>
+        internal static string ViewTimes {
+            get {
+                return ResourceManager.GetString("ViewTimes", resourceCulture);
             }
         }
         

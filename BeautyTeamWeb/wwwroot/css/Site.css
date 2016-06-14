@@ -593,7 +593,8 @@ ul.navbar-nav > .active > a {
     }
 
     .overlay-slide img {
-        width: 100%;
+        min-width: 100%;
+        min-height:100%;
         display: block;
     }
 
@@ -2736,7 +2737,8 @@ figcaption .links {
 }
 
 .video-background {
-    width: 100%;
+    min-height:100%;
+    min-width:100%;
 }
 
 .video-background-container {
@@ -2980,4 +2982,8 @@ iframe {
 
 .dl-Obihorizontal dd {
     margin-left: 80px;
+}
+
+.navbar-collapse {
+    max-height:800px;
 }

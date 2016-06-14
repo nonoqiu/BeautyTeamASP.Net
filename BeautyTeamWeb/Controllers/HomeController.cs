@@ -13,17 +13,15 @@ namespace BeautyTeamWeb.Controllers
     {
         public async Task<ActionResult> Index()
         {
-            return await Task.Factory.StartNew(() =>
+            var model = new HomeIndexViewModel
             {
-                var model = new HomeIndexViewModel
-                {
-                    Users = DbContext.Users.Count(),
-                    GroupNumbers = DbContext.Groups.Count(),
-                    Projects = DbContext.Projects.Count(),
-                    Tasks = DbContext.GroupTasks.Count() + DbContext.PersonalTasks.Count() + DbContext.RadioTasks.Count()
-                };
-                return View(model);
-            });
+                Users = DbContext.Users.Count(),
+                GroupNumbers = DbContext.Groups.Count(),
+                Projects = DbContext.Projects.Count(),
+                Tasks = DbContext.GroupTasks.Count() + DbContext.PersonalTasks.Count() + DbContext.RadioTasks.Count(),
+                Newss = await DbContext.NewsViewModels.OrderByDescending(t => t.PublishTime).ToListAsync()
+            };
+            return View(model);
         }
 
         public ActionResult About()
@@ -47,12 +45,23 @@ namespace BeautyTeamWeb.Controllers
         {
             return View();
         }
-
-        public ActionResult TheLightOfTheory()
+        public ActionResult Light()
         {
             return View();
         }
 
+        public async Task<ActionResult> AllNews()
+        {
+            var model = new HomeIndexViewModel
+            {
+                Newss = await DbContext.NewsViewModels.OrderByDescending(t => t.PublishTime).ToListAsync()
+            };
+            return View("_Blog", model);
+        }
+
+
+
+        #region Job
         public async Task<ActionResult> AllJobs(JobType? id)
         {
             if (id == null)
@@ -62,34 +71,32 @@ namespace BeautyTeamWeb.Controllers
             }
             else
             {
-                var Jobs = await DbContext.JobOpenings.Where(t=>t.JobType==id).ToListAsync();
+                var Jobs = await DbContext.JobOpenings.Where(t => t.JobType == id).ToListAsync();
                 return View(Jobs);
             }
         }
-
         public async Task<ActionResult> JobDetails(int? id)
         {
-            if(id == null)
+            if (id == null)
             {
                 return RedirectToAction("AllJobs");
             }
             var CurrentJob = await DbContext.JobOpenings.FindAsync(id);
-            if(CurrentJob==null)
+            if (CurrentJob == null)
             {
                 return RedirectToAction("AllJobs");
             }
             CurrentJob.Views++;
             await DbContext.SaveChangesAsync();
 
-            var Suggestion= await DbContext.JobOpenings.OrderByDescending(t => t.Views).ToListAsync();
+            var Suggestion = await DbContext.JobOpenings.OrderByDescending(t => t.Views).ToListAsync();
             ViewBag.Suggestion = Suggestion;
             return View(CurrentJob);
         }
-
         [ObisoftAuthorize]
         public async Task<ActionResult> ApplyJob(int? id)
         {
-            if(id==null)
+            if (id == null)
             {
                 return RedirectToAction("AllJobs");
             }
@@ -119,6 +126,7 @@ namespace BeautyTeamWeb.Controllers
             }
             return RedirectToAction("JobDetails", new { id = model.JobId });
         }
+        #endregion
 
         [ObisoftAuthorize]
         public ActionResult Applied()

@@ -1,0 +1,100 @@
+﻿@using BeautyTeamWeb.Services
+
+@model BeautyTeamWeb.ViewModels.LightOfTheory
+
+@section IndexClass{active}
+
+@{
+    ViewBag.Title = "Light";
+}
+
+@Html.Partial("../Home/_StaticSliderIV")
+
+<div class="container">
+    <h3>理论之光 Obisoft企业考察接收</h3>
+    <hr />
+    <h4>@Resources.lang.WhoWeAre</h4>
+    <p>
+        @Resources.lang.CompanyBackgroundD
+    </p>
+    <p>
+        @Resources.lang.AboutUsD
+    </p>
+    <p>
+        Obisoft乐意接受东北大学软件学院14、15级成员参与Obisoft企业社会实践。开放的实践课题包括Obisoft企业创新情况考察和企业文化建设情况考察。
+    </p>
+    <p>
+        在这里填写你的报名表，并留下你的联系方式，以参与Obisoft公司理论之光社会实践。Obisoft公司将为你或你的团队安排时间组织企业考察、交流会议等，你将在完成考察后书写你的社会实践报告，同时Obisoft公司将会提供公章。
+    </p>
+    <p>
+        <b>根据理论之光文件要求，企业实习是无效的。Obisoft不允许任何社会实践参与者进行Obisoft工作实习。如果有意愿加入Obisoft公司，请浏览并填写开放的招聘工作列表。</b>
+    </p>
+    <div class="col-md-12 text-center">
+        <a class="btn btn-main featured text-center" href="@Url.Action("AllJobs","Home")">@Resources.lang.JobOpenings</a>
+    </div>
+</div>
+
+
+
+<h2>Light</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>LightOfTheory</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TeamName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TeamName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TeamName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Class, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Class, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Class, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Messages, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Messages, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Messages, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

@@ -1,0 +1,42 @@
+﻿@using BeautyTeamWeb.Services
+
+@model List<BeautyTeamWeb.ViewModels.NewsViewModel>
+
+@section NewsClass{active}
+
+@{
+    ViewBag.Title = "AllNews";
+}
+
+@Html.Partial("_StaticSliderVII")
+
+<div class="container">
+    <h2>All News</h2>
+    @foreach (var News in Model)
+    {
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <div class="sidebar">
+                    <div class="portfolio-desc">
+                        <h4>@Html.DisplayFor(modelItem => News.NewsViewModelName)</h4>
+                        <p>
+                            @News.NewsContent.RemoveHTML().Take(200)
+                        </p>
+                    </div>
+                    <div>
+                        <a class="btn btn-main featured" style="margin-left: 10px;" href="@Url.Action(News.ToAction,News.ToController)">@Resources.lang.Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="right-sidebar">
+                    <h4>@Resources.lang.JobProperties</h4>
+                    <ul class="circle">
+                        <li><span>@Resources.lang.PublishTime</span>@Html.DisplayFor(modelItem => News.PublishTime)</li>
+                        <li><span>@Resources.lang.ViewTimes</span>@News.Views</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    }
+</div>

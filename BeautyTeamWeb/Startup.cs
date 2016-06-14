@@ -52,6 +52,7 @@ namespace BeautyTeamWeb
         public static RouteCollection RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
             routes.MapRoute("api", "api/{action}/{id}",
             new { lang = "en-US", controller = "api", action = "Index", id = UrlParameter.Optional });
 
