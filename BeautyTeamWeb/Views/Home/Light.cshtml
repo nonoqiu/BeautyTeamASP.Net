@@ -5,7 +5,7 @@
 @section IndexClass{active}
 
 @{
-    ViewBag.Title = "Light";
+    ViewBag.Title = "Light of the Theory";
 }
 
 @Html.Partial("../Home/_StaticSliderIV")
@@ -32,69 +32,59 @@
     <div class="col-md-12 text-center">
         <a class="btn btn-main featured text-center" href="@Url.Action("AllJobs","Home")">@Resources.lang.JobOpenings</a>
     </div>
-</div>
+    <h4>Obisoft理论之光 - 团队接收报名表</h4>
+    <hr />
+    <div class="row">
+        <form class="contact_full" method="post" action="@Url.Action("Light","Home")">
+            @Html.AntiForgeryToken()
+            <div class="col-md-6 left">
+                <div class="left_contact">
+                    <div class="form-level">
+                        <input name="YourName" placeholder="你的姓名" id="YourName" value="@Model.YourName" type="text" class="input-block" data-val-required="必须输入你的姓名" data-val="true" />
+                        <span class="form-icon fa fa-user"></span>
+                    </div>
+                    <span class="field-validation-valid text-danger" data-valmsg-replace="true" data-valmsg-for="YourName"></span>
 
+                    <div class="form-level right">
+                        <textarea name="TeamMembers" placeholder="你的团队成员姓名" id="TeamMembers" rows="5" class="textarea-block" data-val-required="必须输入团队成员姓名" data-val="true">@Model.TeamMembers</textarea>
+                        <span class="form-icon fa fa-users"></span>
+                    </div>
+                    <span class="field-validation-valid text-danger" data-valmsg-replace="true" data-valmsg-for="TeamMembers"></span>
 
+                    <div class="form-level">
+                        <input name="Phone" placeholder="你的手机号码" id="Phone" value="@Model.Phone" type="number" class="input-block"  data-val-required="必须输入手机号码" data-val="true"/>
+                        <span class="form-icon fa fa-phone"></span>
+                    </div>
+                    <span class="field-validation-valid text-danger" data-valmsg-replace="true" data-valmsg-for="Phone"></span>
 
-<h2>Light</h2>
+                    <div class="form-level">
+                        <input name="Email" placeholder="你的邮箱地址" id="Email" value="@Model.Email" type="email" class="input-block" data-val-email="@Resources.lang.InvalidEmailAddress" data-val-required="必须输入邮箱地址" data-val="true"/>
+                        <span class="form-icon fa fa-envelope"></span>
+                    </div>
+                    <span class="field-validation-valid text-danger" data-valmsg-replace="true" data-valmsg-for="Email"></span>
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-
-    <div class="form-horizontal">
-        <h4>LightOfTheory</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.TeamName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TeamName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TeamName, "", new { @class = "text-danger" })
+                    <div class="form-level">
+                        <input name="Class" placeholder="你的班级" id="Class" value="@Model.Class" type="text" class="input-block" data-val-required="必须输入班级" data-val="true"/>
+                        <span class="form-icon fa fa-bank"></span>
+                    </div>
+                    <span class="field-validation-valid text-danger" data-valmsg-replace="true" data-valmsg-for="Class"></span>
+                </div>
             </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+            <div class="col-md-6 right">
+                <div class="form-level">
+                    <textarea name="Messages" id="Messages" rows="13" class="textarea-block" placeholder="你的团队期待在Obisoft参与哪些活动? 你的团队什么时候有时间?">@Model.Messages</textarea>
+                    <span class="form-icon fa fa-pencil"></span>
+                </div>
             </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            <div class="col-md-12 text-center">
+                <button class="btn btn-main featured">申请Obisoft企业实践调研</button>
             </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Class, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Class, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Class, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Messages, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Messages, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Messages, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
+        </form>
     </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
+    <div>
+        @Html.ActionLink("返回Obisoft生涯中心", "Careers")
+    </div>
 </div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

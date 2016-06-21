@@ -13,6 +13,7 @@ namespace BeautyTeamWeb.ViewModels
         public virtual int Tasks { get; set; }
         public virtual int Projects { get; set; }
         public virtual List<BeautyTeamWeb.ViewModels.NewsViewModel> Newss { get; set; }
+        public virtual IEnumerable<BeautyTeamWeb.ViewModels.ProductType> Types { get; set; }
     }
     public class SubScribeViewModel
     {

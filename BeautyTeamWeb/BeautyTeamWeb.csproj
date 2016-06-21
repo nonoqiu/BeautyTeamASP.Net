@@ -96,6 +96,10 @@
       <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Obisoft.HSharp, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Obisoft.HSharp.1.1.2\lib\net40\Obisoft.HSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Owin.Security.Providers, Version=1.25.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.Security.Providers.1.27\lib\net45\Owin.Security.Providers.dll</HintPath>
       <Private>True</Private>
@@ -235,15 +239,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>lang.resx</DependentUpon>
     </Compile>
-    <Compile Include="App_GlobalResources\lang.zh.designer.cs">
+    <Compile Include="App_GlobalResources\lang.zh-TW.designer.cs">
+      <DependentUpon>lang.zh-TW.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>lang.zh.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\lang.zh-CN.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lang.zh-CN.resx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\API\FriendsApiController.cs" />
     <Compile Include="Controllers\API\NotificationApiController.cs" />
     <Compile Include="Controllers\API\TeamPostsApiController.cs" />
     <Compile Include="Controllers\ApiController.cs" />
+    <Compile Include="Controllers\JobController.cs" />
     <Compile Include="Controllers\WeChatController.cs" />
     <Compile Include="Migrations\201605211845280_Initialize.cs" />
     <Compile Include="Migrations\201605211845280_Initialize.Designer.cs">
@@ -321,6 +331,18 @@
     <Compile Include="Migrations\201606131237521_whatchanged.Designer.cs">
       <DependentUpon>201606131237521_whatchanged.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606150830261_ChangeMode3l.cs" />
+    <Compile Include="Migrations\201606150830261_ChangeMode3l.Designer.cs">
+      <DependentUpon>201606150830261_ChangeMode3l.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606150851125_LittleChange1.cs" />
+    <Compile Include="Migrations\201606150851125_LittleChange1.Designer.cs">
+      <DependentUpon>201606150851125_LittleChange1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606211605417_createproducttype.cs" />
+    <Compile Include="Migrations\201606211605417_createproducttype.Designer.cs">
+      <DependentUpon>201606211605417_createproducttype.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ViewModels\Home\ApplyJobModel.cs" />
     <Compile Include="ViewModels\Home\EmailSubscribe.cs" />
@@ -379,6 +401,7 @@
     <Compile Include="ViewModels\Home\JobOpening.cs" />
     <Compile Include="ViewModels\Home\LightOfTheory.cs" />
     <Compile Include="ViewModels\Home\NewsViewModel.cs" />
+    <Compile Include="ViewModels\Home\ProductType.cs" />
     <Compile Include="ViewModels\Manage\BasicInfoViewModel.cs" />
     <Compile Include="ViewModels\Manage\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -386,6 +409,14 @@
     <Compile Include="ViewModels\WeChat\Bind.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Homework.mdf" />
+    <Content Include="App_Data\Homework_log.ldf">
+      <DependentUpon>Homework.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\ObisoftMainDB.mdf" />
+    <Content Include="App_Data\ObisoftMainDB_log.ldf">
+      <DependentUpon>ObisoftMainDB.mdf</DependentUpon>
+    </Content>
     <Content Include="wwwroot\css\example.css" />
     <Content Include="wwwroot\css\OwlCarousel\AjaxLoader.gif" />
     <Content Include="wwwroot\css\OwlCarousel\grabbing.png" />
@@ -609,13 +640,14 @@
     <Content Include="Views\Home\_Pricing.cshtml" />
     <Content Include="Views\Home\Careers.cshtml" />
     <Content Include="Views\Home\_Destiny.cshtml" />
-    <Content Include="Views\Home\AllJobs.cshtml" />
-    <Content Include="Views\Home\JobDetails.cshtml" />
-    <Content Include="Views\Home\ApplyJob.cshtml" />
-    <Content Include="Views\Home\Applied.cshtml" />
+    <Content Include="Views\Job\AllJobs.cshtml" />
+    <Content Include="Views\Job\JobDetails.cshtml" />
+    <Content Include="Views\Job\ApplyJob.cshtml" />
+    <Content Include="Views\Job\Applied.cshtml" />
     <Content Include="Views\Home\AllNews.cshtml" />
     <Content Include="Views\Home\_StaticSliderVII.cshtml" />
     <Content Include="Views\Home\Light.cshtml" />
+    <Content Include="Views\Home\LightApplied.cshtml" />
     <None Include="wwwroot\js\jquery.validate-vsdoc.js" />
     <Content Include="wwwroot\js\jquery.validate.js" />
     <Content Include="wwwroot\js\jquery.validate.min.js" />
@@ -672,12 +704,16 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_GlobalResources\lang.zh.resx">
+    <Content Include="App_GlobalResources\lang.zh-CN.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>lang.zh.designer.cs</LastGenOutput>
+      <LastGenOutput>lang.zh-CN.designer.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_GlobalResources\lang.zh-TW.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>lang.zh-TW.designer.cs</LastGenOutput>
+    </Content>
     <EmbeddedResource Include="Migrations\201605211845280_Initialize.resx">
       <DependentUpon>201605211845280_Initialize.cs</DependentUpon>
     </EmbeddedResource>
@@ -735,7 +771,17 @@
     <EmbeddedResource Include="Migrations\201606131237521_whatchanged.resx">
       <DependentUpon>201606131237521_whatchanged.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606150830261_ChangeMode3l.resx">
+      <DependentUpon>201606150830261_ChangeMode3l.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606150851125_LittleChange1.resx">
+      <DependentUpon>201606150851125_LittleChange1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606211605417_createproducttype.resx">
+      <DependentUpon>201606211605417_createproducttype.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

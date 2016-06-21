@@ -12,12 +12,18 @@ namespace BeautyTeamWeb.ViewModels
         public virtual int LightOfTheoryId { get; set; }
         public string ObisoftUserId { get; set; }
         public ObisoftUser  ObisoftUser { get; set; }
-        public string TeamName { get; set; }
+        [Required]
+        public string YourName { get; set; }
+        [Required]
+        public string TeamMembers { get; set; }
+        [Required]
         [Phone]
         public string  Phone { get; set; }
         [DataType(dataType:DataType.EmailAddress)]
         public string Email { get; set; }
+        [Required]
         public string Class { get; set; }
+        [Required]
         public string Messages { get; set; }
     }
 }

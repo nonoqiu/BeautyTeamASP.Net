@@ -358,6 +358,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Join Obisoft and be creative.
+        /// </summary>
+        internal static string IVSubTitle {
+            get {
+                return ResourceManager.GetString("IVSubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your dream job is closer than you think.
+        /// </summary>
+        internal static string IVTitle {
+            get {
+                return ResourceManager.GetString("IVTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Job Openings.
         /// </summary>
         internal static string JobOpenings {
@@ -381,6 +399,42 @@ namespace Resources {
         internal static string JobSuggestion {
             get {
                 return ResourceManager.GetString("JobSuggestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Art &amp; Animation.
+        /// </summary>
+        internal static string JobT1 {
+            get {
+                return ResourceManager.GetString("JobT1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Engineering.
+        /// </summary>
+        internal static string JobT2 {
+            get {
+                return ResourceManager.GetString("JobT2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Production.
+        /// </summary>
+        internal static string JobT3 {
+            get {
+                return ResourceManager.GetString("JobT3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Operations.
+        /// </summary>
+        internal static string JobT4 {
+            get {
+                return ResourceManager.GetString("JobT4", resourceCulture);
             }
         }
         
@@ -543,6 +597,15 @@ namespace Resources {
         internal static string ObisoftAccount {
             get {
                 return ResourceManager.GetString("ObisoftAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use another service to log in..
+        /// </summary>
+        internal static string OtherToLogin {
+            get {
+                return ResourceManager.GetString("OtherToLogin", resourceCulture);
             }
         }
         

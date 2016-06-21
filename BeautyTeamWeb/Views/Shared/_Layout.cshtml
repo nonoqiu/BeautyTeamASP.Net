@@ -27,7 +27,7 @@
                 <ul class="nav navbar-nav navbar-left ">
                     <li class="@RenderSection("IndexClass",false)"><a href="@Url.Action("Index","Home")">@Resources.lang.Home</a></li>
                     <li class="@RenderSection("PortfolioClass",false)"><a href="@Url.Action("Index","Home")">@Resources.lang.Portfolio</a></li>
-                     <li class="@RenderSection("CareersClass",false)"><a href="@Url.Action("Careers","Home")">@Resources.lang.Careers</a></li>
+                    <li class="@RenderSection("CareersClass",false)"><a href="@Url.Action("Careers","Home")">@Resources.lang.Careers</a></li>
                     <li class="@RenderSection("AboutClass",false)"><a href="@Url.Action("About","Home")">@Resources.lang.AboutUs</a></li>
                     <li class="@RenderSection("ContactClass",false)"><a href="@Url.Action("Contact","Home")">@Resources.lang.Contact</a></li>
                 </ul>
@@ -37,14 +37,14 @@
                             <a class="dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">@Resources.lang.Lang<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li class="dropdown-header">@Resources.lang.Lang</li>
-                                <li @if (ViewContext.RouteData.Values["lang"].ToString().ToLower()=="zh-cn")
-                                {
-                                    @:class="active" 
-                                    }><a  href="@Url.RouteUrl(ViewContext.RouteData.Values.ChangeAndReturn("lang","zh-CN"))">简体中文</a></li>
-                                <li @if (ViewContext.RouteData.Values["lang"].ToString().ToLower()=="en-us")
-                                {
-                                    @:class="active" 
+                                <li @if (ViewContext.RouteData.Values["lang"].ToString().ToLower() == "en-us") { @: class="active"
                                     }><a href="@Url.RouteUrl(ViewContext.RouteData.Values.ChangeAndReturn("lang","en-US"))">English</a></li>
+
+                                <li @if (ViewContext.RouteData.Values["lang"].ToString().ToLower() == "zh-cn") { @: class="active"
+                                    }><a href="@Url.RouteUrl(ViewContext.RouteData.Values.ChangeAndReturn("lang","zh-CN"))">简体中文</a></li>
+
+                                <li @if (ViewContext.RouteData.Values["lang"].ToString().ToLower() == "zh-tw") { @: class="active"
+                                    }><a href="@Url.RouteUrl(ViewContext.RouteData.Values.ChangeAndReturn("lang","zh-TW"))">繁體中文</a></li>
                             </ul>
                         </li>
                         @if (Request.IsAuthenticated)

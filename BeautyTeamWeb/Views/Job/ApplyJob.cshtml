@@ -19,7 +19,7 @@
         </dd>
     </dl>
     <div class="row">
-        <form class="contact_full" method="post" action="@Url.Action("ApplyJob","Home")">
+        <form class="contact_full" method="post" action="@Url.Action("ApplyJob","Job")">
             <div class="col-md-6 left">
                 <div class="left_contact">
                     <input type="hidden" value="@Model.JobOpeningId" name="JobId" id="JobId" />
@@ -49,6 +49,6 @@
         </form>
     </div>
     <p>
-        @Html.ActionLink("Back to List", "JobDetails", "Home", new { id = Model.JobOpeningId })
+        @Html.ActionLink("Back to List", "JobDetails", "Job", new { id = Model.JobOpeningId })
     </p>
 </div>

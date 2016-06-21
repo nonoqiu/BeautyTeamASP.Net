@@ -10,15 +10,10 @@
                         <div class="hero-content text-center">
                             <div class="hero-text wow fadeIn" data-wow-delay=".8s">
                                 <h2 style="font-size: 40px;">@ViewBag.Title</h2>
-                                <h3 class="animated2"> 23333</h3>
+                                <h3 class="animated2">@Resources.lang.IVTitle</h3>
                                 <p class="hero-buttons">
-                                    <strong>@Html.ActionLink("23423423", "Publish", "TanZone", new { PartId = Request.QueryString["PartId"] }, new { @class = "btn btn-dark" })</strong>
-                                    @if (User.Identity.IsAuthenticated)
-                                    {
-                                        <strong>@Html.ActionLink("2342342", "UserDetail", "TanZone", new { id = "" }, new { @class = "btn btn-main featured" }) </strong>
-                                    }
+                                    <strong>@Html.ActionLink(Resources.lang.IVSubTitle, "Careers", "Home", new { PartId = Request.QueryString["PartId"] }, new { @class = "btn btn-dark" })</strong>
                                 </p>
-                              
                             </div>
                         </div>
                     </div>

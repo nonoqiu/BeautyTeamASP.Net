@@ -118,336 +118,336 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AccManaCenter" xml:space="preserve">
-    <value>Account</value>
+    <value>账户管理</value>
   </data>
   <data name="Address" xml:space="preserve">
-    <value>NO. 3-11, Wenhua Road, Heping District, Shenyang, P. R. China</value>
+    <value>辽宁省沈阳市和平区文化路三巷11号</value>
   </data>
   <data name="Contact" xml:space="preserve">
-    <value>Contact</value>
+    <value>联络</value>
   </data>
   <data name="EmailAddressRequired" xml:space="preserve">
-    <value>The Email field is required.</value>
+    <value>必须输入邮箱账号</value>
   </data>
   <data name="Hello" xml:space="preserve">
-    <value>Hello</value>
+    <value>你好</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Home</value>
+    <value>主页</value>
   </data>
   <data name="HomeSubTitle" xml:space="preserve">
-    <value>Make ideas real</value>
+    <value>把想法变成现实</value>
   </data>
   <data name="HomeTitle" xml:space="preserve">
-    <value>Create Great Things</value>
+    <value>创造伟大的东西</value>
   </data>
   <data name="InvalidEmailAddress" xml:space="preserve">
-    <value>Invalid Email address!</value>
+    <value>输入的邮箱不是有效的邮箱地址</value>
   </data>
   <data name="Lab" xml:space="preserve">
-    <value>Lab</value>
+    <value>实验室</value>
   </data>
   <data name="Lang" xml:space="preserve">
-    <value>Lang</value>
+    <value>语言</value>
   </data>
   <data name="Licensing" xml:space="preserve">
-    <value>Licensing</value>
+    <value>许可协议</value>
   </data>
   <data name="Link" xml:space="preserve">
-    <value>Link</value>
+    <value>链接</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Log in</value>
+    <value>登录</value>
   </data>
   <data name="Logout" xml:space="preserve">
-    <value>Logout</value>
+    <value>注销</value>
   </data>
   <data name="MyTanZone" xml:space="preserve">
-    <value>My TanZone</value>
+    <value>我的坛坛</value>
   </data>
   <data name="Navigation" xml:space="preserve">
-    <value>Navigation</value>
+    <value>导航</value>
   </data>
   <data name="Our" xml:space="preserve">
-    <value>Our</value>
+    <value>我们的</value>
   </data>
   <data name="Permission" xml:space="preserve">
-    <value>Privacy Statement</value>
+    <value>隐私声明</value>
   </data>
   <data name="Portfolio" xml:space="preserve">
-    <value>Portfolio</value>
+    <value>产品服务</value>
   </data>
   <data name="PortSub" xml:space="preserve">
-    <value>No matter if you are a student or enterprise, if you are in U.S. or not, there must exists something you need.</value>
+    <value>无论你是学生，还是企业，无论你在国内还是国外，我们的产品总有你需要的一款。</value>
   </data>
   <data name="Register" xml:space="preserve">
-    <value>Register</value>
+    <value>注册</value>
   </data>
   <data name="Ser1Ti" xml:space="preserve">
-    <value>Develope for idea</value>
+    <value>灵感实现</value>
   </data>
   <data name="Ser2Ti" xml:space="preserve">
-    <value>Art Design</value>
+    <value>艺术设计</value>
   </data>
   <data name="Ser3Ti" xml:space="preserve">
-    <value>Technical Support</value>
+    <value>技术支援</value>
   </data>
   <data name="Ser4Ti" xml:space="preserve">
-    <value>For enterprises</value>
+    <value>助力企业</value>
   </data>
   <data name="SerSubTi" xml:space="preserve">
-    <value>No matter websites, or mobile applications, or other services like wechat, we only need your thoughts.</value>
+    <value>无论是网站还是移动应用程序, 或者是其它技术咨询, 我们只需要你的想法</value>
   </data>
   <data name="Service" xml:space="preserve">
-    <value>Service</value>
+    <value>技术服务</value>
   </data>
   <data name="Sta1Ani1" xml:space="preserve">
-    <value>Breath with reliable service.</value>
+    <value>和可靠服务一起呼吸</value>
   </data>
   <data name="Sta1Ani2" xml:space="preserve">
-    <value>Log in your Obisoft account to enjoy personal service.</value>
+    <value>登录Obisoft账号以访问个性化服务</value>
   </data>
   <data name="Tags" xml:space="preserve">
-    <value>Tags</value>
+    <value>标签</value>
   </data>
   <data name="TanZone" xml:space="preserve">
-    <value>TanZone</value>
+    <value>坛坛</value>
   </data>
   <data name="UserSerToLog" xml:space="preserve">
-    <value>Use Obsoft account to log in.</value>
+    <value>登录你的Obisoft账号.</value>
   </data>
   <data name="Ser1SubTi" xml:space="preserve">
-    <value>Do not require technology. With only an idea, we will bring it to billions of devices to run as a real application. One click, one dream, win thousands of users.</value>
+    <value>不需要你了解技术，或许你只有一个灵感，我们让它变成真实的应用，运行在各种设备上面，赢得千万用户。使你的灵感变成现实，只需一次点击。</value>
   </data>
   <data name="Ser2SubTi" xml:space="preserve">
-    <value>Create your own culture. Do not need lots of money. No matter 2D or 3D, no matter pic or video, everything and be more beautiful. Every application can be more cool</value>
+    <value>打造你自己的文化，不需要多少资本。无论是平面还是三维，无论是图片还是视频，每一个作品都能更美一点。每一个应用都能更炫一点。</value>
   </data>
   <data name="Ser3SubTi" xml:space="preserve">
-    <value>Any time, any place, and you won't run into technical problems. WeBo, WeChat, voting, statistics, information, management ... ... Our technical support you forever. Remember: technology is not an issue with us.</value>
+    <value>任何时间任何地点，你不会再遇到技术难题。微博、微信、投票、统计、通知、管理……我们是你永远的技术支柱。记住：我们在，技术就不是问题。</value>
   </data>
   <data name="Ser4SubTi" xml:space="preserve">
-    <value>Whether start-up businesses need a Web site, or an established company for scientific research, we will be your technical team. In this mobile first cloud first age, we want to bring you technical strength.</value>
+    <value>无论是初创企业需要网站，还是老牌企业进行科研，我们就是你的技术团队。在这个移动第一云第一的时代，我们要把技术力量带给你。</value>
   </data>
   <data name="ConfirmPassword" xml:space="preserve">
-    <value>Confirm Password</value>
+    <value>密码确认</value>
   </data>
   <data name="CreateNewAccount" xml:space="preserve">
-    <value>Create New Obisoft Account</value>
+    <value>创建新的Obisoft账号</value>
   </data>
   <data name="ForgotPassword" xml:space="preserve">
-    <value>Forgot your password?</value>
+    <value>忘记密码</value>
   </data>
   <data name="NewPassword" xml:space="preserve">
-    <value>New Password</value>
+    <value>新密码</value>
   </data>
   <data name="ObisoftAccount" xml:space="preserve">
-    <value>Obisoft Account (Email)</value>
+    <value>Obisoft账号 (Email地址)</value>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>Password</value>
+    <value>密码</value>
   </data>
   <data name="RegisterasaNewUser" xml:space="preserve">
-    <value>Register as a new user.</value>
+    <value>注册新用户</value>
   </data>
   <data name="RememberMe" xml:space="preserve">
-    <value>Remember Me?</value>
+    <value>记住密码</value>
   </data>
   <data name="UnabletoLogin" xml:space="preserve">
-    <value>Unable to Log in?</value>
+    <value>无法登录?</value>
   </data>
   <data name="WhyAccountC1" xml:space="preserve">
-    <value>Enjoy TanZone and have your own tech blog, share tech ideas with your team and other experts.</value>
+    <value>在坛坛建立你自己的技术博客，并和众多大牛，以及你的团队一起交流技术观念。</value>
   </data>
   <data name="WhyAccountC2" xml:space="preserve">
-    <value>Enjoy BeautyTeam service, communicate better with your team members and your tasks.</value>
+    <value>体验BeautyTeam，提高你的团队沟通管理效率。</value>
   </data>
   <data name="WhyAccountC3" xml:space="preserve">
-    <value>Sync your API Studio settings and projects with different devices.</value>
+    <value>在API Studio中向云端同步，保持你的工作项目，并同步到你的所有设备上。</value>
   </data>
   <data name="WhyAccountHeader" xml:space="preserve">
-    <value>What can you do with an Obisoft account?</value>
+    <value>为什么需要Obisoft账号</value>
   </data>
   <data name="YourEmailAccount" xml:space="preserve">
-    <value>Your Email Account</value>
+    <value>你的Email地址</value>
   </data>
   <data name="Keepourpride" xml:space="preserve">
-    <value>Keep our pride</value>
+    <value>保留我们引以为傲的</value>
   </data>
   <data name="WorkIsOurSel" xml:space="preserve">
-    <value>Our work is ourselves</value>
+    <value>作品就是我们自己</value>
   </data>
   <data name="Details" xml:space="preserve">
-    <value>Details</value>
+    <value>详细内容</value>
   </data>
   <data name="AboutUs" xml:space="preserve">
-    <value>About Us</value>
+    <value>关于我们</value>
   </data>
   <data name="JoinUs" xml:space="preserve">
-    <value>Join Us</value>
+    <value>加入我们</value>
   </data>
   <data name="Partners" xml:space="preserve">
-    <value>Partners</value>
+    <value>合作伙伴</value>
   </data>
   <data name="VF1Parg" xml:space="preserve">
-    <value>There isn't a rapid path for us startups, but it's better to create masterpieces. Our team have only created less than 10 products in the first year after establishment, obviously, that’s too few. However, there isn’t so strong relationship between us tech-teams and time, since the young is always looking forward to the advanced. Of course there is technology in our blood, not only for the outsources, but also the ability of facing the Internet. Hardly would we share our products with you when it’s finished, bringing you with our view of the Internet. Our program is representing ourselves.</value>
+    <value>创业很多事急不得，你得慢慢做出精品。我们团队成立一年，只做了不到十个产品，当然实在是太少了。但技术团队和时间其实并没有太大关系，反而年轻人更喜欢做先进的东西。技术我们还是有的，我们有的不是外包的能力，而是面对互联网的能力。我们有了作品就去分享，用作品告诉大家我们对互联网的认识。我们的程序就是我们自己。</value>
   </data>
   <data name="VF2Parg" xml:space="preserve">
-    <value>Although only for the technology, our team is filled with love, belief, and attitude. So we’d like to be in this way, enjoy it, and keep going like it forever. Competing with the advanced technology in this world, we’ll respect them firstly and they’ll push us forward then. We’ll keep what we cherish, what we take pride in, so, we’re always willing to follow our heart. Focus on the tech, at least, it deserves the time we spend. For other things, just to be judged by the users.</value>
+    <value>虽然只是技术，但我们有情怀有信念有态度。有些人批评我们固执、缓慢，而这背后隐含的是对项目的看法和对完美的追求。所以我们宁愿这样必须这样，也一直这样。面对现在世界上这么先进的技术，我们要先尊重它，它才会成就我。我们要保留我们最珍惜的最引以为傲的，因此我们能愿意去听从内心的安排。专注做点技术，至少对得起光阴岁月。其他的，就交给用户去说吧。</value>
   </data>
   <data name="APIDoc" xml:space="preserve">
-    <value>API Document</value>
+    <value>API文档</value>
   </data>
   <data name="WhatWeDo" xml:space="preserve">
-    <value>What We do</value>
+    <value>我们做了什么</value>
   </data>
   <data name="Work" xml:space="preserve">
-    <value>Work</value>
+    <value>作品</value>
   </data>
   <data name="WorkSub" xml:space="preserve">
-    <value>No matter enterprise or students, our products must exist one you need.</value>
+    <value>无论是企业还是学生，我们的作品中一定有你感兴趣的</value>
   </data>
   <data name="WhatWeDoSub" xml:space="preserve">
-    <value>Respect to the technology today gives us the chance to face the Internet today. No matter web application, native app or enterprise solution, maybe you can find something new here.</value>
+    <value>尊重今天的技术，让我们面对今天的互联网。无论是Web、App还是企业级应用，或许在这里你会对它们有新的感悟</value>
   </data>
   <data name="SourceCode" xml:space="preserve">
-    <value>SourceCode</value>
+    <value>源代码</value>
   </data>
   <data name="Careers" xml:space="preserve">
-    <value>Careers</value>
+    <value>生涯职位</value>
   </data>
   <data name="Support" xml:space="preserve">
-    <value>Support</value>
+    <value>技术支援</value>
   </data>
   <data name="Subscribe" xml:space="preserve">
-    <value>Subscribe Us</value>
+    <value>订阅Obisoft新闻</value>
   </data>
   <data name="SubscribeNow" xml:space="preserve">
-    <value>Subscribe Now</value>
+    <value>立即订阅</value>
   </data>
   <data name="AboutUsD" xml:space="preserve">
-    <value>Obisoft Corporation is a premier developer and publisher of development software and co-working solution. After establishing the corporation in 2015, the company quickly became one of the very popular and well-respected makers of software in China. By focusing on creating well-designed, highly enjoyable using experiences, Obisoft Corporation has maintained an unparalleled reputation for quality since its inception.</value>
+    <value>在开发工具和协同办公领域中，Obisoft公司一直作为开发商和出版商。在2015年成立之后，Obisoft迅速成为知名而广受关注的软件提供商。关注于极端优质的设计和极端优良的用户体验，Obisoft公司一直靠质量保持着自成立以来的声誉。</value>
   </data>
   <data name="CompanyBackground" xml:space="preserve">
-    <value>Company Background</value>
+    <value>公司背景</value>
   </data>
   <data name="CompanyBackgroundD" xml:space="preserve">
-    <value>Each member of the Obisoft Corporation staff is a true program enthusiast, giving the company invaluable insight into creating products for programmers.</value>
+    <value>Obisoft公司每一个成员都是狂热的开发技术爱好者，给公司不可估量的创造力和洞察力，为用户和开发者提供产品。</value>
   </data>
   <data name="CompanyBackgroundD2" xml:space="preserve">
-    <value>Headquartered in Shenyang, Liaoning. Obisoft was founded in 2015 under the destination of OSpace by MMA, president &amp; CEO, and chief development officer God Yu.</value>
+    <value>公司总部在辽宁沈阳市。2015年，在打造OSpace的目标驱动之下，Obisoft由首席执行官薛锋和首席发展官林为昱共同创建。</value>
   </data>
   <data name="NewWorld" xml:space="preserve">
-    <value>New World</value>
+    <value>在新的世界</value>
   </data>
   <data name="NewWorldD" xml:space="preserve">
-    <value>In addition to the BeautyTeam universes, Obisoft is now exploring new worlds—and mashing them together. The upcoming API Studio, announced on 2016, is a SaaS based communication test and development tool. Set in an all-new Obisoft universe, API Studio makes every unit test and API management in the cloud.</value>
+    <value>在BeautyTeam的环境基础上，Obisoft一直在探索新的世界，并把他们加入生态中。即将在2016年发布的API Studio，是一个基于SaaS的连接和开发测试工具。基于全新的Obisoft生态系统，API Studio也将使单元测试和API管理走向云。</value>
   </data>
   <data name="JobOpenings" xml:space="preserve">
-    <value>Job Openings</value>
+    <value>开放职位申请</value>
   </data>
   <data name="WhoWeAre" xml:space="preserve">
-    <value>Who We Are</value>
+    <value>我们是谁</value>
   </data>
   <data name="DestinyTitle" xml:space="preserve">
-    <value>Choose Your Destiny</value>
+    <value>使命召唤你</value>
   </data>
   <data name="NoteTo" xml:space="preserve">
-    <value>Note to Recruiters and Placement Agencies: We do not accept unsolicited agency resumes. Please do not forward unsolicited agency resumes to our website or to any of our employees. We will not pay fees to any third party agency, outside recruiter or firm without a mutually agreed-upon contract and will not be responsible for any agency fees associated with unsolicited resumes. Unsolicited resumes received will be considered our property and will be processed accordingly.</value>
+    <value>招聘和中介机构注意：我们不接受任何非主动请求的简历。请不要将中介机构的简历转发到我们的网站或我们的员工。我们不会向任何第三方机构、招聘机构或公司在商业合同外支付任何费用，也不会负责任何非主动请求的简历。收到的非主动请求的简历将会直接被视为我们的资产并进行处理。</value>
   </data>
   <data name="OurPartner" xml:space="preserve">
-    <value>Our Partner</value>
+    <value>合作伙伴</value>
   </data>
   <data name="DestinyDes" xml:space="preserve">
-    <value>We’re on a quest: bring our dream ideas to life, and make them as awesome on the screen as they are in our heads. To accomplish that, we need smart, driven people with serious talents. Want in? What do you want to do?</value>
+    <value>我们拥有共同的梦想：把我们梦中的想法变成现实，让屏幕上的它们如同我们梦想中的生动。为了这个梦想，我们需要敏捷、热忱而有天分的人。想要加入？你喜欢做什么呢？</value>
   </data>
   <data name="FeedBack1" xml:space="preserve">
-    <value>Pine Zhao</value>
+    <value>赵清松</value>
   </data>
   <data name="FeedBack1C" xml:space="preserve">
-    <value>I'm really envy you young and energetic team. This team the most suitable investment and training, hope you get better and better.</value>
+    <value>真羡慕你们年轻而富有活力的团队。这样的团队最适合投资和培养，也希望你们越来越好。</value>
   </data>
   <data name="FeedBack1D" xml:space="preserve">
-    <value>Exectuive Officer of Yoolee Network</value>
+    <value>油利网科技总经理</value>
   </data>
   <data name="About" xml:space="preserve">
-    <value>About</value>
+    <value>关于</value>
   </data>
   <data name="AllJobs" xml:space="preserve">
-    <value>All Jobs</value>
+    <value>全部职位</value>
   </data>
   <data name="ApplyOnline" xml:space="preserve">
-    <value>Apply Online</value>
+    <value>在线申请</value>
   </data>
   <data name="JobProperties" xml:space="preserve">
-    <value>Job Properties</value>
+    <value>职位属性</value>
   </data>
   <data name="JobSuggestion" xml:space="preserve">
-    <value>Job Suggestion</value>
+    <value>职位推荐</value>
   </data>
   <data name="JobType" xml:space="preserve">
-    <value>Job Type</value>
+    <value>职位类型</value>
   </data>
   <data name="PublishTime" xml:space="preserve">
-    <value>Publish Time</value>
+    <value>发布时间</value>
   </data>
   <data name="Share" xml:space="preserve">
-    <value>Share</value>
+    <value>分享</value>
   </data>
   <data name="ViewTimes" xml:space="preserve">
-    <value>View Times</value>
+    <value>浏览量</value>
   </data>
   <data name="FeedBack2" xml:space="preserve">
-    <value>Zijie Yang</value>
+    <value>杨子杰</value>
   </data>
   <data name="FeedBack2C" xml:space="preserve">
-    <value>With the continued efforts beyond their peers, this team provides high-quality delivery which rivals professional teams with years of experiences,  while the applications of latest technology are even better. Hope you keep on working and I will always offer help in my universe.</value>
+    <value>掌握的技能和交付的成果都媲美多年经验的专业开发团队，在新技术的运用上更甚。这一切来源于背后超出常人的勤奋。希望你们坚持下去，我会一直在我的经验领域提供帮助。</value>
   </data>
   <data name="FeedBack2D" xml:space="preserve">
-    <value>Head of R&amp;D Department of XY HOME</value>
+    <value>星云科技研发部部长</value>
   </data>
   <data name="SubThanks" xml:space="preserve">
-    <value>Thanks for subscription. You now will recieve our news Emails.</value>
+    <value>感谢订阅! 现在你将收到我们的新闻邮件</value>
   </data>
   <data name="NewsCenter" xml:space="preserve">
-    <value>News</value>
+    <value>新闻中心</value>
   </data>
   <data name="ForChina" xml:space="preserve">
-    <value />
+    <value>辽ICP备15014187号</value>
   </data>
   <data name="LatestNews" xml:space="preserve">
-    <value>News &amp; Event</value>
+    <value>新闻和事件</value>
   </data>
   <data name="Group" xml:space="preserve">
-    <value>Groups</value>
+    <value>团队</value>
   </data>
   <data name="Project" xml:space="preserve">
-    <value>Projects</value>
+    <value>项目</value>
   </data>
   <data name="Task" xml:space="preserve">
-    <value>Tasks</value>
+    <value>任务</value>
   </data>
   <data name="User" xml:space="preserve">
-    <value>Users</value>
+    <value>用户</value>
   </data>
   <data name="IVSubTitle" xml:space="preserve">
-    <value>Join Obisoft and be creative</value>
+    <value>加入Obisoft创新事业</value>
   </data>
   <data name="IVTitle" xml:space="preserve">
-    <value>Your dream job is closer than you think</value>
+    <value>理想的生涯比你想象的更近</value>
   </data>
   <data name="OtherToLogin" xml:space="preserve">
-    <value>Use another service to log in.</value>
+    <value>使用第三方服务登录</value>
   </data>
   <data name="JobT1" xml:space="preserve">
-    <value>Art &amp; Animation</value>
+    <value>艺术可视化</value>
   </data>
   <data name="JobT2" xml:space="preserve">
-    <value>Engineering</value>
+    <value>工程技术</value>
   </data>
   <data name="JobT3" xml:space="preserve">
-    <value>Production</value>
+    <value>产品服务</value>
   </data>
   <data name="JobT4" xml:space="preserve">
-    <value>Operations</value>
+    <value>执行管理</value>
   </data>
 </root>

@@ -19,7 +19,8 @@ namespace BeautyTeamWeb.Controllers
                 GroupNumbers = DbContext.Groups.Count(),
                 Projects = DbContext.Projects.Count(),
                 Tasks = DbContext.GroupTasks.Count() + DbContext.PersonalTasks.Count() + DbContext.RadioTasks.Count(),
-                Newss = await DbContext.NewsViewModels.OrderByDescending(t => t.PublishTime).ToListAsync()
+                Newss = await DbContext.NewsViewModels.OrderByDescending(t => t.PublishTime).ToListAsync(),
+                Types = await DbContext.ProductTypes.ToListAsync()
             };
             return View(model);
         }
@@ -45,11 +46,29 @@ namespace BeautyTeamWeb.Controllers
         {
             return View();
         }
+
         public ActionResult Light()
+        {
+            return View(new LightOfTheory());
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Light(LightOfTheory model)
+        {
+            if (ModelState.IsValid)
+            {
+                DbContext.LightOfTheorys.Add(model);
+                await DbContext.SaveChangesAsync();
+                return RedirectToAction("LightApplied");
+            }
+            return View(model);
+        }
+
+        public ActionResult LightApplied()
         {
             return View();
         }
-
         public async Task<ActionResult> AllNews()
         {
             var model = new HomeIndexViewModel
@@ -60,79 +79,6 @@ namespace BeautyTeamWeb.Controllers
         }
 
 
-
-        #region Job
-        public async Task<ActionResult> AllJobs(JobType? id)
-        {
-            if (id == null)
-            {
-                var Jobs = await DbContext.JobOpenings.ToListAsync();
-                return View(Jobs);
-            }
-            else
-            {
-                var Jobs = await DbContext.JobOpenings.Where(t => t.JobType == id).ToListAsync();
-                return View(Jobs);
-            }
-        }
-        public async Task<ActionResult> JobDetails(int? id)
-        {
-            if (id == null)
-            {
-                return RedirectToAction("AllJobs");
-            }
-            var CurrentJob = await DbContext.JobOpenings.FindAsync(id);
-            if (CurrentJob == null)
-            {
-                return RedirectToAction("AllJobs");
-            }
-            CurrentJob.Views++;
-            await DbContext.SaveChangesAsync();
-
-            var Suggestion = await DbContext.JobOpenings.OrderByDescending(t => t.Views).ToListAsync();
-            ViewBag.Suggestion = Suggestion;
-            return View(CurrentJob);
-        }
-        [ObisoftAuthorize]
-        public async Task<ActionResult> ApplyJob(int? id)
-        {
-            if (id == null)
-            {
-                return RedirectToAction("AllJobs");
-            }
-            var CurrentJob = await DbContext.JobOpenings.FindAsync(id);
-            if (CurrentJob == null)
-            {
-                return RedirectToAction("AllJobs");
-            }
-            return View(CurrentJob);
-        }
-        [HttpPost]
-        public async Task<ActionResult> ApplyJob(ApplyJobModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                DbContext.UserApplyJobModels.Add(new UserApplyJobModel
-                {
-                    Email = model.Email,
-                    JobId = model.JobId,
-                    Message = model.Message,
-                    Name = model.Name,
-                    ObisoftUserId = User.Identity.GetUserId(),
-                    Phone = model.Phone
-                });
-                await DbContext.SaveChangesAsync();
-                return View("Applied");
-            }
-            return RedirectToAction("JobDetails", new { id = model.JobId });
-        }
-        #endregion
-
-        [ObisoftAuthorize]
-        public ActionResult Applied()
-        {
-            return View();
-        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]

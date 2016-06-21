@@ -141,7 +141,7 @@ jQuery(function ($) {
     function setColumns() {
         var winWidth = $(window).width(),
           columnNumb = splitColumns(),
-          postWidth = Math.floor(winWidth / columnNumb);
+          postWidth = Math.floor(winWidth -10/ columnNumb);
 
         container.find('.portfolio-box').each(function () {
             $(this).css({

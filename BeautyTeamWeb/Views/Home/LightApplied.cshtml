@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "申请成功";
+}
+@Html.Partial("../Home/_StaticSliderIV")
+
+<div class="container">
+    <h2>提交成功</h2>
+    <hr />
+    <p>你已经报名了Obisoft企业调研实践活动!</p>
+    <p>我们将在活动具体安排确定完成后将安排发送至你的邮箱。逾期未确认则视为放弃。</p>
+    <p>如果对Obisoft其它内容感兴趣，浏览下面链接：</p>
+    <a class="btn btn-main featured text-center" href="@Url.Action("AllJobs","Home")">@Resources.lang.JobOpenings</a>
+    <a class="btn btn-main featured text-center" href="@Url.Action("Register","Account")">@Resources.lang.Register</a>
+    <a class="btn btn-main featured text-center" href="@Url.Action("Login","Account")">@Resources.lang.Login</a>
+    <a href="@Url.Action("Index","Home")">返回主页</a>
+</div>
