@@ -317,7 +317,7 @@ ul.navbar-nav a {
     font-weight: 700;
     font-size: 14px;
     padding: 15px 0 15px 30px;
-    line-height: 40px;
+    line-height: 35px;
     display: inline-block;
     text-transform: uppercase;
 }
@@ -1084,7 +1084,7 @@ figcaption .links {
     }
 
 .tab-content > .active {
-    margin-top: 55px;
+    margin-top: 0px;
 }
 
 .tab-content img {
@@ -2949,6 +2949,9 @@ iframe {
     line-height: 85px;
     position: relative;
 }
+    .carousel-caption h5{
+    color: #fff;
+    }
 
     .carousel-caption h2:after {
         content: "";
@@ -2984,6 +2987,7 @@ iframe {
     margin-left: 80px;
 }
 
-.navbar-collapse {
-    max-height:800px;
+#bs-example-navbar-collapse-1
+{
+    max-height:1000px;
 }

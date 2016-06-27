@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BeautyTeamWeb.ViewModels.ProductType>
+﻿@model BeautyTeamWeb.ViewModels.HomeIndexViewModel
 <section id="portfolio">
     <div class="container">
         <div class="row">
@@ -13,151 +13,35 @@
     </div>
 
     <div id="isotope-filter" class="skew3 text-center">
-        <a data-filter="*" href="#" class="current">All</a>
-        @foreach(var Type in Model)
+        <a data-filter="*" href="#" class="active ">All</a>
+        @foreach (var Type in Model.Types)
         {
-        <a data-filter=".@Type.ProductTypeName" href="#" class="">@Type.ProductTypeName</a>
+            <a data-filter=".@Type.ProductTypeId" href="#" class="">@Type.ProductTypeName</a>
         }
     </div>
     <div class="clearfix"></div>
     <div class="text-center ">
-        <ul class="portfolio-wrap" id="portfolio_items">
-            <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio identity web-design">
-                <figure>
-                    <img src="~/wwwroot/images/portfolio/p1.jpg" alt="" class="img-responsive" />
-                    <figcaption>
-                        <h5>Creative Zoe</h5>
-                        <p class="links">
-                            <a href="portfolio-single.html"> <i class="fa fa-link"></i></a>
-                            <a href="images/portfolio/p1.jpg" data-rel="prettyPhoto">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </p>
-                        <p class="description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </p>
-                    </figcaption>
-                </figure>
-            </li>
-            <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio logo graphic">
-                <figure>
-                    <img src="~/wwwroot/images/portfolio/p2.jpg" alt="" class="img-responsive" />
-                    <figcaption>
-                        <h5>Creative Zoe</h5>
-                        <p class="links">
-                            <a href="portfolio-single.html"> <i class="fa fa-link"></i></a>
-                            <a href="~/wwwroot/images/portfolio/p2.jpg" data-rel="prettyPhoto">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </p>
-                        <p class="description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </p>
-                    </figcaption>
-                </figure>
-            </li>
-            <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio graphic logo">
-                <figure>
-                    <img src="~/wwwroot/images/portfolio/p3.jpg" alt="" class="img-responsive" />
-                    <figcaption>
-                        <h5>Creative Zoe</h5>
-                        <p class="links">
-                            <a href="portfolio-single.html"> <i class="fa fa-link"></i></a>
-                            <a href="~/wwwroot/images/portfolio/p3.jpg" data-rel="prettyPhoto">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </p>
-                        <p class="description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </p>
-                    </figcaption>
-                </figure>
-            </li>
-            <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio web-design identity">
-                <figure>
-                    <img src="~/wwwroot/images/portfolio/p7.jpg" alt="" class="img-responsive" />
-                    <figcaption>
-                        <h5>Creative Zoe</h5>
-                        <p class="links">
-                            <a href="portfolio-single.html"> <i class="fa fa-link"></i></a>
-                            <a href="~/wwwroot/images/portfolio/p7.jpg" data-rel="prettyPhoto">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </p>
-                        <p class="description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </p>
-                    </figcaption>
-                </figure>
-            </li>
-            <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio logo web-design">
-                <figure>
-                    <img src="~/wwwroot/images/portfolio/p5.jpg" alt="" class="img-responsive" />
-                    <figcaption>
-                        <h5>Creative Zoe</h5>
-                        <p class="links">
-                            <a href="portfolio-single.html"> <i class="fa fa-link"></i></a>
-                            <a href="~/wwwroot/images/portfolio/p5.jpg" data-rel="prettyPhoto">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </p>
-                        <p class="description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </p>
-                    </figcaption>
-                </figure>
-            </li>
-            <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio logo graphic">
-                <figure>
-                    <img src="~/wwwroot/images/portfolio/p6.jpg" alt="" class="img-responsive" />
-                    <figcaption>
-                        <h5>Creative Zoe</h5>
-                        <p class="links">
-                            <a href="portfolio-single.html"> <i class="fa fa-link"></i></a>
-                            <a href="~/wwwroot/images/portfolio/p6.jpg" data-rel="prettyPhoto">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </p>
-                        <p class="description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </p>
-                    </figcaption>
-                </figure>
-            </li>
-            <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio graphic identity">
-                <figure>
-                    <img src="~/wwwroot/images/portfolio/p3.jpg" alt="" class="img-responsive" />
-                    <figcaption>
-                        <h5>Creative Zoe</h5>
-                        <p class="links">
-                            <a href="portfolio-single.html"> <i class="fa fa-link"></i></a>
-                            <a href="~/wwwroot/images/portfolio/p3.jpg" data-rel="prettyPhoto">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </p>
-                        <p class="description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </p>
-                    </figcaption>
-                </figure>
-            </li>
-            <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio web-design graphic">
-                <figure>
-                    <img src="~/wwwroot/images/portfolio/p7.jpg" alt="" class="img-responsive" />
-                    <figcaption>
-                        <h5>Creative Zoe</h5>
-                        <p class="links">
-                            <a href="portfolio-single.html"> <i class="fa fa-link"></i></a>
-                            <a href="~/wwwroot/images/portfolio/p7.jpg" data-rel="prettyPhoto">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </p>
-                        <p class="description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </p>
-                    </figcaption>
-                </figure>
-            </li>
-        </ul>
+            <ul class="portfolio-wrap" id="portfolio_items">
+                @foreach (var Product in Model.Products)
+                {
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio @Product.ProductTypeId">
+                        <figure>
+                            <img src="@Product.ImageUrl" alt="" class="img-responsive" />
+                            <figcaption>
+                                <h5>@Product.ProductName</h5>
+                                <p class="links">
+                                    <a href="@Url.Action(Product.ActionName,Product.ControllerName)"> <i class="fa fa-link"></i></a>
+                                    <a href="@Product.ImageUrl" data-rel="prettyPhoto">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                </p>
+                                <p class="description">
+                                    @Product.ShortDescription
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                }
+            </ul>
     </div>
 </section>

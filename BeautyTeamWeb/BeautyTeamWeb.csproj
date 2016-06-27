@@ -254,6 +254,7 @@
     <Compile Include="Controllers\API\TeamPostsApiController.cs" />
     <Compile Include="Controllers\ApiController.cs" />
     <Compile Include="Controllers\JobController.cs" />
+    <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Controllers\WeChatController.cs" />
     <Compile Include="Migrations\201605211845280_Initialize.cs" />
     <Compile Include="Migrations\201605211845280_Initialize.Designer.cs">
@@ -343,6 +344,14 @@
     <Compile Include="Migrations\201606211605417_createproducttype.Designer.cs">
       <DependentUpon>201606211605417_createproducttype.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606220619170_AddProducts.cs" />
+    <Compile Include="Migrations\201606220619170_AddProducts.Designer.cs">
+      <DependentUpon>201606220619170_AddProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606220648331_ChangeProduct.cs" />
+    <Compile Include="Migrations\201606220648331_ChangeProduct.Designer.cs">
+      <DependentUpon>201606220648331_ChangeProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ViewModels\Home\ApplyJobModel.cs" />
     <Compile Include="ViewModels\Home\EmailSubscribe.cs" />
@@ -401,6 +410,7 @@
     <Compile Include="ViewModels\Home\JobOpening.cs" />
     <Compile Include="ViewModels\Home\LightOfTheory.cs" />
     <Compile Include="ViewModels\Home\NewsViewModel.cs" />
+    <Compile Include="ViewModels\Home\Product.cs" />
     <Compile Include="ViewModels\Home\ProductType.cs" />
     <Compile Include="ViewModels\Manage\BasicInfoViewModel.cs" />
     <Compile Include="ViewModels\Manage\ManageViewModels.cs" />
@@ -425,8 +435,11 @@
     <Content Include="wwwroot\css\OwlCarousel\owl.transitions.css" />
     <Content Include="wwwroot\css\prettyPhoto.css" />
     <Content Include="wwwroot\css\Sitefont.css" />
+    <Content Include="wwwroot\css\sunlight.default.css" />
     <Content Include="wwwroot\css\weui.min.css" />
     <Content Include="wwwroot\images\Icon.jpg" />
+    <Content Include="wwwroot\images\portfolio\HSharp.png" />
+    <Content Include="wwwroot\images\portfolio\HSharpLogo2.png" />
     <Content Include="wwwroot\images\Resources\News1.jpg" />
     <Content Include="wwwroot\images\slider\s4.jpg" />
     <Content Include="wwwroot\images\wc\icon_nav_actionSheet.png" />
@@ -462,6 +475,8 @@
     <Content Include="wwwroot\js\owl.carousel.js" />
     <Content Include="wwwroot\js\owl.carousel.min.js" />
     <Content Include="wwwroot\js\smooth-scroll.js" />
+    <Content Include="wwwroot\js\sunlight-min.js" />
+    <Content Include="wwwroot\js\sunlight.csharp-min.js" />
     <Content Include="wwwroot\js\waypoints.min.js" />
     <Content Include="wwwroot\js\wow.min.js" />
     <Content Include="wwwroot\videos\gdrive.mp4" />
@@ -648,6 +663,7 @@
     <Content Include="Views\Home\_StaticSliderVII.cshtml" />
     <Content Include="Views\Home\Light.cshtml" />
     <Content Include="Views\Home\LightApplied.cshtml" />
+    <Content Include="Views\Portfolio\HSharp.cshtml" />
     <None Include="wwwroot\js\jquery.validate-vsdoc.js" />
     <Content Include="wwwroot\js\jquery.validate.js" />
     <Content Include="wwwroot\js\jquery.validate.min.js" />
@@ -779,6 +795,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606211605417_createproducttype.resx">
       <DependentUpon>201606211605417_createproducttype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606220619170_AddProducts.resx">
+      <DependentUpon>201606220619170_AddProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606220648331_ChangeProduct.resx">
+      <DependentUpon>201606220648331_ChangeProduct.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

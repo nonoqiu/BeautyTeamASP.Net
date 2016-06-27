@@ -10,6 +10,8 @@ using System.Web.Mvc;
 
 namespace BeautyTeamWeb.Controllers
 {
+    [ObisoftLocalization]
+    [RequireHttps]
     public class JobController : ControllerWithAuthorize
     {
         public async Task<ActionResult> AllJobs(JobType? id)

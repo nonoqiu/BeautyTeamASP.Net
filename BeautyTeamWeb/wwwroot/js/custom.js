@@ -94,7 +94,7 @@ jQuery(function ($) {
         filter: '*',
         layoutMode: 'fitRows',
         animationOptions: {
-            duration: 750,
+            duration: 550,
             easing: 'linear'
         }
     });
@@ -102,11 +102,12 @@ jQuery(function ($) {
     $filter.find('a').click(function () {
         var selector = $(this).attr('data-filter');
         $filter.find('a').removeClass('current');
+        $filter.find('a').removeClass('active');
         $(this).addClass('current');
         $container.isotope({
             filter: selector,
             animationOptions: {
-                animationDuration: 750,
+                animationDuration: 550,
                 easing: 'linear',
                 queue: false,
             }
@@ -132,7 +133,7 @@ jQuery(function ($) {
         } else if (winWidth > 479) {
             columnNumb = 2;
         } else if (winWidth < 479) {
-            columnNumb = 1;
+            columnNumb = 2;
         }
 
         return columnNumb;

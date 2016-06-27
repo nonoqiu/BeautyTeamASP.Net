@@ -1,0 +1,286 @@
+﻿@model BeautyTeamWeb.ViewModels.Product
+
+@{
+    ViewBag.Title = "Obisoft.HSharp";
+}
+@section Scripts {
+    @Scripts.Render("~/js/Sunlight")
+    <script type="text/javascript">
+        var options = {
+            lineNumbers: false,
+        };
+        Sunlight.highlightAll(options);
+    </script>
+}
+@section css{
+    @Styles.Render("~/css/Sunlight")
+}
+
+@section PortfolioClass{active}
+
+<section id="slider_part">
+    <div class="carousel slide" id="carousel-example-generic" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="overlay-slide">
+                    <img src="~/wwwroot/images/slider/s4.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="carousel-caption">
+                    <div class="col-md-6">
+                        <h2>Obisoft.HSharp</h2>
+                        <h4 class="animated2">Popular high-performance HTML framework for .NET</h4>
+                        <div class="line"></div>
+                        <h5 class="animated2">Version : 1.1.4</h5>
+                        <ul class="social-contact list-inline">
+                            <li> <a href="https://github.com/Obisoft2017" title="Github" target="_blank"><i class="fa fa-github"></i></a></li>
+                            <li> <a href="http://hsharp.codeplex.com/" title="CodePlex" target="_blank"> <i class="fa fa-code"></i></a></li>
+                            <li> <a href="https://www.nuget.org/packages/Obisoft.HSharp/" title="Nuget" target="_blank"><i class="fa fa-cloud-download"></i></a></li>
+                        </ul>
+                        <div class="hero-content text-center">
+                            <div class="hero-text wow fadeIn" data-wow-delay=".8s">
+                                <p class="hero-buttons">
+                                    <strong>
+                                        <a class="btn btn-dark" data-toggle="modal" data-target="#DownloadPanel">
+                                            Download
+                                        </a>
+                                    </strong>
+                                    <strong><a href="#" class="btn btn-main featured">Source Code</a></strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 hidden-sm" style="text-align:left">
+                        <h4 class="text-center">Deserialize Html</h4>
+<pre class="sunlight-highlight-csharp">
+string ExampleHtml =@@" &lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Example&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Some Text
+        &lt;table&gt;
+            &lt;tr&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/body&gt;
+&lt;/html&gt;"
+var Document = HtmlConvert.DeserializeHtml(ExampleHtml);
+Console.WriteLine(Document["html"]["head"]["title"].Son);//Example
+Console.WriteLine(Document["html"]["body"]["table"].Children.Count);//3
+</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Modal -->
+<div class="modal fade" id="DownloadPanel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Install with NuGet (recommended)</h4>
+            </div>
+            <div class="modal-body">
+                <a href="https://www.nuget.org/packages/Newtonsoft.Json/" target="_blank">
+                    <img src="http://www.newtonsoft.com/Content/Images/nuget-logo.png" alt="NuGet" class="center-block">
+                </a>
+                <br>
+                <h4>
+                    <code>
+                        PM&gt; Install-Package Obisoft.HSharp
+                    </code>
+                </h4>
+                Install via VS <a href="https://docs.nuget.org/consume/package-manager-dialog" target="_blank">Package Management</a> window.
+                <br>
+                <h4 class="page-header">Direct Download</h4>
+                <p>
+                    ZIP file containing Obisoft.HSharp assemblies and source code:
+                    <a class="btn btn-default btn-sm" href="https://github.com/Obisoft2017/Obisoft.HSharp/archive/master.zip" target="_blank">
+                        <i class="fa fa-file-zip-o"></i> Obisoft.HSharp
+                    </a>
+                </p>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h4><i class="fa fa-cogs fa-2x"></i>World-class HTML Serializer</h4>
+            Serialize and deserialize any HTML with Obisoft.HSharp's powerful HTML converter.
+        </div>
+        <div class="col-md-4">
+            <h4><i class="fa fa-magic fa-2x"></i>C# to HTML</h4>
+            Create, parse, query and modify HTML using Obisoft.HSharp's HDoc, HTag and HTextTag.
+        </div>
+        <div class="col-md-4">
+            <h4><i class="fa fa-bolt fa-2x"></i>High Performance</h4>
+            Deserialize typical HTML in less than 150 ms.
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="row">
+        <div class="col-md-4">
+            <h4><i class="fa fa-android fa-2x"></i>Cross Platform</h4>
+            Obisoft.HSharp supports Windows, Windows Store, Windows Phone, Mono, and Xamarin.
+        </div>
+        <div class="col-md-4">
+            <h4><i class="fa fa-codepen fa-2x"></i>JQuery-like methods</h4>
+            Find or edit elements by id, name or tag name.
+        </div>
+        <div class="col-md-4">
+            <h4><i class="fa fa-file-code-o fa-2x"></i>XML Support</h4>
+            Deserialize any markup language like XML and even XAML without construct the class.
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="row">
+        <div class="col-md-4">
+            <h4><i class="fa fa-github fa-2x"></i>Open Source</h4>
+            Obisoft.HSharp is open source software and is completely free for commercial use.
+        </div>
+        <div class="col-md-4">
+            <h4><i class="fa fa-smile-o fa-2x"></i>Easy to use</h4>
+            Learn by 3 examples in few minutes.
+        </div>
+
+        <div class="col-md-4">
+            <h4><i class="fa fa-gears fa-2x"></i>Customize Build</h4>
+            Generate HTML with your own C# code without writting HTML.
+        </div>
+    </div>
+    <h2>How To Use</h2>
+    <hr />
+    <div class="blog-tab">
+        <div role="tabpanel">
+            <ul class="nav nav-tabs tab-default" role="tablist">
+                <li class="active">
+                    <a role="tab" aria-controls="dsh" href="#dsh" data-toggle="tab">Deserialize HTML</a>
+                </li>
+                <li>
+                    <a role="tab" aria-controls="bdh" href="#bdh" data-toggle="tab">Build HTML</a>
+                </li>
+                <li>
+                    <a role="tab" aria-controls="dsw" href="#dsw" data-toggle="tab">Deserialize WebSite</a>
+                </li>
+                <li>
+                    <a role="tab" aria-controls="dns" href="#dns" data-toggle="tab">Dynamicly Deserialize</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="dsh" role="tabpanel">
+ExampleHtml: (string)
+<pre>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot;&gt;
+        &lt;title&gt;Example&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Some Text
+        &lt;table&gt;
+            &lt;tr&gt;One&lt;/tr&gt;
+            &lt;tr&gt;Two&lt;/tr&gt;
+            &lt;tr&gt;Three&lt;/tr&gt;
+        &lt;/table&gt;
+        Other Text
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<pre class="sunlight-highlight-csharp">
+var Document = HtmlConvert.DeserializeHtml(ExampleHtml);
+Console.WriteLine(Document["html"]["head"]["meta", 0].Properties["charset"]);//utf-8
+Console.WriteLine(Document["html"]["head"]["meta", 1].Properties["name"]);//viewport
+foreach (var Line in Document["html"]["body"]["table"])
+{
+    //One
+    //Two
+    //Three
+    Console.WriteLine(Line.Son);
+}
+</pre>
+                    <p>The basic usage of HSharp is to deserialize HTML. Do NOT need to create any classes or use any expressions. Simply get the element you want. Easily get the properties and inner content.</p>
+                </div>
+                <div class="tab-pane" id="bdh" role="tabpanel">
+<pre class="sunlight-highlight-csharp">
+var Document = new HDoc(DocumentOptions.BasicHTML);
+Document["html"]["body"].AddChild("div");
+Document["html"]["body"]["div"].AddChild("a", new HProp("href", "/#"));
+Document["html"]["body"]["div"].AddChild("table");
+Document["html"]["body"]["div"]["table"].AddChildren(
+    new HTag("tr"),
+    new HTag("tr", new HTag("td")));
+    new HTag("tr", new HTag("td")));
+var Result = HtmlConvert.SerializeHtml(Document);
+Console.WriteLine(Result);
+</pre>
+<pre>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;&lt;/meta&gt;
+        &lt;title&gt;Example &lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;
+            &lt;a href=&quot;/#&quot;&gt;&lt;/a&gt;
+            &lt;table&gt;
+                &lt;tr&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;SomeText&lt;/td&gt;&lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+                    <p>In some cases you need to output HTML using C# and dynamicly change some values. Using HSharp to generate HTML easily and fastly</p>
+                </div>
+                <div id="dsw" class="tab-pane" role="tabpanel">
+<pre class="sunlight-highlight-csharp">
+var Document = new HDoc(new Uri("https://www.obisoft.com.cn"));
+Console.WriteLine(Document["html"]["head"]["title"].Children[1]);//Obisoft
+Console.WriteLine(Document.FindTagById("service")["div"]["div"]["div"]["div"]["h3"]["b"].Son);//Service
+Console.WriteLine(Document.FindTagByTagName("nav").GenerateHTML());
+</pre>
+                    <pre>
+&lt;nav class=&quot;collapse navbar-collapse&quot; id=&quot;bs-example-navbar-collapse-1&quot; role=&quot;navigation&quot;&gt;
+    &lt;ul class=&quot;nav navbar-nav navbar-left &quot;&gt;
+        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;/en-US&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;/en-US&quot;&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;/en-US/Home/Careers&quot;&gt;Careers&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;/en-US/Home/About&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;/en-US/Home/Contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;form class=&quot;navbar-right&quot; id=&quot;logoutForm&quot; action=&quot;/en-US/Account/LogOff&quot; method=&quot;post&quot;&gt;
+        &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
+            &lt;li class=&quot;dropdown&quot;&gt;
+                &lt;a class=&quot;dropdown-toggle&quot; role=&quot;button&quot; aria-expanded=&quot;false&quot; aria-haspopup=&quot;true&quot; href=&quot;#&quot; data-toggle=&quot;dropdown&quot;&gt;Lang&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                    &lt;li class=&quot;dropdown-header&quot;&gt;Lang&lt;/li&gt;
+                    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;/en-US&quot;&gt;English&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;/zh-CN&quot;&gt;简体中文&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;/zh-TW&quot;&gt;繁體中文&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a id=&quot;registerLink&quot; href=&quot;/en-US/Account/Register&quot;&gt;Register&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a id=&quot;loginLink&quot; href=&quot;/en-US/Account/Login&quot;&gt;Log in&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/form&gt;
+&lt;/nav&gt;
+</pre>
+                    <p>Wanna directly deserialize a productive website? One line of code and get the result you want.</p>
+                </div>
+                <div id="dns" class="tab-pane" role="tabpanel">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

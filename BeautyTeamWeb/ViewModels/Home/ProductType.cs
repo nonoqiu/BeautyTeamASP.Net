@@ -9,5 +9,7 @@ namespace BeautyTeamWeb.ViewModels
     {
         public virtual int ProductTypeId { get; set; }
         public virtual string ProductTypeName { get; set; }
+
+        public virtual List<Product> Products { get; set; }
     }
 }

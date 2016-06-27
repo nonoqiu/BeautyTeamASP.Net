@@ -28,6 +28,7 @@ namespace BeautyTeamWeb.Models
         public DbSet<PersonalTask> PersonalTasks { get; set; }
         public DbSet<PostResponse> PostResponses { get; set; }
         public DbSet<Posts> Posts { get; set; }
+        public DbSet<Product> Products { get; set; }
         public DbSet<ProductType> ProductTypes { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<RadioEvent> RadioEvents { get; set; }

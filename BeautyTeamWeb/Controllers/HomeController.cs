@@ -19,8 +19,9 @@ namespace BeautyTeamWeb.Controllers
                 GroupNumbers = DbContext.Groups.Count(),
                 Projects = DbContext.Projects.Count(),
                 Tasks = DbContext.GroupTasks.Count() + DbContext.PersonalTasks.Count() + DbContext.RadioTasks.Count(),
-                Newss = await DbContext.NewsViewModels.OrderByDescending(t => t.PublishTime).ToListAsync(),
-                Types = await DbContext.ProductTypes.ToListAsync()
+                Newss = DbContext.NewsViewModels.OrderByDescending(t => t.PublishTime),
+                Types = DbContext.ProductTypes,
+                Products=DbContext.Products
             };
             return View(model);
         }
@@ -69,6 +70,7 @@ namespace BeautyTeamWeb.Controllers
         {
             return View();
         }
+
         public async Task<ActionResult> AllNews()
         {
             var model = new HomeIndexViewModel

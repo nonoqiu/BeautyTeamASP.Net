@@ -109,6 +109,14 @@ namespace BeautyTeamWeb
             bundles.Add(new StyleBundle("~/css/WeUI").Include(
             Webroot + "/css/weui.min.css",
             Webroot + "/css/example.css"));
+            //Code UI CSS
+            bundles.Add(new StyleBundle("~/css/Sunlight").Include(
+            Webroot + "/css/sunlight.default.css"));
+            //Code UI JS
+            bundles.Add(new ScriptBundle("~/js/Sunlight").Include(
+            Webroot + "/js/sunlight-min.js",
+            Webroot + "/js/sunlight.csharp-min.js"));
+
         }
         public static ObisoftUserManager CreateUserManager(IdentityFactoryOptions<ObisoftUserManager> options, IOwinContext context)
         {
@@ -186,22 +194,22 @@ namespace BeautyTeamWeb
             //app.UseFacebookAuthentication("1755093041403342", "14745cd185959ac9d19d75b079592c6e");
             //app.UseTwitterAuthentication("1usofmLObsFymH7hUo6sF6DFi", "T7KiA4HxH4LRsgYFAFFsEpLRYQWnKj7DzXy4cx6OeNVviSzdB6");
             app.UseGitHubAuthentication("a2921a92d97e3d903fe4", "881bb2326621323230b36c2ad32f895a6b26a183");
-            //    app.UseVisualStudioAuthentication(nameof(waitting), nameof(waitting));
-            //    app.UseInstagramInAuthentication(nameof(waitting), nameof(waitting));
-            //    app.UseHealthGraphAuthentication(nameof(waitting), nameof(waitting));
-            //    app.UseGooglePlusAuthentication(nameof(waitting), nameof(waitting));
-            //    app.UseBattleNetAuthentication(nameof(waitting), nameof(waitting));
-            //    app.UseLinkedInAuthentication(nameof(waitting), nameof(waitting));
-            //    app.UseSpotifyAuthentication(nameof(waitting), nameof(waitting));
-            //    app.UseDropboxAuthentication(nameof(waitting), nameof(waitting));
-            //    app.UseFitbitAuthentication(nameof(waitting), nameof(waitting));
-            //    app.UsePayPalAuthentication(nameof(waitting), nameof(waitting));
-            //    app.UseFlickrAuthentication(nameof(waitting), nameof(waitting));
-            //    app.UseGoogleAuthentication(nameof(waitting), nameof(waitting));
-            //    app.UseTwitchAuthentication(nameof(waitting), nameof(waitting));
-            //    app.UseVimeoAuthentication(nameof(waitting), nameof(waitting));
-            //    app.UseYahooAuthentication(nameof(waitting), nameof(waitting));
-            //    app.UseSteamAuthentication(nameof(waitting));
+            // app.UseVisualStudioAuthentication(nameof(waitting), nameof(waitting));
+            // app.UseInstagramInAuthentication(nameof(waitting), nameof(waitting));
+            // app.UseHealthGraphAuthentication(nameof(waitting), nameof(waitting));
+            // app.UseGooglePlusAuthentication(nameof(waitting), nameof(waitting));
+            // app.UseBattleNetAuthentication(nameof(waitting), nameof(waitting));
+            // app.UseLinkedInAuthentication(nameof(waitting), nameof(waitting));
+            // app.UseSpotifyAuthentication(nameof(waitting), nameof(waitting));
+            // app.UseDropboxAuthentication(nameof(waitting), nameof(waitting));
+            // app.UseFitbitAuthentication(nameof(waitting), nameof(waitting));
+            // app.UsePayPalAuthentication(nameof(waitting), nameof(waitting));
+            // app.UseFlickrAuthentication(nameof(waitting), nameof(waitting));
+            // app.UseGoogleAuthentication(nameof(waitting), nameof(waitting));
+            // app.UseTwitchAuthentication(nameof(waitting), nameof(waitting));
+            // app.UseVimeoAuthentication(nameof(waitting), nameof(waitting));
+            // app.UseYahooAuthentication(nameof(waitting), nameof(waitting));
+            // app.UseSteamAuthentication(nameof(waitting));
         }
     }
 }
