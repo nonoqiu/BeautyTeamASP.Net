@@ -44,7 +44,7 @@
                                             Download
                                         </a>
                                     </strong>
-                                    <strong><a href="#" class="btn btn-main featured">Source Code</a></strong>
+                                    <strong><a href="https://github.com/Obisoft2017" target="_blank" class="btn btn-main featured">Source Code</a></strong>
                                 </p>
                             </div>
                         </div>
@@ -112,6 +112,21 @@ Console.WriteLine(Document["html"]["body"]["table"].Children.Count);//3
 
 <div class="container">
     <div class="row">
+        <h2>What is HSharp?</h2>
+        <hr />
+        <p>
+            So, you are building a C# application and need to parse a web page’s HTML. You could use regular expressions, but it seems more efficient to use a DOM-based approach. XPath is a solution but it is still diffcult to learn.
+        </p>
+        <p>
+            .Net contains an HtmlDocument class, along with HtmlElement, in System.Windows.Forms, which could seem pretty interesting. It does provide basic DOM methods like GetElementById and GetElementsByTagName. However, if you try to create an HtmlDocument object, you will soon notice that it has no public constructor. It is actually a wrapper around an unmanaged class and the only way you can get an instance is through the WebBrowser control. Quite slow and annoying… So, what are the other solutions?
+        </p>
+        <p>
+            Yes. This is HSHarp. HSharp is a library used to analyse markup language like HTML easily and fastly.
+        </p>
+    </div>
+    <div class="row">
+        <h2>Why HSharp?</h2>
+        <hr />
         <div class="col-md-4">
             <h4><i class="fa fa-cogs fa-2x"></i>World-class HTML Serializer</h4>
             Serialize and deserialize any HTML with Obisoft.HSharp's powerful HTML converter.
@@ -122,7 +137,7 @@ Console.WriteLine(Document["html"]["body"]["table"].Children.Count);//3
         </div>
         <div class="col-md-4">
             <h4><i class="fa fa-bolt fa-2x"></i>High Performance</h4>
-            Deserialize typical HTML in less than 150 ms.
+            Deserialize typical HTML in less than 150 ms. The library is only 20kb with no dependencies
         </div>
     </div>
     <div class="divider"></div>
